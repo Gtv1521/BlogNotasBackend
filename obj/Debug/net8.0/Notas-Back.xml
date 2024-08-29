@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Notas-Back</name>
+    </assembly>
+    <members>
+        <member name="M:Notas_Back.Controllers.NotasController.allNotes(System.String)">
+            <summary>
+            Muestra todas las notas de un usuario 
+            </summary>
+            <param name="IdUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.NotasController.getNota(System.String)">
+            <summary>
+            Muestra los datos de una nota 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.NotasController.newNotes(Notas_Back.Models.Notas)">
+            <summary>
+            Inserta una nueva nota
+            </summary>
+            <param name="notas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.NotasController.updateNota(Notas_Back.Dto.NotasUpdateDto,System.String)">
+            <summary>
+            Actualiza los datos que contiene la nota 
+            </summary>
+            <param name="notas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.NotasController.deleteNote(System.String)">
+            <summary>
+            Borra una nota con el id de la nota
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.Session.NewUser(Notas_Back.Models.Usuarios)">
+             <summary>
+             Crea un nuevo usuario
+             </summary>
+             <param name="usuarios"></param>
+             <returns>true</returns>
+             <remarks>
+             Sample request:
+            
+                 POST /SigIn
+                 {
+                     "email": "gustavober98@gmail.com",
+                     "firsName": "Gustavo",
+                     "lastName": "Bernal Acero",
+                     "userName": "Gustavober98",
+                     "password": "123",
+                     "rol": "Administrador"
+                 }
+            
+             </remarks>
+             <response code="201">{
+                       "status": 201,
+                        "mensaje": "Usuario agregado con éxito"
+             }</response>
+             <response code="400">If the item is null</response>
+        </member>
+        <member name="M:Notas_Back.Controllers.Session.Inicio(System.String,System.String)">
+            <summary>
+            Devuelve los datos de inicio de sesión
+            </summary>
+            <param name="NameUser"></param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.Session.putPass(System.String,System.String,System.String)">
+            <summary>
+            Actualiza un usuario 
+            </summary>
+            <param name="pass"></param>
+            <param name="pass2"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Notas_Back.Controllers.User">
+            <summary>
+            Modulo para gestión de usuarios
+            </summary>
+        </member>
+        <member name="M:Notas_Back.Controllers.User.Users">
+            <summary>
+             Muestra datos de  usuario registrado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.User.MostrarUser(System.String)">
+            <summary>
+            Muestra los datos de un usuario por el id 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.User.verEmail(System.String)">
+            <summary>
+            Muestra si el email esta agregado a la base
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.User.putUser(Notas_Back.Models.Usuarios,System.String)">
+            <summary>
+            Actualiza datos de un usuario 
+            </summary>
+            <param name="user"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Notas_Back.Controllers.User.DeleteUser(System.String)">
+            <summary>
+             Elimina un usuario de la aplicación
+            </summary>
+            <param name="IdUser"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

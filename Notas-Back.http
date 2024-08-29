@@ -1,0 +1,6 @@
+@Notas_Back_HostAddress = http://localhost:5287
+
+GET {{Notas_Back_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
