@@ -108,3 +108,5 @@
 /home/gustavo/Desarrollo/C#/BlogNotas/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /home/gustavo/Desarrollo/C#/BlogNotas/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /home/gustavo/Desarrollo/C#/BlogNotas/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/gustavo/Desarrollo/C#/BlogNotas/bin/Debug/net8.0/package-lock.json
+/home/gustavo/Desarrollo/C#/BlogNotas/bin/Debug/net8.0/package.json
