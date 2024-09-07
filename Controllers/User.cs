@@ -19,7 +19,7 @@ namespace Notas_Back.Controllers
     [Route("api/[controller]")]
     public class User : ControllerBase
     {
-        private readonly UsuariosService _service = new UsuariosService();
+        private readonly UsuariosService _service;
 
         public User(UsuariosService usuariosService)
         {
@@ -27,12 +27,12 @@ namespace Notas_Back.Controllers
         }
 
         /// <summary>
-        ///  Muestra datos de  usuario registrado
+        ///  Muestra todos los  datos de los usuarios registrados
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         [Route("VerUsuarios")]
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> Users()
         {
             return Ok(await _service.GetAllUsers());

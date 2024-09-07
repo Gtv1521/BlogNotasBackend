@@ -6,6 +6,7 @@ using Notas_Back.Interfaces;
 using Notas_Back.Models;
 using Notas_Back.Repositories;
 using Notas_Back.Services;
+using System.Buffers;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
@@ -24,6 +25,13 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader();
     });
 });
+builder.Services.Configure<MongoConections>(
+    builder.Configuration.GetSection("MOngoDb")
+);
+
+builder.Services.Configure<MongoConections>(
+    builder.Configuration.GetSection("MongoDb")
+);
 
 builder.Services.AddSwaggerGen(options =>
 {
@@ -53,8 +61,10 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddControllers();
 builder.Services.AddScoped<UsuariosService>();
 builder.Services.AddScoped<NotasService>();
+builder.Services.AddScoped<EnviarCorreo>();
+builder.Services.AddScoped<generaToken>();
 builder.Services.AddScoped<ManejoContraseñas>();
-// builder.Services.AddScoped<ICrud<Usuarios>, UsuariosService>();
+builder.Services.AddSingleton<Context>(); 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

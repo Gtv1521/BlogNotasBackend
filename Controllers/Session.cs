@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.IdentityModel.Tokens;
 using Notas_Back.Dto;
 using Notas_Back.Models;
+using Notas_Back.Repositories;
 using Notas_Back.Services;
 
 namespace Notas_Back.Controllers
@@ -22,15 +23,16 @@ namespace Notas_Back.Controllers
     public class Session : ControllerBase
     {
         private readonly UsuariosService _UsuariosService;
+        private readonly generaToken _token;
         private readonly ManejoContraseñas _manejoContraseñas;
+        private readonly EnviarCorreo _enviarCorreo;
 
-        private readonly IConfiguration _configuration;
-
-        public Session(UsuariosService usuariosService, ManejoContraseñas manejoContraseñas, IConfiguration configuration)
+        public Session(UsuariosService usuariosService, generaToken token, ManejoContraseñas manejoContraseñas, EnviarCorreo correo)
         {
             _UsuariosService = usuariosService;
             _manejoContraseñas = manejoContraseñas;
-            _configuration = configuration;
+            _enviarCorreo = correo;
+            _token = token;
         }
 
         /// <summary>
@@ -87,16 +89,46 @@ namespace Notas_Back.Controllers
                     ModelState.AddModelError("Email", "The Email shouldn´t be Empty");
                 }
 
+                Usuarios Mail = await _UsuariosService.verEmail(usuarios.Email.ToString());
+                Usuarios User = await _UsuariosService.verUserName(usuarios.UserName.ToString());
+                if (Mail != null)
+                {
+                    return StatusCode(409, new NoData
+                    {
+                        status = 409,
+                        mensaje = "Email ya existe"
+                    });
+                }
+                if (User != null)
+                {
+                    return StatusCode(409, new NoData
+                    {
+                        status = 409,
+                        mensaje = "UserName ya existe"
+                    });
+                }
+
+                var Mesagge = "<h1>Bienvenido a MyBloggg</H1>" +
+                "<h4>Te damos un recibimiento esperamos te guste esta esperiencia</h4>" +
+                "Tu usuario: <b>" + usuarios.UserName + "</b>" +
+                 "<p>Esta App esta construida para aquellos que lo secuestra la inspiracion en cualquier momento</p>" +
+                 "<p>Nos complace que seas parte de esta gran experiencia y que te animes a probar las cosas nuevas que ofrece la tecnologia.</p>";
+
+
                 await _UsuariosService.Post(usuarios);
-                return Created("created", new NoData
+                bool result = _enviarCorreo.EnviarCorreoNotificacion(usuarios.Email.ToString(), Mesagge);
+                string token = _token.crearToken(usuarios.UserName.ToString());
+
+                return Created("created", new
                 {
                     status = 201,
-                    mensaje = "Usuario agregado con éxito"
+                    mensaje = "Usuario agregado con éxito",
+                    token
                 });
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
-                return BadRequest("No se pudo crear el usuario");
+                return BadRequest("No se pudo crear el usuario" + ex);
                 throw;
             }
         }
@@ -119,22 +151,7 @@ namespace Notas_Back.Controllers
                     bool statusPass = _manejoContraseñas.VerifyContraseña(Password, respuesta.Password.ToString());
                     if (statusPass)
                     {
-                        var claims = new[]
-                     {
-                new Claim(JwtRegisteredClaimNames.Sub, NameUser),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            };
-
-                        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-                        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-                        var token = new JwtSecurityToken(
-                            issuer: _configuration["Jwt:Issuer"],
-                            audience: _configuration["Jwt:Issuer"],
-                            claims: claims,
-                            expires: DateTime.UtcNow.AddMinutes(30),
-                            signingCredentials: creds);
-
+                        string token = _token.crearToken(NameUser);
                         return Ok(new
                         {
                             Id = respuesta.Id,
@@ -143,11 +160,8 @@ namespace Notas_Back.Controllers
                             Apellido = respuesta.LastName,
                             Email = respuesta.Email,
                             Mensaje = "Bienvenido A Blog Notas",
-                            Token = new JwtSecurityTokenHandler().WriteToken(token)
+                            token
                         });
-
-
-                        // return Ok(respuesta);
                     }
                     else
                     {

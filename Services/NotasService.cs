@@ -14,11 +14,11 @@ namespace Notas_Back.Services
 {
     public class NotasService : ICrud<Notas>
     {
-        internal Context _context = new Context();
+        // public Context _context;
         public IMongoCollection<Notas> collection;
-        public NotasService()
+        public NotasService(Context context)
         {
-            collection = _context.db.GetCollection<Notas>("Notas");
+            collection = context.GetCollection<Notas>("Notas");
         }
         public async Task Delete(string Id)
         {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RAeONjPCintriGsS9+WomyoBO0GDx6JAO/8C4sEALeQzV6N8b29CQU5vEmLUD9HfsgLHnVx4gwuUC5xiM4K6DA==",
+  "dgSpecHash": "g4mI9ceoIcVadAjlJoTBPgli0lmzIzTbS//R1ZDUV8uY5D3xLyIg/46bcDp8LbNsCHZowSrCpXFnK6dMNU7/6A==",
   "success": true,
-  "projectFilePath": "/home/gustavo/Desarrollo/C#/BlogNotas/Notas-Back.csproj",
+  "projectFilePath": "/home/gustavo/Dropbox/Desarrollo/C#/BlogNotas/Notas-Back.csproj",
   "expectedPackageFiles": [
     "/home/gustavo/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/home/gustavo/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",

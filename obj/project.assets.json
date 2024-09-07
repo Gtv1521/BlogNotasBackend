@@ -1617,11 +1617,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/gustavo/Desarrollo/C#/BlogNotas/Notas-Back.csproj",
+      "projectUniqueName": "/home/gustavo/Dropbox/Desarrollo/C#/BlogNotas/Notas-Back.csproj",
       "projectName": "Notas-Back",
-      "projectPath": "/home/gustavo/Desarrollo/C#/BlogNotas/Notas-Back.csproj",
+      "projectPath": "/home/gustavo/Dropbox/Desarrollo/C#/BlogNotas/Notas-Back.csproj",
       "packagesPath": "/home/gustavo/.nuget/packages/",
-      "outputPath": "/home/gustavo/Desarrollo/C#/BlogNotas/obj/",
+      "outputPath": "/home/gustavo/Dropbox/Desarrollo/C#/BlogNotas/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/gustavo/.nuget/NuGet/NuGet.Config"

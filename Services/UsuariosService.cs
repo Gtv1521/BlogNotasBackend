@@ -16,13 +16,14 @@ namespace Notas_Back.Services
 {
     public class UsuariosService : ICrud<Usuarios>
     {
-        internal Context _context = new Context();
+        // private Context _context;
         public IMongoCollection<Usuarios> collection;
-        private readonly ManejoContraseñas _manejoContraseñas = new ManejoContraseñas();
+        private readonly ManejoContraseñas _manejoContraseñas;
 
-        public UsuariosService() // Constructor de la clase
+        public UsuariosService(Context context, ManejoContraseñas manejoContraseñas) // Constructor de la clase
         {
-            collection = _context.db.GetCollection<Usuarios>("Usuarios");
+            _manejoContraseñas = manejoContraseñas;
+            collection = context.GetCollection<Usuarios>("Usuarios");
         }
 
         // Ingresa un usuario nuevo y hace hass de la contraseña 
@@ -94,6 +95,14 @@ namespace Notas_Back.Services
         {
             return await collection.FindAsync(new BsonDocument { { "Email", email } }).Result.FirstOrDefaultAsync();
         }
+
+        public async Task<Usuarios> verUserName(string user)
+        {
+            var filter = Builders<Usuarios>.Filter.Eq(u => u.UserName, user);
+            return await collection.FindAsync(filter).Result.FirstOrDefaultAsync();
+        }
+
+
 
         public async Task<Usuarios> Init(string user, string pass)
         {

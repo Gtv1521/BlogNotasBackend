@@ -89,7 +89,7 @@
         </member>
         <member name="M:Notas_Back.Controllers.User.Users">
             <summary>
-             Muestra datos de  usuario registrado
+             Muestra todos los  datos de los usuarios registrados
             </summary>
             <returns></returns>
         </member>
