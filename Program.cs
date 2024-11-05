@@ -139,16 +139,6 @@ if (builder.Environment.IsDevelopment())
     });
 
 }
-else
-{
-    // Configuración específica para producción
-    app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-        options.RoutePrefix = "docs";  // En producción, se muestra en "/docs"
-    });
-}
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
