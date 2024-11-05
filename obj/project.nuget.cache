@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g4mI9ceoIcVadAjlJoTBPgli0lmzIzTbS//R1ZDUV8uY5D3xLyIg/46bcDp8LbNsCHZowSrCpXFnK6dMNU7/6A==",
+  "dgSpecHash": "ob0gnTaBe3qOZMQEi88Bwv9Nv+RHKMBFfrZZyftdI0YGv250QddM61zWpxLPfZrnGOlGs1Sjg245Lx52nFYV7g==",
   "success": true,
-  "projectFilePath": "/home/gustavo/Dropbox/Desarrollo/C#/BlogNotas/Notas-Back.csproj",
+  "projectFilePath": "/home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend/Notas-Back.csproj",
   "expectedPackageFiles": [
     "/home/gustavo/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/home/gustavo/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
@@ -39,7 +39,7 @@
     "/home/gustavo/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
     "/home/gustavo/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
     "/home/gustavo/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512",
-    "/home/gustavo/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.7/microsoft.aspnetcore.app.ref.8.0.7.nupkg.sha512"
+    "/home/gustavo/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512"
   ],
   "logs": []
 }

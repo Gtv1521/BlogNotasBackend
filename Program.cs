@@ -29,10 +29,6 @@ builder.Services.Configure<MongoConections>(
     builder.Configuration.GetSection("MOngoDb")
 );
 
-builder.Services.Configure<MongoConections>(
-    builder.Configuration.GetSection("MongoDb")
-);
-
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -64,7 +60,7 @@ builder.Services.AddScoped<NotasService>();
 builder.Services.AddScoped<EnviarCorreo>();
 builder.Services.AddScoped<generaToken>();
 builder.Services.AddScoped<ManejoContraseñas>();
-builder.Services.AddSingleton<Context>(); 
+builder.Services.AddSingleton<Context>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -143,6 +139,15 @@ if (builder.Environment.IsDevelopment())
     });
 
 }
+else
+{
+    // Configuración específica para producción
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        options.RoutePrefix = "docs";  // En producción, se muestra en "/docs"
+    });
+}
 
 
 // Configure the HTTP request pipeline.
@@ -159,7 +164,7 @@ app.UseSwagger(options =>
 
 app.UseHttpsRedirection();
 
-app.UseCors();
+app.UseCors("PermitirTodo");
 
 app.UseAuthentication();
 

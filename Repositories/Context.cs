@@ -14,10 +14,20 @@ namespace Notas_Back.Repositories
         private readonly IMongoDatabase _db;
         public Context(IOptions<MongoConections> settings)
         {
-            var client = new MongoClient(settings.Value.ConnectionStrings);
-            _db = client.GetDatabase(settings.Value.DatabaseName);
+            try
+            {
+                var client = new MongoClient(settings.Value.ConnectionStrings);
+                _db = client.GetDatabase(settings.Value.DatabaseName);
+                var tables =  client.ListDatabaseNames().ToList();
+                
+                System.Console.WriteLine("connect successfully");
+            }
+            catch (System.Exception ex)
+            {
+                System.Console.WriteLine($"Error al conctar a Mongo: {ex.Message}");
+                throw new ApplicationException("No se pudo conectar a la base de datos"); ;
+            }
         }
-
         public IMongoCollection<T> GetCollection<T>(string name)
         {
             return _db.GetCollection<T>(name);
