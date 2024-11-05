@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Notas-Back")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+619c3852978c3a76ab2616d3b2ad1dd555a232ba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9b1df5aee81e98b3ed288933177076c9d01fee0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Notas-Back")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Notas-Back")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
