@@ -164,7 +164,7 @@ app.UseSwagger(options =>
 
 app.UseHttpsRedirection();
 
-app.UseCors("PermitirTodo");
+app.UseCors();
 
 app.UseAuthentication();
 
