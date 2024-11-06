@@ -9,7 +9,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Notas_Back.Models
 {
-    public class Usuarios
+    public class UsuariosM
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

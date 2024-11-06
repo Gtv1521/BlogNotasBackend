@@ -63,7 +63,7 @@ namespace Notas_Back.Controllers
         {
             if (email != null)
             {
-                Usuarios result = await _service.verEmail(email);
+                UsuariosM result = await _service.verEmail(email);
                 if (result != null)
                 {
                     return Ok(result);
@@ -97,7 +97,7 @@ namespace Notas_Back.Controllers
         [HttpPut]
         [Authorize]
         [Route("updateUser")]
-        public async Task<IActionResult> putUser([FromBody] Usuarios user, string id)
+        public async Task<IActionResult> putUser([FromBody] UsuariosM user, string id)
         {
             try
             {

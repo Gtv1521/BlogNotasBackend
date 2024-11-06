@@ -14,19 +14,19 @@ using Notas_Back.Repositories;
 
 namespace Notas_Back.Services
 {
-    public class UsuariosService : ICrud<Usuarios>
+    public class UsuariosService : ICrud<UsuariosM>
     {
-        public IMongoCollection<Usuarios> collection;
+        public IMongoCollection<UsuariosM> collection;
         private readonly ManejoContraseñas _manejoContraseñas;
 
         public UsuariosService(Context context, ManejoContraseñas manejoContraseñas) // Constructor de la clase
         {
             _manejoContraseñas = manejoContraseñas;
-            collection = context.GetCollection<Usuarios>("Usuarios");
+            collection = context.GetCollection<UsuariosM>("Usuarios");
         }
 
         // Ingresa un usuario nuevo y hace hass de la contraseña 
-        public async Task Post(Usuarios modelo)
+        public async Task Post(UsuariosM modelo)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace Notas_Back.Services
                 {
 
                     string contraseña = _manejoContraseñas.HashearContraseña(modelo.Password.ToString());
-                    Usuarios User = new Usuarios
+                    UsuariosM User = new UsuariosM
                     {
                         Email = modelo.Email,
                         FirsName = modelo.FirsName,
@@ -54,28 +54,28 @@ namespace Notas_Back.Services
         }
 
         // Muestra un usuario por el id
-        public async Task<Usuarios> Get(string IdUser)
+        public async Task<UsuariosM> Get(string IdUser)
         {
             return await collection.FindAsync(new BsonDocument { { "_id", new ObjectId(IdUser) } }).Result.FirstOrDefaultAsync();
         }
 
         // Muestra todos los usuarios
-        public async Task<List<Usuarios>> GetAllUsers()
+        public async Task<List<UsuariosM>> GetAllUsers()
         {
             return await collection.FindAsync(new BsonDocument()).Result.ToListAsync();
         }
 
         // Actualiza datos de un usuario 
-        public async Task Update(Usuarios modelo)
+        public async Task Update(UsuariosM modelo)
         {
-            var filter = Builders<Usuarios>.Filter.Eq(s => s.Id, modelo.Id);
+            var filter = Builders<UsuariosM>.Filter.Eq(s => s.Id, modelo.Id);
             await collection.ReplaceOneAsync(filter, modelo);
         }
 
         // Elimina un usuario 
         public async Task Delete(string id)
         {
-            var filter = Builders<Usuarios>.Filter.Eq(s => s.Id, id);
+            var filter = Builders<UsuariosM>.Filter.Eq(s => s.Id, id);
             await collection.DeleteOneAsync(filter);
         }
 
@@ -84,23 +84,23 @@ namespace Notas_Back.Services
         {
             string contraseña = _manejoContraseñas.HashearContraseña(pass);
 
-            var filter = Builders<Usuarios>.Filter.Eq(u => u.Id, id);
-            var password = Builders<Usuarios>.Update.Set(u => u.Password, contraseña);
+            var filter = Builders<UsuariosM>.Filter.Eq(u => u.Id, id);
+            var password = Builders<UsuariosM>.Update.Set(u => u.Password, contraseña);
             await collection.UpdateOneAsync(filter, password);
         }
 
         // verifica si el email existe
-        public async Task<Usuarios> verEmail(string email)
+        public async Task<UsuariosM> verEmail(string email)
         {
             return await collection.FindAsync(new BsonDocument { { "Email", email } }).Result.FirstOrDefaultAsync();
         }
 
         // muestra un usuario por el id
-        public async Task<Usuarios> verUserName(string user)
+        public async Task<UsuariosM> verUserName(string user)
         {
             try
             {
-                var filter = Builders<Usuarios>.Filter.Eq(u => u.UserName, user);
+                var filter = Builders<UsuariosM>.Filter.Eq(u => u.UserName, user);
                 return await collection.FindAsync(filter).Result.FirstOrDefaultAsync();
             }
             catch (System.Exception ex)
@@ -112,11 +112,11 @@ namespace Notas_Back.Services
 
 
         // hace login en esta funcion
-        public async Task<Usuarios> Init(string user, string pass)
+        public async Task<UsuariosM> Init(string user, string pass)
         {
             try
             {
-                var filter = Builders<Usuarios>.Filter.Eq(u => u.UserName, user);
+                var filter = Builders<UsuariosM>.Filter.Eq(u => u.UserName, user);
                 return await collection.FindAsync(filter).Result.FirstOrDefaultAsync();
 
             }

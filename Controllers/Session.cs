@@ -63,7 +63,7 @@ namespace Notas_Back.Controllers
         [Route("SigIn")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> NewUser([FromBody] Usuarios usuarios)
+        public async Task<IActionResult> NewUser([FromBody] UsuariosM usuarios)
         {
             try
             {
@@ -89,8 +89,8 @@ namespace Notas_Back.Controllers
                     ModelState.AddModelError("Email", "The Email shouldn´t be Empty");
                 }
 
-                Usuarios Mail = await _UsuariosService.verEmail(usuarios.Email.ToString());
-                Usuarios User = await _UsuariosService.verUserName(usuarios.UserName.ToString());
+                UsuariosM Mail = await _UsuariosService.verEmail(usuarios.Email.ToString());
+                UsuariosM User = await _UsuariosService.verUserName(usuarios.UserName.ToString());
                 if (Mail != null)
                 {
                     return StatusCode(409, new NoData
@@ -145,7 +145,7 @@ namespace Notas_Back.Controllers
         {
             if (NameUser != null && Password != null)
             {
-                Usuarios respuesta = await _UsuariosService.Init(NameUser, Password);
+                UsuariosM respuesta = await _UsuariosService.Init(NameUser, Password);
                 if (respuesta?.Password != null)
                 {
                     bool statusPass = _manejoContraseñas.VerifyContraseña(Password, respuesta.Password.ToString());

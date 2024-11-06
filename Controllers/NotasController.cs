@@ -83,7 +83,7 @@ namespace Notas_Back.Controllers
         {
             if (notas.IdUser != null)
             {
-                Usuarios user = await _user.Get(notas.IdUser);
+                UsuariosM user = await _user.Get(notas.IdUser);
                 if (user != null)
                 {
                     await _service.Post(notas);

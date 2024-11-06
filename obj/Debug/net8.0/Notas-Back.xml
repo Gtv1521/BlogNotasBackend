@@ -39,7 +39,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Notas_Back.Controllers.Session.NewUser(Notas_Back.Models.Usuarios)">
+        <member name="M:Notas_Back.Controllers.Session.NewUser(Notas_Back.Models.UsuariosM)">
              <summary>
              Crea un nuevo usuario
              </summary>
@@ -107,7 +107,7 @@
             <param name="email"></param>
             <returns></returns>
         </member>
-        <member name="M:Notas_Back.Controllers.User.putUser(Notas_Back.Models.Usuarios,System.String)">
+        <member name="M:Notas_Back.Controllers.User.putUser(Notas_Back.Models.UsuariosM,System.String)">
             <summary>
             Actualiza datos de un usuario 
             </summary>
