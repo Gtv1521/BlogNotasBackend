@@ -129,15 +129,17 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-
-app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
+if (app.Environment.IsDevelopment())
 {
-    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-    options.RoutePrefix = string.Empty;
-    options.DocumentTitle = "My API Documentation";
-    options.InjectStylesheet("/swagger/custom.css"); // Agregar tu hoja de estilos personalizada
-    options.InjectJavascript("/swagger/custom.js");
-});
+    app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        options.RoutePrefix = string.Empty;
+        options.DocumentTitle = "My API Documentation";
+        options.InjectStylesheet("/swagger/custom.css"); // Agregar tu hoja de estilos personalizada
+        options.InjectJavascript("/swagger/custom.js");
+    });
+}
 
 
 // Configure the HTTP request pipeline.
@@ -152,7 +154,7 @@ app.UseSwagger(options =>
 
 app.UseHttpsRedirection();
 
-app.UseCors("PermitirTodo");
+app.UseCors();
 
 app.UseAuthentication();
 
