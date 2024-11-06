@@ -85,7 +85,7 @@ namespace Notas_Back.Services
                                         .Set("FechaUpdate", modelo.FechaUpdate);
                 await collection.UpdateOneAsync(filter, update);
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
                 throw new ApplicationException($"no se pueden cargar los datos _{ex.Message}");
             }
