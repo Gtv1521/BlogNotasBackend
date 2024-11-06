@@ -24,8 +24,7 @@ namespace Notas_Back.Repositories
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine($"Error al conctar a Mongo: {ex.Message}");
-                throw new ApplicationException("No se pudo conectar a la base de datos"); ;
+                throw new ApplicationException($"No se pudo conectar a la base de datos {ex.Message}"); ;
             }
         }
         public IMongoCollection<T> GetCollection<T>(string name)

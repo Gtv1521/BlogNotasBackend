@@ -59,7 +59,7 @@ builder.Services.AddScoped<NotasService>();
 builder.Services.AddScoped<EnviarCorreo>();
 builder.Services.AddScoped<generaToken>();
 builder.Services.AddScoped<ManejoContraseñas>();
-builder.Services.AddSingleton<Context>();
+builder.Services.AddScoped<Context>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

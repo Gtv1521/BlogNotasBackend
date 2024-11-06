@@ -54,7 +54,7 @@ namespace Notas_Back.Services
             }
             catch (System.Exception ex)
             {
-                throw new ApplicationException($"no se pueden cargar los datos _{ex.Message}");
+                throw new ApplicationException($"no se pueden cargar los datos {ex.Message}");
             }
         }
 
