@@ -14,7 +14,6 @@ namespace Notas_Back.Services
 {
     public class NotasService : ICrud<Notas>
     {
-        // public Context _context;
         public IMongoCollection<Notas> collection;
         public NotasService(Context context)
         {
@@ -29,8 +28,7 @@ namespace Notas_Back.Services
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine(ex);
-                throw;
+                throw new ApplicationException($"no se Borrar el dato _{ex.Message}");
             }
         }
 
@@ -43,8 +41,7 @@ namespace Notas_Back.Services
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine(ex);
-                throw;
+                throw new ApplicationException($"no se pueden cargar los datos _{ex.Message}");
             }
         }
 
@@ -57,8 +54,7 @@ namespace Notas_Back.Services
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine(ex);
-                throw;
+                throw new ApplicationException($"no se pueden cargar los datos _{ex.Message}");
             }
         }
 
@@ -74,27 +70,25 @@ namespace Notas_Back.Services
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine(ex);
-                throw;
+                throw new ApplicationException($"no se pueden cargar los datos _{ex.Message}");
             }
         }
 
         public async Task Update(Notas modelo)
         {
-         try
-         {
-            var filter = Builders<Notas>.Filter.Eq(s => s.IdNota, modelo.IdNota);
-            var update = Builders<Notas>.Update
-                                    .Set("Titulo", modelo.Titulo)
-                                    .Set("Contenido", modelo.Contenido)
-                                    .Set("FechaUpdate", modelo.FechaUpdate);
-            await collection.UpdateOneAsync(filter, update);
-         }
-         catch (System.Exception)
-         {
-            
-            throw;
-         }
+            try
+            {
+                var filter = Builders<Notas>.Filter.Eq(s => s.IdNota, modelo.IdNota);
+                var update = Builders<Notas>.Update
+                                        .Set("Titulo", modelo.Titulo)
+                                        .Set("Contenido", modelo.Contenido)
+                                        .Set("FechaUpdate", modelo.FechaUpdate);
+                await collection.UpdateOneAsync(filter, update);
+            }
+            catch (System.Exception)
+            {
+                throw new ApplicationException($"no se pueden cargar los datos _{ex.Message}");
+            }
         }
     }
 }

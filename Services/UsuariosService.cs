@@ -16,7 +16,6 @@ namespace Notas_Back.Services
 {
     public class UsuariosService : ICrud<Usuarios>
     {
-        // private Context _context;
         public IMongoCollection<Usuarios> collection;
         private readonly ManejoContraseñas _manejoContraseñas;
 
@@ -50,8 +49,7 @@ namespace Notas_Back.Services
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine(ex);
-                throw;
+                throw new ApplicationException($"no se pudo ingresar el usuario _{ex.Message}");
             }
         }
 
@@ -91,19 +89,29 @@ namespace Notas_Back.Services
             await collection.UpdateOneAsync(filter, password);
         }
 
+        // verifica si el email existe
         public async Task<Usuarios> verEmail(string email)
         {
             return await collection.FindAsync(new BsonDocument { { "Email", email } }).Result.FirstOrDefaultAsync();
         }
 
+        // muestra un usuario por el id
         public async Task<Usuarios> verUserName(string user)
         {
-            var filter = Builders<Usuarios>.Filter.Eq(u => u.UserName, user);
-            return await collection.FindAsync(filter).Result.FirstOrDefaultAsync();
+            try
+            {
+                var filter = Builders<Usuarios>.Filter.Eq(u => u.UserName, user);
+                return await collection.FindAsync(filter).Result.FirstOrDefaultAsync();
+            }
+            catch (System.Exception ex)
+            {
+                throw new ApplicationException($"no se pueden cargar usuario _{ex.Message}");
+
+            }
         }
 
 
-
+        // hace login en esta funcion
         public async Task<Usuarios> Init(string user, string pass)
         {
             try
@@ -114,8 +122,7 @@ namespace Notas_Back.Services
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine(ex);
-                throw;
+                throw new ApplicationException($"no se pueden cargar los datos _{ex.Message}");
             }
         }
     }
