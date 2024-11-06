@@ -136,11 +136,8 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
         options.RoutePrefix = string.Empty;
         options.DocumentTitle = "My API Documentation";
-        options.InjectStylesheet("/swagger/custom.css"); // Agregar tu hoja de estilos personalizada
-        options.InjectJavascript("/swagger/custom.js");
     });
 }
-
 
 // Configure the HTTP request pipeline.
 app.UseSwagger();
