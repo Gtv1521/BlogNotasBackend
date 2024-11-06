@@ -152,7 +152,7 @@ app.UseSwagger(options =>
 
 app.UseHttpsRedirection();
 
-app.UseCors();
+app.UseCors("PermitirTodo");
 
 app.UseAuthentication();
 
