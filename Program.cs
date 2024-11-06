@@ -129,7 +129,7 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+if (builder.Environment.IsDevelopment())
 {
     app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
     {
