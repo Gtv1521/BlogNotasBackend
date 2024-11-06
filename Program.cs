@@ -26,9 +26,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.Configure<MongoConections>(
-    builder.Configuration.GetSection("MOngoDb")
-);
+builder.Services.Configure<MongoConections>(builder.Configuration.GetSection("MOngoDb"));
 
 builder.Services.AddSwaggerGen(options =>
 {
