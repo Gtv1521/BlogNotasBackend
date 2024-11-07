@@ -43,7 +43,6 @@
              <summary>
              Crea un nuevo usuario
              </summary>
-             <param name="usuarios"></param>
              <returns>true</returns>
              <remarks>
              Sample request:
@@ -57,21 +56,26 @@
                      "password": "123",
                      "rol": "Administrador"
                  }
-            
              </remarks>
-             <response code="201">{
-                       "status": 201,
-                        "mensaje": "Usuario agregado con éxito"
-             }</response>
-             <response code="400">If the item is null</response>
+             <response code="201">Usuario agregado con éxito</response>
         </member>
         <member name="M:Notas_Back.Controllers.Session.Inicio(System.String,System.String)">
-            <summary>
-            Devuelve los datos de inicio de sesión
-            </summary>
-            <param name="NameUser"></param>
-            <param name="Password"></param>
-            <returns></returns>
+             <summary>
+             Devuelve los datos de inicio de sesión
+             </summary>
+             <param name="NameUser"></param>
+             <param name="Password"></param>
+             <returns>true</returns>
+             <remarks>
+             Sample request:
+            
+                 Get /LogIn
+                 {
+                     "NameUser": "Gustavober98",
+                     "Password": "Ilovereggae.17"
+                 }
+            
+             </remarks> 
         </member>
         <member name="M:Notas_Back.Controllers.Session.putPass(System.String,System.String,System.String)">
             <summary>

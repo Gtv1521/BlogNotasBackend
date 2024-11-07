@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUSARIO\\OneDrive\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj": {}
+    "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUSARIO\\OneDrive\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj": {
+    "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUSARIO\\OneDrive\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj",
+        "projectUniqueName": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj",
         "projectName": "Notas-Back",
-        "projectPath": "C:\\Users\\USUSARIO\\OneDrive\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj",
+        "projectPath": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj",
         "packagesPath": "C:\\Users\\USUSARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUSARIO\\OneDrive\\Documents\\Desarrollo\\BlogNotasBackend\\obj\\",
+        "outputPath": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,7 +68,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.9.0, )"
             },
             "dotenv.net": {
               "target": "Package",

@@ -15,6 +15,7 @@ using Notas_Back.Dto;
 using Notas_Back.Models;
 using Notas_Back.Repositories;
 using Notas_Back.Services;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Notas_Back.Controllers
 {
@@ -38,7 +39,6 @@ namespace Notas_Back.Controllers
         /// <summary>
         /// Crea un nuevo usuario
         /// </summary>
-        /// <param name="usuarios"></param>
         /// <returns>true</returns>
         /// <remarks>
         /// Sample request:
@@ -52,13 +52,8 @@ namespace Notas_Back.Controllers
         ///         "password": "123",
         ///         "rol": "Administrador"
         ///     }
-        ///
         /// </remarks>
-        /// <response code="201">{
-        ///           "status": 201,
-        ///            "mensaje": "Usuario agregado con éxito"
-        /// }</response>
-        /// <response code="400">If the item is null</response>
+        /// <response code="201">Usuario agregado con éxito</response>
         [HttpPost]
         [Route("SigIn")]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -138,7 +133,17 @@ namespace Notas_Back.Controllers
         /// </summary>
         /// <param name="NameUser"></param>
         /// <param name="Password"></param>
-        /// <returns></returns>
+        /// <returns>true</returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     Get /LogIn
+        ///     {
+        ///         "NameUser": "Gustavober98",
+        ///         "Password": "Ilovereggae.17"
+        ///     }
+        ///
+        /// </remarks> 
         [HttpGet]
         [Route("LogIn")]
         public async Task<IActionResult> Inicio(string NameUser, string Password)
