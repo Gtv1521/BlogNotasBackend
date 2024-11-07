@@ -18,9 +18,12 @@ namespace Notas_Back.Repositories
             {
                 var client = new MongoClient(settings.Value.ConnectionStrings);
                 _db = client.GetDatabase(settings.Value.DatabaseName);
-                var tables =  client.ListDatabaseNames().ToList();
                 
                 System.Console.WriteLine("connect successfully");
+            }
+            catch (MongoException ex)
+            {
+                Console.WriteLine($"Error al conectar a MongoDB: {ex.Message}");
             }
             catch (System.Exception ex)
             {
