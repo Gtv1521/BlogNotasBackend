@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj": {}
+    "/home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend/Notas-Back.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj": {
+    "/home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend/Notas-Back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj",
+        "projectUniqueName": "/home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend/Notas-Back.csproj",
         "projectName": "Notas-Back",
-        "projectPath": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\Notas-Back.csproj",
-        "packagesPath": "C:\\Users\\USUSARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUSARIO\\Documents\\Desarrollo\\BlogNotasBackend\\obj\\",
+        "projectPath": "/home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend/Notas-Back.csproj",
+        "packagesPath": "/home/gustavo/.nuget/packages/",
+        "outputPath": "/home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\USUSARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gustavo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -66,6 +54,14 @@
               "target": "Package",
               "version": "[2.28.0, )"
             },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.9.0, )"
@@ -86,6 +82,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.10, 8.0.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -94,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

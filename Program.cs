@@ -10,8 +10,16 @@ using System.Buffers;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
+using Serilog;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Monitoreo de la aplicacion  using Serilog; using Microsoft.Extensions.Logging;
+Log.Logger = new LoggerConfiguration().WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day).CreateLogger();
+// builder.Logging.ClearProviders();
+builder.Logging.AddSerilog();
+
 
 // Add services to the container.
 // Agrega policía cors 

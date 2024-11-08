@@ -13,8 +13,10 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.IdentityModel.Tokens;
 using Notas_Back.Dto;
 using Notas_Back.Models;
+using NotasBack.Dto.Responses;
 using Notas_Back.Repositories;
 using Notas_Back.Services;
+using NotasBack.Dto;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Notas_Back.Controllers
@@ -27,13 +29,15 @@ namespace Notas_Back.Controllers
         private readonly generaToken _token;
         private readonly ManejoContraseñas _manejoContraseñas;
         private readonly EnviarCorreo _enviarCorreo;
+        private readonly ILogger<Session> _logger;
 
-        public Session(UsuariosService usuariosService, generaToken token, ManejoContraseñas manejoContraseñas, EnviarCorreo correo)
+        public Session(UsuariosService usuariosService, generaToken token, ManejoContraseñas manejoContraseñas, EnviarCorreo correo, ILogger<Session> logger)
         {
             _UsuariosService = usuariosService;
             _manejoContraseñas = manejoContraseñas;
             _enviarCorreo = correo;
             _token = token;
+            _logger = logger;
         }
 
         /// <summary>
@@ -56,10 +60,12 @@ namespace Notas_Back.Controllers
         /// <response code="201">Usuario agregado con éxito</response>
         [HttpPost]
         [Route("SigIn")]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CreatedUserDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
         public async Task<IActionResult> NewUser([FromBody] UsuariosM usuarios)
         {
+            var user = usuarios.FirsName + " " + usuarios.LastName;
+            _logger.LogInformation("Ejecuto método POST SignIn - {Time} - {@user}", DateTime.UtcNow, user);
             try
             {
                 if (usuarios == null) return BadRequest();
@@ -88,6 +94,8 @@ namespace Notas_Back.Controllers
                 UsuariosM User = await _UsuariosService.verUserName(usuarios.UserName.ToString());
                 if (Mail != null)
                 {
+                    var resemail = usuarios.Email;
+                    _logger.LogInformation("Email {@resemail} ya existe - {Time}", DateTime.UtcNow, resemail);
                     return StatusCode(409, new NoData
                     {
                         status = 409,
@@ -96,6 +104,7 @@ namespace Notas_Back.Controllers
                 }
                 if (User != null)
                 {
+                    _logger.LogInformation("Usuario {@user} ya existe - {Time}", DateTime.UtcNow, user);
                     return StatusCode(409, new NoData
                     {
                         status = 409,
@@ -131,21 +140,24 @@ namespace Notas_Back.Controllers
         /// <summary>
         /// Devuelve los datos de inicio de sesión
         /// </summary>
-        /// <param name="NameUser"></param>
-        /// <param name="Password"></param>
         /// <returns>true</returns>
         /// <remarks>
         /// Sample request:
-        ///
-        ///     Get /LogIn
+        /// 
+        ///     GET /LogIn
         ///     {
         ///         "NameUser": "Gustavober98",
         ///         "Password": "Ilovereggae.17"
         ///     }
-        ///
         /// </remarks> 
+        /// <response code="200">Inicio session con exito</response>
+        /// <response code="400">Contraseña incorrecta </response>
+        /// <response code="404">No datos</response>
         [HttpGet]
         [Route("LogIn")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ResponseLoginDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> Inicio(string NameUser, string Password)
         {
             if (NameUser != null && Password != null)
@@ -157,7 +169,7 @@ namespace Notas_Back.Controllers
                     if (statusPass)
                     {
                         string token = _token.crearToken(NameUser);
-                        return Ok(new
+                        return Ok(new ResponseLoginDto
                         {
                             Id = respuesta.Id,
                             UserName = respuesta.UserName,
@@ -165,14 +177,14 @@ namespace Notas_Back.Controllers
                             Apellido = respuesta.LastName,
                             Email = respuesta.Email,
                             Mensaje = "Bienvenido A Blog Notas",
-                            token
+                            Token = token
                         });
                     }
                     else
                     {
-                        return Unauthorized(new NoData
+                        return BadRequest(new NoData
                         {
-                            status = 401,
+                            status = 400,
                             mensaje = "contraseña incorrecta"
                         });
                     }
@@ -201,17 +213,32 @@ namespace Notas_Back.Controllers
         /// <summary>
         /// Actualiza un usuario 
         /// </summary>
-        /// <param name="pass"></param>
-        /// <param name="pass2"></param>
-        /// <param name="id"></param>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///     PUT /LogIn
+        ///     {
+        ///         "Id": "66dd00816d2edc4b82609d8c",
+        ///         "Password": "Gustavo.123",
+        ///         "PasswordVerify": "Gustavo.123"
+        ///     }
+        /// </remarks>
+        /// <param name="Id"></param>
+        /// <param name="Password"></param>
+        /// <param name="PasswordVerify"></param>
         /// <returns></returns>
+        /// <response code="200">Inicio session con exito</response>
+        /// <response code="400">Contraseña incorrecta </response>
+        /// <response code="404">No datos</response>
         [HttpPut]
         [Route("UpdatePassword/{id}")]
-        public async Task<IActionResult> putPass(string pass, string pass2, string id)
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(NoData))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
+        public async Task<IActionResult> putPass(string Password, string PasswordVerify, string Id)
         {
-            if (pass == pass2)
+            if (Password == PasswordVerify)
             {
-                await _UsuariosService.cambiarPass(id, pass);
+                await _UsuariosService.cambiarPass(Id, Password);
                 return Created("created", new NoData
                 {
                     status = 201,
