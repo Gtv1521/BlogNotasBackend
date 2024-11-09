@@ -1,0 +1,1055 @@
+2024-11-08 20:00:13.535 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 20:00:13.630 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 20:00:13.633 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 20:00:13.633 -05:00 [INF] Hosting environment: Development
+2024-11-08 20:00:13.634 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 20:00:15.274 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger - null null
+2024-11-08 20:00:15.352 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger - 301 0 null 78.8467ms
+2024-11-08 20:00:15.407 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:00:15.481 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 74.051ms
+2024-11-08 20:00:15.605 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:00:15.607 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 2.1487ms
+2024-11-08 20:00:15.607 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:00:15.609 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.2637ms
+2024-11-08 20:00:15.738 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/favicon-16x16.png - null null
+2024-11-08 20:00:15.749 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-11-08 20:00:15.750 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/favicon-16x16.png - 200 665 image/png 11.5487ms
+2024-11-08 20:00:15.787 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:00:15.901 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.5036ms
+2024-11-08 20:00:32.522 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/User/VerUsuarios - null null
+2024-11-08 20:00:32.526 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 20:00:32.551 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.User.Users (Notas-Back)'
+2024-11-08 20:00:32.564 -05:00 [INF] Route matched with {action = "Users", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Users() on controller Notas_Back.Controllers.User (Notas-Back).
+2024-11-08 20:00:33.875 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Notas_Back.Models.UsuariosM, Notas-Back, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-08 20:00:33.886 -05:00 [INF] Executed action Notas_Back.Controllers.User.Users (Notas-Back) in 1319.1079ms
+2024-11-08 20:00:33.886 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.User.Users (Notas-Back)'
+2024-11-08 20:00:33.886 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/User/VerUsuarios - 200 null application/json; charset=utf-8 1364.3766ms
+2024-11-08 20:02:53.543 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:02:53.544 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.9292ms
+2024-11-08 20:02:53.570 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:02:53.572 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:02:53.573 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.6089ms
+2024-11-08 20:02:53.574 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 3.4726ms
+2024-11-08 20:02:53.658 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:02:53.665 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.1096ms
+2024-11-08 20:03:03.566 -05:00 [INF] Application is shutting down...
+2024-11-08 20:03:11.020 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 20:03:11.106 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 20:03:11.109 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 20:03:11.109 -05:00 [INF] Hosting environment: Development
+2024-11-08 20:03:11.109 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 20:03:11.431 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:03:11.512 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 82.5522ms
+2024-11-08 20:03:11.527 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:03:11.527 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:03:11.528 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.4351ms
+2024-11-08 20:03:11.529 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.8612ms
+2024-11-08 20:03:11.625 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:03:11.718 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.9728ms
+2024-11-08 20:04:02.966 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:04:02.968 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 2.3599ms
+2024-11-08 20:04:02.984 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:04:02.984 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:04:02.984 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.3703ms
+2024-11-08 20:04:02.984 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.6559ms
+2024-11-08 20:04:03.051 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:04:03.064 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.9796ms
+2024-11-08 20:04:11.017 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:04:11.018 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.0647ms
+2024-11-08 20:04:11.040 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:04:11.040 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:04:11.041 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.7023ms
+2024-11-08 20:04:11.041 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.082ms
+2024-11-08 20:04:11.115 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:04:11.121 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.3381ms
+2024-11-08 20:04:16.911 -05:00 [INF] Application is shutting down...
+2024-11-08 20:04:24.461 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 20:04:24.535 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 20:04:24.537 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 20:04:24.537 -05:00 [INF] Hosting environment: Development
+2024-11-08 20:04:24.537 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 20:04:24.841 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:04:24.937 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 96.7197ms
+2024-11-08 20:04:24.961 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:04:24.962 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:04:24.965 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 3.2991ms
+2024-11-08 20:04:24.965 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 4.6876ms
+2024-11-08 20:04:25.073 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:04:25.166 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.4266ms
+2024-11-08 20:05:03.221 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:05:03.224 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 3.5971ms
+2024-11-08 20:05:03.243 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:05:03.243 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:05:03.243 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.4856ms
+2024-11-08 20:05:03.244 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.8383ms
+2024-11-08 20:05:03.375 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:05:03.389 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.0319ms
+2024-11-08 20:05:42.124 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:05:42.125 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.2804ms
+2024-11-08 20:05:42.146 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:05:42.146 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:05:42.147 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.3652ms
+2024-11-08 20:05:42.147 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.7525ms
+2024-11-08 20:05:42.228 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:05:42.234 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.1698ms
+2024-11-08 20:06:54.720 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:06:54.721 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.0402ms
+2024-11-08 20:06:54.738 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:06:54.738 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:06:54.739 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.4549ms
+2024-11-08 20:06:54.739 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.741ms
+2024-11-08 20:06:54.807 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:06:54.816 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.8387ms
+2024-11-08 20:21:42.187 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:21:42.188 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.1293ms
+2024-11-08 20:21:42.216 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:21:42.217 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:21:42.217 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.7788ms
+2024-11-08 20:21:42.217 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.0397ms
+2024-11-08 20:21:42.297 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:21:42.305 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.6842ms
+2024-11-08 20:22:16.146 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:22:16.147 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.6151ms
+2024-11-08 20:22:16.163 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:22:16.163 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:22:16.164 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.2608ms
+2024-11-08 20:22:16.165 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.5662ms
+2024-11-08 20:22:16.256 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:22:16.268 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.5875ms
+2024-11-08 20:23:15.985 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 20:23:16.060 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 20:23:16.063 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 20:23:16.064 -05:00 [INF] Hosting environment: Development
+2024-11-08 20:23:16.064 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 20:23:16.091 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:23:16.153 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 63.952ms
+2024-11-08 20:23:16.166 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:23:16.166 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:23:16.167 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.4794ms
+2024-11-08 20:23:16.168 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 2.2174ms
+2024-11-08 20:23:16.232 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:23:16.306 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 73.8973ms
+2024-11-08 20:27:29.210 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - null null
+2024-11-08 20:27:29.214 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 20:27:29.234 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:27:29.259 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 20:27:30.725 -05:00 [INF] Executing OkObjectResult, writing value of type 'NotasBack.Dto.Responses.ResponseLoginDto'.
+2024-11-08 20:27:30.736 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 1474.2228ms
+2024-11-08 20:27:30.737 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:27:30.743 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The JSON property name for 'NotasBack.Dto.Responses.ResponseLoginDto.mensaje' collides with another property.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerPropertyNameConflict(Type type, String propertyName)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.JsonPropertyInfoList.AddPropertyWithConflictResolution(JsonPropertyInfo jsonPropertyInfo, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 20:27:30.746 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - 500 null text/plain; charset=utf-8 1536.4791ms
+2024-11-08 20:28:34.867 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:28:34.869 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 2.0311ms
+2024-11-08 20:28:34.889 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:28:34.889 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:28:34.889 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.6566ms
+2024-11-08 20:28:34.890 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.8658ms
+2024-11-08 20:28:34.999 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:28:35.006 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.0418ms
+2024-11-08 20:29:16.239 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=srting&Password=string - null null
+2024-11-08 20:29:16.241 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:29:16.241 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 20:29:16.402 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 20:29:16.412 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 170.8403ms
+2024-11-08 20:29:16.412 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:29:16.412 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=srting&Password=string - 401 null application/json; charset=utf-8 173.4579ms
+2024-11-08 20:29:31.281 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - null null
+2024-11-08 20:29:31.283 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:29:31.283 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 20:29:31.521 -05:00 [INF] Executing OkObjectResult, writing value of type 'NotasBack.Dto.Responses.ResponseLoginDto'.
+2024-11-08 20:29:31.521 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 237.8722ms
+2024-11-08 20:29:31.521 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:29:31.522 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The JSON property name for 'NotasBack.Dto.Responses.ResponseLoginDto.mensaje' collides with another property.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerPropertyNameConflict(Type type, String propertyName)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.JsonPropertyInfoList.AddPropertyWithConflictResolution(JsonPropertyInfo jsonPropertyInfo, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 20:29:31.523 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - 500 null text/plain; charset=utf-8 242.2917ms
+2024-11-08 20:30:02.629 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:30:02.630 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.8674ms
+2024-11-08 20:30:02.654 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:30:02.654 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:30:02.654 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.4145ms
+2024-11-08 20:30:02.655 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.7007ms
+2024-11-08 20:30:02.738 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:30:02.753 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.5903ms
+2024-11-08 20:30:06.575 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:30:06.576 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.8498ms
+2024-11-08 20:30:06.594 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:30:06.594 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:30:06.595 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.5664ms
+2024-11-08 20:30:06.596 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.3507ms
+2024-11-08 20:30:06.658 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:30:06.666 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.3867ms
+2024-11-08 20:30:20.338 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - null null
+2024-11-08 20:30:20.338 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:30:20.342 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 20:30:20.615 -05:00 [INF] Executing OkObjectResult, writing value of type 'NotasBack.Dto.Responses.ResponseLoginDto'.
+2024-11-08 20:30:20.615 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 272.7929ms
+2024-11-08 20:30:20.615 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:30:20.616 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The JSON property name for 'NotasBack.Dto.Responses.ResponseLoginDto.mensaje' collides with another property.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerPropertyNameConflict(Type type, String propertyName)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.JsonPropertyInfoList.AddPropertyWithConflictResolution(JsonPropertyInfo jsonPropertyInfo, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 20:30:20.617 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - 500 null text/plain; charset=utf-8 279.0816ms
+2024-11-08 20:30:39.217 -05:00 [INF] Application is shutting down...
+2024-11-08 20:30:47.892 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 20:30:47.982 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 20:30:47.984 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 20:30:47.984 -05:00 [INF] Hosting environment: Development
+2024-11-08 20:30:47.985 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 20:30:48.364 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:30:48.463 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 98.8085ms
+2024-11-08 20:30:48.480 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:30:48.480 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:30:48.483 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 2.717ms
+2024-11-08 20:30:48.484 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 3.9335ms
+2024-11-08 20:30:48.588 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:30:48.692 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.958ms
+2024-11-08 20:31:10.047 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - null null
+2024-11-08 20:31:10.052 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 20:31:10.073 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:31:10.090 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 20:31:11.538 -05:00 [INF] Executing OkObjectResult, writing value of type 'NotasBack.Dto.Responses.ResponseLoginDto'.
+2024-11-08 20:31:11.547 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 1455.2708ms
+2024-11-08 20:31:11.547 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:31:11.553 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The JSON property name for 'NotasBack.Dto.Responses.ResponseLoginDto.mensaje' collides with another property.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerPropertyNameConflict(Type type, String propertyName)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.JsonPropertyInfoList.AddPropertyWithConflictResolution(JsonPropertyInfo jsonPropertyInfo, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 20:31:11.555 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - 500 null text/plain; charset=utf-8 1508.4998ms
+2024-11-08 20:41:01.630 -05:00 [INF] Application is shutting down...
+2024-11-08 20:42:10.306 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 20:42:10.385 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 20:42:10.387 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 20:42:10.387 -05:00 [INF] Hosting environment: Development
+2024-11-08 20:42:10.387 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 20:42:10.768 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:42:10.856 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 90.3809ms
+2024-11-08 20:42:10.889 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:42:10.889 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:42:10.894 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 4.8464ms
+2024-11-08 20:42:10.894 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 6.1541ms
+2024-11-08 20:42:11.011 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:42:11.125 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.2254ms
+2024-11-08 20:42:31.792 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/User/VerUsuarios - null null
+2024-11-08 20:42:31.796 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 20:42:31.810 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.User.Users (Notas-Back)'
+2024-11-08 20:42:31.826 -05:00 [INF] Route matched with {action = "Users", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Users() on controller Notas_Back.Controllers.User (Notas-Back).
+2024-11-08 20:42:33.139 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Notas_Back.Models.UsuariosM, Notas-Back, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-08 20:42:33.151 -05:00 [INF] Executed action Notas_Back.Controllers.User.Users (Notas-Back) in 1322.8073ms
+2024-11-08 20:42:33.151 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.User.Users (Notas-Back)'
+2024-11-08 20:42:33.151 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/User/VerUsuarios - 200 null application/json; charset=utf-8 1358.9488ms
+2024-11-08 20:43:10.480 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:43:10.482 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.7473ms
+2024-11-08 20:43:10.501 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:43:10.501 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:43:10.502 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.4198ms
+2024-11-08 20:43:10.502 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.9815ms
+2024-11-08 20:43:10.587 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:43:10.597 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.3599ms
+2024-11-08 20:43:28.613 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - null null
+2024-11-08 20:43:28.614 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:43:28.620 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 20:43:28.908 -05:00 [INF] Executing OkObjectResult, writing value of type 'NotasBack.Dto.Responses.ResponseLoginDto'.
+2024-11-08 20:43:28.913 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 293.5588ms
+2024-11-08 20:43:28.914 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:43:28.919 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The JSON property name for 'NotasBack.Dto.Responses.ResponseLoginDto.mensaje' collides with another property.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerPropertyNameConflict(Type type, String propertyName)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo.JsonPropertyInfoList.AddPropertyWithConflictResolution(JsonPropertyInfo jsonPropertyInfo, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CacheEntry.GetResult()
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfo(Type type)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 20:43:28.922 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - 500 null text/plain; charset=utf-8 309.3832ms
+2024-11-08 20:46:51.727 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:46:51.728 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.0765ms
+2024-11-08 20:46:51.749 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:46:51.749 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:46:51.749 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.2098ms
+2024-11-08 20:46:51.749 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.593ms
+2024-11-08 20:46:51.822 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:46:51.827 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.97ms
+2024-11-08 20:47:29.282 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:47:29.283 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.6296ms
+2024-11-08 20:47:29.294 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:47:29.294 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:47:29.295 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.2506ms
+2024-11-08 20:47:29.295 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.4533ms
+2024-11-08 20:47:29.382 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:47:29.388 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.848ms
+2024-11-08 20:47:51.728 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - null null
+2024-11-08 20:47:51.730 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:47:51.732 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 20:47:52.042 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`7[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-08 20:47:52.045 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 313.1115ms
+2024-11-08 20:47:52.045 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:47:52.046 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - 200 null application/json; charset=utf-8 318.0932ms
+2024-11-08 20:48:33.436 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 20:48:33.522 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 20:48:33.525 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 20:48:33.525 -05:00 [INF] Hosting environment: Development
+2024-11-08 20:48:33.525 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 20:48:33.560 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:48:33.628 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 69.1463ms
+2024-11-08 20:48:33.645 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:48:33.648 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 2.9431ms
+2024-11-08 20:48:33.649 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:48:33.651 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 2.1366ms
+2024-11-08 20:48:33.724 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:48:33.797 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 73.2474ms
+2024-11-08 20:48:39.403 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:48:39.404 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.9302ms
+2024-11-08 20:48:39.425 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:48:39.425 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:48:39.425 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.4144ms
+2024-11-08 20:48:39.425 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.756ms
+2024-11-08 20:48:39.498 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:48:39.505 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.9667ms
+2024-11-08 20:48:41.876 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:48:41.879 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 2.7703ms
+2024-11-08 20:48:41.896 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:48:41.896 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:48:41.896 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.3149ms
+2024-11-08 20:48:41.897 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.7033ms
+2024-11-08 20:48:41.965 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:48:41.974 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.8127ms
+2024-11-08 20:49:00.519 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - null null
+2024-11-08 20:49:00.523 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 20:49:00.540 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:49:00.552 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 20:49:01.971 -05:00 [INF] Executing OkObjectResult, writing value of type 'NotasBack.Dto.Responses.ResponseLoginDto'.
+2024-11-08 20:49:01.978 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 1423.6542ms
+2024-11-08 20:49:01.979 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 20:49:01.979 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=Gus123&Password=Ilovereggae.17 - 200 null application/json; charset=utf-8 1459.8157ms
+2024-11-08 20:55:36.720 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:55:36.721 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.2098ms
+2024-11-08 20:55:36.756 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:55:36.757 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:55:36.757 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.2735ms
+2024-11-08 20:55:36.757 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.0997ms
+2024-11-08 20:55:36.829 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:55:36.837 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.7669ms
+2024-11-08 20:58:27.990 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:58:27.991 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.1599ms
+2024-11-08 20:58:28.008 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:58:28.009 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:58:28.009 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.6374ms
+2024-11-08 20:58:28.010 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.7399ms
+2024-11-08 20:58:28.085 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:58:28.092 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.195ms
+2024-11-08 20:59:15.391 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 20:59:15.392 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.7207ms
+2024-11-08 20:59:15.406 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 20:59:15.406 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 20:59:15.407 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.9958ms
+2024-11-08 20:59:15.407 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.1709ms
+2024-11-08 20:59:15.477 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 20:59:15.482 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.7431ms
+2024-11-08 21:00:48.842 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:00:48.843 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.5893ms
+2024-11-08 21:00:48.859 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:00:48.859 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:00:48.859 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.2314ms
+2024-11-08 21:00:48.859 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.5903ms
+2024-11-08 21:00:48.936 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:00:48.943 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.6928ms
+2024-11-08 21:02:24.851 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:02:24.852 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.6455ms
+2024-11-08 21:02:24.869 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:02:24.869 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:02:24.871 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.1081ms
+2024-11-08 21:02:24.871 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.9309ms
+2024-11-08 21:02:24.950 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:02:24.955 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.7041ms
+2024-11-08 21:03:28.490 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:03:28.490 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.4073ms
+2024-11-08 21:03:28.508 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:03:28.508 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:03:28.509 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.2402ms
+2024-11-08 21:03:28.509 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.4368ms
+2024-11-08 21:03:28.586 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:03:28.592 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.1477ms
+2024-11-08 21:09:29.233 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:09:29.234 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.0843ms
+2024-11-08 21:09:29.255 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:09:29.255 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:09:29.255 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.413ms
+2024-11-08 21:09:29.255 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.1476ms
+2024-11-08 21:09:29.339 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:09:29.358 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/User/updateUser" for actions - Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 21:09:29.359 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 20.5768ms
+2024-11-08 21:09:41.876 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:09:41.877 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.5302ms
+2024-11-08 21:09:41.891 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:09:41.891 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:09:41.892 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.3906ms
+2024-11-08 21:09:41.892 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.0694ms
+2024-11-08 21:09:41.961 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:09:41.967 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/User/updateUser" for actions - Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 21:09:41.968 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 6.8848ms
+2024-11-08 21:25:33.063 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:25:33.065 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.726ms
+2024-11-08 21:25:33.080 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:25:33.081 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:25:33.081 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.1531ms
+2024-11-08 21:25:33.081 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.6103ms
+2024-11-08 21:25:33.143 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:25:33.149 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/User/updateUser" for actions - Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 21:25:33.149 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 5.8914ms
+2024-11-08 21:26:26.359 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:26:26.359 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.4586ms
+2024-11-08 21:26:26.380 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:26:26.380 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:26:26.381 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.5378ms
+2024-11-08 21:26:26.381 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.349ms
+2024-11-08 21:26:26.449 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:26:26.454 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/User/updateUser" for actions - Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 21:26:26.455 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 6.5406ms
+2024-11-08 21:27:08.259 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:27:08.260 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.0163ms
+2024-11-08 21:27:08.275 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:27:08.275 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:27:08.275 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.3673ms
+2024-11-08 21:27:08.276 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.6836ms
+2024-11-08 21:27:08.344 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:27:08.351 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/User/updateUser" for actions - Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 21:27:08.351 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 7.1671ms
+2024-11-08 21:27:17.140 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:27:17.140 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.418ms
+2024-11-08 21:27:17.157 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:27:17.157 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:27:17.158 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.3059ms
+2024-11-08 21:27:17.158 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.3866ms
+2024-11-08 21:27:17.233 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:27:17.241 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/User/updateUser" for actions - Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 21:27:17.241 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 8.289ms
+2024-11-08 21:27:42.483 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:27:42.484 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.3854ms
+2024-11-08 21:27:42.502 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:27:42.502 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:27:42.502 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.1708ms
+2024-11-08 21:27:42.503 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.4225ms
+2024-11-08 21:27:42.581 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:27:42.583 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/User/updateUser" for actions - Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 21:27:42.584 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 2.6485ms
+2024-11-08 21:29:11.735 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:29:11.737 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 2.0965ms
+2024-11-08 21:29:11.760 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:29:11.760 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:29:11.760 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.188ms
+2024-11-08 21:29:11.760 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.4115ms
+2024-11-08 21:29:11.833 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:29:11.838 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/User/updateUser" for actions - Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back),Notas_Back.Controllers.User.putUser (Notas-Back). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-08 21:29:11.839 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 5.1429ms
+2024-11-08 21:29:14.819 -05:00 [INF] Application is shutting down...
+2024-11-08 21:29:22.273 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 21:29:22.361 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 21:29:22.364 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 21:29:22.364 -05:00 [INF] Hosting environment: Development
+2024-11-08 21:29:22.364 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 21:29:22.763 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:29:22.851 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 91.1876ms
+2024-11-08 21:29:22.873 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:29:22.873 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:29:22.878 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 4.9872ms
+2024-11-08 21:29:22.878 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 4.9871ms
+2024-11-08 21:29:22.972 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:29:23.100 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 127.7714ms
+2024-11-08 21:54:52.078 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 21:54:52.085 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 7.0924ms
+2024-11-08 21:54:52.111 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 21:54:52.112 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.6008ms
+2024-11-08 21:54:52.112 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 21:54:52.113 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.4356ms
+2024-11-08 21:54:52.184 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 21:54:52.192 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.4684ms
+2024-11-08 22:02:12.892 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/favicon.ico - null null
+2024-11-08 22:02:12.898 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 22:02:12.909 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/favicon.ico - 404 0 null 17.288ms
+2024-11-08 22:02:12.910 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5287/favicon.ico, Response status code: 404
+2024-11-08 22:02:13.518 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/ - null null
+2024-11-08 22:02:13.520 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/ - 301 0 null 1.3266ms
+2024-11-08 22:02:14.233 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:02:14.235 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.5895ms
+2024-11-08 22:02:14.429 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:02:14.430 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger-ui-standalone-preset.js - null null
+2024-11-08 22:02:14.430 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:02:14.431 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 1.525ms
+2024-11-08 22:02:14.431 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.7171ms
+2024-11-08 22:02:14.445 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-11-08 22:02:14.446 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger-ui-standalone-preset.js - 200 230293 text/javascript 17.1962ms
+2024-11-08 22:02:14.569 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.css - null null
+2024-11-08 22:02:14.569 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger-ui-bundle.js - null null
+2024-11-08 22:02:14.570 -05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-11-08 22:02:14.570 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.css - 200 202 text/css 1.0532ms
+2024-11-08 22:02:14.573 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-11-08 22:02:14.573 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger-ui-bundle.js - 200 1452753 text/javascript 3.8923ms
+2024-11-08 22:02:15.182 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger-ui.css - null null
+2024-11-08 22:02:15.184 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-11-08 22:02:15.184 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger-ui.css - 200 152034 text/css 2.2068ms
+2024-11-08 22:02:17.115 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:02:17.115 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/favicon-32x32.png - null null
+2024-11-08 22:02:17.116 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-11-08 22:02:17.117 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/favicon-32x32.png - 200 628 image/png 1.7858ms
+2024-11-08 22:02:17.130 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.159ms
+2024-11-08 22:09:10.534 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 22:09:10.617 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 22:09:10.620 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 22:09:10.620 -05:00 [INF] Hosting environment: Development
+2024-11-08 22:09:10.620 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 22:09:10.649 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 22:09:10.721 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 73.8864ms
+2024-11-08 22:09:10.737 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 22:09:10.737 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:09:10.740 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 2.2178ms
+2024-11-08 22:09:10.740 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 2.2364ms
+2024-11-08 22:09:10.812 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:09:10.911 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 98.4849ms
+2024-11-08 22:21:34.358 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 22:21:34.440 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 22:21:34.442 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 22:21:34.443 -05:00 [INF] Hosting environment: Development
+2024-11-08 22:21:34.443 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 22:21:34.468 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 22:21:34.542 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 74.2111ms
+2024-11-08 22:21:34.554 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:21:34.555 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 22:21:34.556 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.4212ms
+2024-11-08 22:21:34.557 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 2.4983ms
+2024-11-08 22:21:34.618 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:21:34.695 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 77.6726ms
+2024-11-08 22:21:52.130 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:21:52.131 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.5017ms
+2024-11-08 22:21:53.137 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:21:53.139 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 2.2084ms
+2024-11-08 22:21:53.206 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:21:53.208 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.5924ms
+2024-11-08 22:21:54.699 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:21:54.709 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.5984ms
+2024-11-08 22:28:34.779 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 22:28:34.780 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.9672ms
+2024-11-08 22:28:34.790 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 22:28:34.791 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:28:34.791 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.3006ms
+2024-11-08 22:28:34.791 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.7042ms
+2024-11-08 22:28:34.864 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:28:34.882 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.1831ms
+2024-11-08 22:28:39.315 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:28:39.317 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.9004ms
+2024-11-08 22:28:40.216 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:28:40.218 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 1.4533ms
+2024-11-08 22:28:40.285 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:28:40.286 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.181ms
+2024-11-08 22:28:41.404 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:28:41.416 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.9809ms
+2024-11-08 22:31:11.386 -05:00 [INF] Application is shutting down...
+2024-11-08 22:31:18.721 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 22:31:18.802 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 22:31:18.804 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 22:31:18.804 -05:00 [INF] Hosting environment: Development
+2024-11-08 22:31:18.804 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 22:31:19.128 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 22:31:19.215 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 89.2582ms
+2024-11-08 22:31:19.236 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 22:31:19.236 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:31:19.238 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.5929ms
+2024-11-08 22:31:19.238 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.2584ms
+2024-11-08 22:31:19.337 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:31:19.439 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.8523ms
+2024-11-08 22:31:24.522 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:31:24.527 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 4.502ms
+2024-11-08 22:31:25.609 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:31:25.609 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.855ms
+2024-11-08 22:31:25.678 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:31:25.678 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 0.5045ms
+2024-11-08 22:31:26.862 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:31:26.879 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.6097ms
+2024-11-08 22:31:53.981 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:31:53.982 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.349ms
+2024-11-08 22:31:54.183 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:31:54.184 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 1.6198ms
+2024-11-08 22:31:55.039 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:31:55.041 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.2478ms
+2024-11-08 22:31:55.388 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:31:55.400 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.8866ms
+2024-11-08 22:32:57.223 -05:00 [INF] Application is shutting down...
+2024-11-08 22:33:07.149 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 22:33:07.249 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 22:33:07.251 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 22:33:07.251 -05:00 [INF] Hosting environment: Development
+2024-11-08 22:33:07.251 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 22:33:11.234 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:33:11.276 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 42.9154ms
+2024-11-08 22:33:11.530 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:33:11.531 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 1.5631ms
+2024-11-08 22:33:11.880 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:33:11.954 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 73.4353ms
+2024-11-08 22:34:33.483 -05:00 [INF] Application is shutting down...
+2024-11-08 22:34:37.771 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 22:34:37.869 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 22:34:37.871 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 22:34:37.871 -05:00 [INF] Hosting environment: Development
+2024-11-08 22:34:37.871 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 22:34:43.136 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:34:43.178 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 43.2157ms
+2024-11-08 22:34:43.428 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:34:43.430 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 1.1234ms
+2024-11-08 22:34:44.320 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:34:44.395 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.4254ms
+2024-11-08 22:35:08.397 -05:00 [INF] Application is shutting down...
+2024-11-08 22:35:15.319 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 22:35:15.392 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 22:35:15.394 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 22:35:15.394 -05:00 [INF] Hosting environment: Development
+2024-11-08 22:35:15.394 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 22:35:16.389 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger - null null
+2024-11-08 22:35:16.425 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger - 301 0 null 36.6877ms
+2024-11-08 22:35:16.467 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 22:35:16.526 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 59.5449ms
+2024-11-08 22:35:16.560 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:35:16.563 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 2.0021ms
+2024-11-08 22:35:16.563 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.css - null null
+2024-11-08 22:35:16.563 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 22:35:16.564 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.8683ms
+2024-11-08 22:35:16.569 -05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-11-08 22:35:16.569 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.css - 200 202 text/css 5.8548ms
+2024-11-08 22:35:16.651 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/favicon-16x16.png - null null
+2024-11-08 22:35:16.653 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-11-08 22:35:16.653 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/favicon-16x16.png - 499 665 image/png 1.6386ms
+2024-11-08 22:35:16.675 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:35:16.764 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.9237ms
+2024-11-08 22:35:18.104 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:35:18.108 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 3.353ms
+2024-11-08 22:35:19.117 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:35:19.117 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 0.5873ms
+2024-11-08 22:35:19.187 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:35:19.187 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.5709ms
+2024-11-08 22:35:38.956 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:35:38.958 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.7875ms
+2024-11-08 22:35:39.166 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:35:39.167 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 0.9228ms
+2024-11-08 22:35:39.586 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:35:39.587 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.7632ms
+2024-11-08 22:36:44.967 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:36:44.969 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.1848ms
+2024-11-08 22:36:45.285 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:36:45.287 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 1.8109ms
+2024-11-08 22:36:45.802 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:36:45.803 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 0.9885ms
+2024-11-08 22:36:46.188 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:36:46.204 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.5143ms
+2024-11-08 22:37:16.289 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/User/VerUsuarios - null null
+2024-11-08 22:37:16.297 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 22:37:16.311 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.User.Users (Notas-Back)'
+2024-11-08 22:37:16.320 -05:00 [INF] Route matched with {action = "Users", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Users() on controller Notas_Back.Controllers.User (Notas-Back).
+2024-11-08 22:37:17.574 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Notas_Back.Models.UsuariosM, Notas-Back, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-08 22:37:17.582 -05:00 [INF] Executed action Notas_Back.Controllers.User.Users (Notas-Back) in 1259.7372ms
+2024-11-08 22:37:17.582 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.User.Users (Notas-Back)'
+2024-11-08 22:37:17.582 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/User/VerUsuarios - 200 null application/json; charset=utf-8 1293.4107ms
+2024-11-08 22:37:51.256 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=string&Password=string - null null
+2024-11-08 22:37:51.262 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 22:37:51.267 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 22:37:51.545 -05:00 [INF] Executing OkObjectResult, writing value of type 'NotasBack.Dto.Responses.ResponseLoginDto'.
+2024-11-08 22:37:51.547 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 280.3112ms
+2024-11-08 22:37:51.547 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 22:37:51.547 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=string&Password=string - 200 null application/json; charset=utf-8 291.2779ms
+2024-11-08 22:38:21.342 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=string&Password=string - null null
+2024-11-08 22:38:21.348 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 22:38:21.350 -05:00 [INF] Route matched with {action = "Inicio", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Inicio(System.String, System.String) on controller Notas_Back.Controllers.Session (Notas-Back).
+2024-11-08 22:38:21.665 -05:00 [INF] Executing OkObjectResult, writing value of type 'NotasBack.Dto.Responses.ResponseLoginDto'.
+2024-11-08 22:38:21.666 -05:00 [INF] Executed action Notas_Back.Controllers.Session.Inicio (Notas-Back) in 315.5845ms
+2024-11-08 22:38:21.666 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.Session.Inicio (Notas-Back)'
+2024-11-08 22:38:21.666 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Session/LogIn?NameUser=string&Password=string - 200 null application/json; charset=utf-8 324.1215ms
+2024-11-08 22:41:28.515 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 22:41:28.590 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 22:41:28.592 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 22:41:28.593 -05:00 [INF] Hosting environment: Development
+2024-11-08 22:41:28.593 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 22:42:58.103 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/User/Email?email=gustavober98%40gmail.com - null null
+2024-11-08 22:42:58.129 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 22:42:58.143 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-08 22:42:58.156 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-08 22:42:58.158 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/User/Email?email=gustavober98%40gmail.com - 401 null application/json 55.7962ms
+2024-11-08 22:43:34.462 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/User/Email?email=gustavober98%40gmail.com - null null
+2024-11-08 22:43:34.470 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.User.verEmail (Notas-Back)'
+2024-11-08 22:43:34.483 -05:00 [INF] Route matched with {action = "verEmail", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] verEmail(System.String) on controller Notas_Back.Controllers.User (Notas-Back).
+2024-11-08 22:43:35.752 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Models.UsuariosM'.
+2024-11-08 22:43:35.757 -05:00 [INF] Executed action Notas_Back.Controllers.User.verEmail (Notas-Back) in 1272.4672ms
+2024-11-08 22:43:35.758 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.User.verEmail (Notas-Back)'
+2024-11-08 22:43:35.758 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/User/Email?email=gustavober98%40gmail.com - 200 null application/json; charset=utf-8 1295.9829ms
+2024-11-08 22:52:27.441 -05:00 [INF] Application is shutting down...
+2024-11-08 22:52:34.670 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 22:52:34.749 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 22:52:34.751 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 22:52:34.751 -05:00 [INF] Hosting environment: Development
+2024-11-08 22:52:34.751 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 22:52:34.928 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:52:34.982 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 53.8849ms
+2024-11-08 22:52:35.782 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger - null null
+2024-11-08 22:52:35.802 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger - 301 0 null 20.0583ms
+2024-11-08 22:52:35.867 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-08 22:52:35.869 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 2.7845ms
+2024-11-08 22:52:35.916 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:52:35.918 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.css - null null
+2024-11-08 22:52:35.919 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 2.5037ms
+2024-11-08 22:52:35.919 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-08 22:52:35.920 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.7654ms
+2024-11-08 22:52:35.928 -05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-11-08 22:52:35.928 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.css - 499 202 text/css 10.2107ms
+2024-11-08 22:52:36.021 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/favicon-16x16.png - null null
+2024-11-08 22:52:36.023 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-11-08 22:52:36.023 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/favicon-16x16.png - 499 665 image/png 2.5494ms
+2024-11-08 22:52:36.061 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:52:36.141 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 80.7637ms
+2024-11-08 22:52:36.150 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:52:36.151 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.5064ms
+2024-11-08 22:52:36.220 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:52:36.221 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 0.9053ms
+2024-11-08 22:52:37.234 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:52:37.255 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.3291ms
+2024-11-08 22:53:12.400 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:53:12.401 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.4387ms
+2024-11-08 22:53:12.604 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:53:12.605 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.5399ms
+2024-11-08 22:53:13.203 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:53:13.204 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 1.0456ms
+2024-11-08 22:53:13.478 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:53:13.492 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.0533ms
+2024-11-08 22:58:48.471 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 22:58:48.473 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.5912ms
+2024-11-08 22:58:53.435 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 22:58:53.436 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 1.2232ms
+2024-11-08 22:58:53.506 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 22:58:53.506 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.5363ms
+2024-11-08 22:58:57.996 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 22:58:58.007 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.7359ms
+2024-11-08 23:04:03.761 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.html - null null
+2024-11-08 23:04:03.763 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.html - 200 null text/html;charset=utf-8 1.0459ms
+2024-11-08 23:04:04.636 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-08 23:04:04.636 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.186ms
+2024-11-08 23:04:04.706 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/index.js - null null
+2024-11-08 23:04:04.706 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/index.js - 200 null application/javascript;charset=utf-8 0.5665ms
+2024-11-08 23:04:05.719 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-08 23:04:05.726 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 7.6849ms
+2024-11-08 23:06:40.761 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/User/VerUsuarios - null null
+2024-11-08 23:06:40.774 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 23:06:40.788 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.User.Users (Notas-Back)'
+2024-11-08 23:06:40.801 -05:00 [INF] Route matched with {action = "Users", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Users() on controller Notas_Back.Controllers.User (Notas-Back).
+2024-11-08 23:06:42.059 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Notas_Back.Models.UsuariosM, Notas-Back, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-08 23:06:42.066 -05:00 [INF] Executed action Notas_Back.Controllers.User.Users (Notas-Back) in 1262.9924ms
+2024-11-08 23:06:42.066 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.User.Users (Notas-Back)'
+2024-11-08 23:06:42.066 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/User/VerUsuarios - 200 null application/json; charset=utf-8 1304.9061ms
+2024-11-08 23:07:37.189 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd00816d2edc4b82609d8c - null null
+2024-11-08 23:07:37.193 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:07:37.199 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:07:37.285 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 23:07:37.291 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 91.6911ms
+2024-11-08 23:07:37.291 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:07:37.291 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd00816d2edc4b82609d8c - 200 null application/json; charset=utf-8 102.5254ms
+2024-11-08 23:08:11.380 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - null null
+2024-11-08 23:08:11.386 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:08:11.386 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:08:11.542 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 23:08:11.543 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 156.2502ms
+2024-11-08 23:08:11.543 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:08:11.543 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - 200 null application/json; charset=utf-8 163.0116ms
+2024-11-08 23:08:30.787 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - null null
+2024-11-08 23:08:30.787 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:08:30.787 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:08:30.858 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 23:08:30.858 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 71.3686ms
+2024-11-08 23:08:30.858 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:08:30.859 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - 200 null application/json; charset=utf-8 72.0444ms
+2024-11-08 23:08:51.323 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - null null
+2024-11-08 23:08:51.324 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:08:51.324 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:08:51.395 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 23:08:51.396 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 71.9159ms
+2024-11-08 23:08:51.396 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:08:51.396 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - 200 null application/json; charset=utf-8 73.1967ms
+2024-11-08 23:09:08.281 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66e07620ff1725bd8dfe2256 - null null
+2024-11-08 23:09:08.281 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:09:08.282 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:09:08.354 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 23:09:08.355 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 72.9303ms
+2024-11-08 23:09:08.355 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:09:08.355 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66e07620ff1725bd8dfe2256 - 200 null application/json; charset=utf-8 74.3847ms
+2024-11-08 23:09:13.134 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66e07620ff1725bd8dfe2256 - null null
+2024-11-08 23:09:13.135 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:09:13.135 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:09:13.314 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 23:09:13.315 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 179.4757ms
+2024-11-08 23:09:13.315 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:09:13.315 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66e07620ff1725bd8dfe2256 - 200 null application/json; charset=utf-8 180.5441ms
+2024-11-08 23:09:47.384 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66e07620ff1725bd8dfe2256 - null null
+2024-11-08 23:09:47.384 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:09:47.384 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:09:47.457 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 23:09:47.457 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 72.6447ms
+2024-11-08 23:09:47.457 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:09:47.458 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66e07620ff1725bd8dfe2256 - 200 null application/json; charset=utf-8 73.861ms
+2024-11-08 23:10:09.706 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - null null
+2024-11-08 23:10:09.706 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:10:09.706 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:10:09.780 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Dto.NoData'.
+2024-11-08 23:10:09.781 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 74.4726ms
+2024-11-08 23:10:09.781 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:10:09.781 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - 200 null application/json; charset=utf-8 75.7847ms
+2024-11-08 23:11:47.071 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66bd3ba09c690e6aa0e29909 - null null
+2024-11-08 23:11:47.072 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:11:47.073 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:11:47.250 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Notas_Back.Models.Notas, Notas-Back, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-08 23:11:47.258 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 185.4893ms
+2024-11-08 23:11:47.259 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:11:47.259 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66bd3ba09c690e6aa0e29909 - 200 null application/json; charset=utf-8 187.6178ms
+2024-11-08 23:15:54.438 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5287/api/Notas/newNote - application/json 612
+2024-11-08 23:15:54.441 -05:00 [INF] No CORS policy found for the specified request.
+2024-11-08 23:15:54.441 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.newNotes (Notas-Back)'
+2024-11-08 23:15:54.447 -05:00 [INF] Route matched with {action = "newNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] newNotes(Notas_Back.Models.Notas) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:15:54.532 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-08 23:15:54.538 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.newNotes (Notas-Back) in 90.6877ms
+2024-11-08 23:15:54.538 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.newNotes (Notas-Back)'
+2024-11-08 23:15:54.538 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5287/api/Notas/newNote - 400 null application/problem+json; charset=utf-8 99.3133ms
+2024-11-08 23:16:43.058 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5287/api/Notas/newNote - application/json 611
+2024-11-08 23:16:43.059 -05:00 [INF] No CORS policy found for the specified request.
+2024-11-08 23:16:43.060 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.newNotes (Notas-Back)'
+2024-11-08 23:16:43.060 -05:00 [INF] Route matched with {action = "newNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] newNotes(Notas_Back.Models.Notas) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:16:43.260 -05:00 [INF] Executing CreatedResult, writing value of type 'System.Boolean'.
+2024-11-08 23:16:43.262 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.newNotes (Notas-Back) in 201.8445ms
+2024-11-08 23:16:43.262 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.newNotes (Notas-Back)'
+2024-11-08 23:16:43.263 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5287/api/Notas/newNote - 201 null application/json; charset=utf-8 204.2231ms
+2024-11-08 23:18:00.029 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - null null
+2024-11-08 23:18:00.031 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:18:00.031 -05:00 [INF] Route matched with {action = "allNotes", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] allNotes(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:18:00.191 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Notas_Back.Models.Notas, Notas-Back, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-08 23:18:00.191 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.allNotes (Notas-Back) in 159.9813ms
+2024-11-08 23:18:00.191 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.allNotes (Notas-Back)'
+2024-11-08 23:18:00.192 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/66dd0cf76d2edc4b82609d8e - 200 null application/json; charset=utf-8 162.1083ms
+2024-11-08 23:20:22.067 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-08 23:20:22.141 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-08 23:20:22.143 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-08 23:20:22.143 -05:00 [INF] Hosting environment: Development
+2024-11-08 23:20:22.143 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-08 23:24:33.459 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/Nota/672ee22b4731bfe2dc30296c - null null
+2024-11-08 23:24:33.484 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-08 23:24:33.495 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.getNota (Notas-Back)'
+2024-11-08 23:24:33.510 -05:00 [INF] Route matched with {action = "getNota", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] getNota(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:24:34.737 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Models.Notas'.
+2024-11-08 23:24:34.750 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.getNota (Notas-Back) in 1238.3244ms
+2024-11-08 23:24:34.752 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.getNota (Notas-Back)'
+2024-11-08 23:24:34.752 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/Nota/672ee22b4731bfe2dc30296c - 200 null application/json; charset=utf-8 1293.8452ms
+2024-11-08 23:28:26.218 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/Nota/672ee22b4731bfe2dc30296c - null null
+2024-11-08 23:28:26.223 -05:00 [INF] Executing endpoint 'Notas_Back.Controllers.NotasController.getNota (Notas-Back)'
+2024-11-08 23:28:26.227 -05:00 [INF] Route matched with {action = "getNota", controller = "Notas"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] getNota(System.String) on controller Notas_Back.Controllers.NotasController (Notas-Back).
+2024-11-08 23:28:26.406 -05:00 [INF] Executing OkObjectResult, writing value of type 'Notas_Back.Models.Notas'.
+2024-11-08 23:28:26.409 -05:00 [INF] Executed action Notas_Back.Controllers.NotasController.getNota (Notas-Back) in 181.7447ms
+2024-11-08 23:28:26.409 -05:00 [INF] Executed endpoint 'Notas_Back.Controllers.NotasController.getNota (Notas-Back)'
+2024-11-08 23:28:26.409 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/Nota/672ee22b4731bfe2dc30296c - 200 null application/json; charset=utf-8 191.6205ms

@@ -9,7 +9,18 @@
             Muestra todas las notas de un usuario 
             </summary>
             <param name="IdUser"></param>
-            <returns></returns>
+            <returns>true</returns>
+            <remarks>
+            Sample request:
+            
+                GET /api/Notas/allNotas/{idUser}
+                {
+                    "Id": "66dd00816d2edc4b82609d8c"
+                }
+            </remarks>
+            <response code="200">Inicio session con exito</response>
+            <response code="400">Contraseña incorrecta </response>
+            <response code="404">No datos</response>
         </member>
         <member name="M:Notas_Back.Controllers.NotasController.getNota(System.String)">
             <summary>
@@ -95,6 +106,9 @@
             <param name="Password"></param>
             <param name="PasswordVerify"></param>
             <returns></returns>
+            <response code="200">Inicio session con exito</response>
+            <response code="400">Contraseña incorrecta </response>
+            <response code="404">No datos</response>
         </member>
         <member name="T:Notas_Back.Controllers.User">
             <summary>
@@ -106,20 +120,44 @@
              Muestra todos los  datos de los usuarios registrados
             </summary>
             <returns></returns>
+            <response code="200">Todos los usuarios.</response>
+            <response code="400">No se encuentran datos</response>
+            <response code="401">No Autorizado</response>
         </member>
         <member name="M:Notas_Back.Controllers.User.MostrarUser(System.String)">
             <summary>
             Muestra los datos de un usuario por el id 
             </summary>
-            <param name="id"></param>
-            <returns></returns>
+            <param name="Id"></param>
+            <returns>true</returns>
+            <remarks>
+            Sample request:  
+                
+                GET /api/USer/{id}
+                {
+                    "Id" = "66dd00816d2edc4b82609d8c",
+                }
+            </remarks>
+            <response code="200">Usuario</response>
+            <response code="400">Usuario no encontrado</response>
+            <response code="401">No Autorizado</response>
         </member>
         <member name="M:Notas_Back.Controllers.User.verEmail(System.String)">
             <summary>
             Muestra si el email esta agregado a la base
             </summary>
             <param name="email"></param>
-            <returns></returns>
+            <remarks>
+            Sample request:  
+                
+                GET /api/USer/Email
+                {
+                    "Email" = "gustavober98@gmail.com",
+                }
+            </remarks>
+            <response code="200">Response.</response>
+            <response code="400">Usuario no encontrado.</response>
+            <response code="401">No Autorizado</response>
         </member>
         <member name="M:Notas_Back.Controllers.User.putUser(Notas_Back.Models.UsuariosM,System.String)">
             <summary>
@@ -127,14 +165,40 @@
             </summary>
             <param name="user"></param>
             <param name="id"></param>
-            <returns></returns>
+            <returns>true</returns>
+            <remarks>
+            Sample request:
+            
+                PUT /api/User/updateUser
+                {
+                    "id": "66dd00816d2edc4b82609d8c",
+                    "email": "gustavober98@gmail.com",
+                    "firsName": "Gustavo",
+                    "lastName": "Bernal",
+                    "userName": "Gus123"
+                }
+            </remarks>
+            <response code="201">Update</response>
+            <response code="400">Algo fallo</response>
+            <response code="404">No encontrado</response>
         </member>
         <member name="M:Notas_Back.Controllers.User.DeleteUser(System.String)">
             <summary>
              Elimina un usuario de la aplicación
             </summary>
             <param name="IdUser"></param>
-            <returns></returns>
+            <returns>true</returns>
+            <remarks>
+            Sample Request:
+            
+                DELETE /api/User/Delete
+                {
+                    "IdUser" : "66dd00816d2edc4b82609d8c"
+                }
+            </remarks>
+            <response code="200">Eliminado.</response>
+            <response code="401">No autorizado.</response>
+            <response code="404">No se encontro usuario.</response>
         </member>
     </members>
 </doc>

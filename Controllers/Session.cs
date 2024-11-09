@@ -155,7 +155,7 @@ namespace Notas_Back.Controllers
         /// <response code="404">No datos</response>
         [HttpGet]
         [Route("LogIn")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ResponseLoginDto))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<ResponseLoginDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> Inicio(string NameUser, string Password)

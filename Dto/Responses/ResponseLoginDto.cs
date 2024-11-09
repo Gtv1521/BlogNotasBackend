@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NotasBack.Dto.Responses
 {
-    public class ResponseLoginDto : CreatedUserDto
+    public class ResponseLoginDto
     {
         public string? Id { get; set; }
         public string? UserName { get; set; }

@@ -125,7 +125,7 @@ builder.Services.AddAuthentication(options =>
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = StatusCodes.Status401Unauthorized;
 
-            var response = new { status = 401, message = "No autorizado. Token invalido o expirado." };
+            var response = new NoData { status = 401, mensaje = "No autorizado. Token invalido o expirado." };
             var jsonResponse = JsonSerializer.Serialize(response);
             return context.Response.WriteAsync(jsonResponse);
         }

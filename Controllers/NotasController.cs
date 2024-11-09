@@ -28,10 +28,23 @@ namespace Notas_Back.Controllers
         /// Muestra todas las notas de un usuario 
         /// </summary>
         /// <param name="IdUser"></param>
-        /// <returns></returns>
+        /// <returns>true</returns>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///     GET /api/Notas/allNotas/{idUser}
+        ///     {
+        ///         "Id": "66dd00816d2edc4b82609d8c"
+        ///     }
+        /// </remarks>
+        /// <response code="200">Inicio session con exito</response>
+        /// <response code="400">Contraseña incorrecta </response>
+        /// <response code="404">No datos</response>
 
         [HttpGet]
         [Route("allNotas/{IdUser}")]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(NoData))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
         public async Task<IActionResult> allNotes(string IdUser)
         {
             List<Notas> Result = await _service.allNotasByUser(IdUser);
@@ -53,9 +66,20 @@ namespace Notas_Back.Controllers
         /// Muestra los datos de una nota 
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>true</returns>
+        /// <remarks>
+        /// Sample request:
+        ///     GET /api/Notas/Nota/{id}  // id de la nota que busca
+        ///     {
+        ///         "id" = "672ee22b4731bfe2dc30296c"
+        ///     }
+        /// </remarks>
+        /// <response code="200">Nota</response> 
+        /// <response code="404">Nota no encontrada</response> 
         [HttpGet]
         [Route("Nota/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Notas))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> getNota(string id)
         {
             if (id == null)
@@ -68,7 +92,15 @@ namespace Notas_Back.Controllers
             }
             else
             {
-                return Ok(await _service.Get(id));
+                try
+                {
+                    return Ok(await _service.Get(id));
+                }
+                catch (System.Exception ex)
+                {
+                    return NotFound(new NoData {status = 404, mensaje = "Nota no encontrada"});
+                    throw new ApplicationException($"Algo Fallo {ex.Message}");
+                }
             }
         }
 
@@ -129,7 +161,7 @@ namespace Notas_Back.Controllers
             {
                 await _service.Update(new Notas
                 {
-                    IdNota = id, 
+                    IdNota = id,
                     Titulo = notas.Titulo,
                     Contenido = notas.Contenido,
                     FechaUpdate = notas.FechaUpdate,

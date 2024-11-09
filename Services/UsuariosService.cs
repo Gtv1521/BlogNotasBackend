@@ -16,13 +16,13 @@ namespace Notas_Back.Services
 {
     public class UsuariosService : ICrud<UsuariosM>
     {
-        public IMongoCollection<UsuariosM> collection;
+        private readonly IMongoCollection<UsuariosM> _collection;
         private readonly ManejoContraseñas _manejoContraseñas;
 
         public UsuariosService(Context context, ManejoContraseñas manejoContraseñas) // Constructor de la clase
         {
             _manejoContraseñas = manejoContraseñas;
-            collection = context.GetCollection<UsuariosM>("Usuarios");
+            _collection = context.GetCollection<UsuariosM>("Usuarios");
         }
 
         // Ingresa un usuario nuevo y hace hass de la contraseña 
@@ -44,7 +44,7 @@ namespace Notas_Back.Services
                         Rol = modelo.Rol
                     };
 
-                    await collection.InsertOneAsync(User);
+                    await _collection.InsertOneAsync(User);
                 }
             }
             catch (System.Exception ex)
@@ -56,27 +56,27 @@ namespace Notas_Back.Services
         // Muestra un usuario por el id
         public async Task<UsuariosM> Get(string IdUser)
         {
-            return await collection.FindAsync(new BsonDocument { { "_id", new ObjectId(IdUser) } }).Result.FirstOrDefaultAsync();
+            return await _collection.FindAsync(new BsonDocument { { "_id", new ObjectId(IdUser) } }).Result.FirstOrDefaultAsync();
         }
 
         // Muestra todos los usuarios
         public async Task<List<UsuariosM>> GetAllUsers()
         {
-            return await collection.FindAsync(new BsonDocument()).Result.ToListAsync();
+            return await _collection.FindAsync(new BsonDocument()).Result.ToListAsync();
         }
 
         // Actualiza datos de un usuario 
         public async Task Update(UsuariosM modelo)
         {
             var filter = Builders<UsuariosM>.Filter.Eq(s => s.Id, modelo.Id);
-            await collection.ReplaceOneAsync(filter, modelo);
+            await _collection.ReplaceOneAsync(filter, modelo);
         }
 
         // Elimina un usuario 
         public async Task Delete(string id)
         {
             var filter = Builders<UsuariosM>.Filter.Eq(s => s.Id, id);
-            await collection.DeleteOneAsync(filter);
+            await _collection.DeleteOneAsync(filter);
         }
 
         // cambiar contraseña 
@@ -86,13 +86,13 @@ namespace Notas_Back.Services
 
             var filter = Builders<UsuariosM>.Filter.Eq(u => u.Id, id);
             var password = Builders<UsuariosM>.Update.Set(u => u.Password, contraseña);
-            await collection.UpdateOneAsync(filter, password);
+            await _collection.UpdateOneAsync(filter, password);
         }
 
         // verifica si el email existe
         public async Task<UsuariosM> verEmail(string email)
         {
-            return await collection.FindAsync(new BsonDocument { { "Email", email } }).Result.FirstOrDefaultAsync();
+            return await _collection.FindAsync(new BsonDocument { { "Email", email } }).Result.FirstOrDefaultAsync();
         }
 
         // muestra un usuario por el id
@@ -101,7 +101,7 @@ namespace Notas_Back.Services
             try
             {
                 var filter = Builders<UsuariosM>.Filter.Eq(u => u.UserName, user);
-                return await collection.FindAsync(filter).Result.FirstOrDefaultAsync();
+                return await _collection.FindAsync(filter).Result.FirstOrDefaultAsync();
             }
             catch (System.Exception ex)
             {
@@ -117,7 +117,7 @@ namespace Notas_Back.Services
             try
             {
                 var filter = Builders<UsuariosM>.Filter.Eq(u => u.UserName, user);
-                return await collection.FindAsync(filter).Result.FirstOrDefaultAsync();
+                return await _collection.FindAsync(filter).Result.FirstOrDefaultAsync();
 
             }
             catch (System.Exception ex)

@@ -19,7 +19,7 @@ namespace Notas_Back.Repositories
                 var client = new MongoClient(settings.Value.ConnectionStrings);
                 _db = client.GetDatabase(settings.Value.DatabaseName);
                 
-                System.Console.WriteLine("connect successfully");
+                // System.Console.WriteLine("connect successfully");
             }
             catch (MongoException ex)
             {
