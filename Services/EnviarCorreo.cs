@@ -37,7 +37,8 @@ namespace Notas_Back.Services
                     From = new MailAddress(User),
                     Subject = "Notification de Bienvenida MyBloggg",
                     Body = Message,
-                    IsBodyHtml = true // Si quieres que el correo soporte HTML, pon esto a true
+                    IsBodyHtml = true,// Si quieres que el correo soporte HTML, pon esto a true
+                    Priority = MailPriority.High
                 };
 
                 // Destinatario del correo
@@ -50,7 +51,7 @@ namespace Notas_Back.Services
             }
             catch (Exception ex)
             {   
-                return false;
+                throw new ApplicationException($"Send Mail fail {ex.Message} ");
                 // Console.WriteLine($"Error al enviar el correo: {ex.Message}");
             }
         }

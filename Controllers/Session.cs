@@ -47,7 +47,7 @@ namespace Notas_Back.Controllers
         /// <remarks>
         /// Sample request:
         ///
-        ///     POST /SigIn
+        ///     POST /api/Session/SigIn
         ///     {
         ///         "email": "gustavober98@gmail.com",
         ///         "firsName": "Gustavo",
@@ -58,10 +58,13 @@ namespace Notas_Back.Controllers
         ///     }
         /// </remarks>
         /// <response code="201">Usuario agregado con éxito</response>
+        /// <response code="400">Algo fallo</response>
+        /// <response code="409">Los datos ya existen</response>
         [HttpPost]
         [Route("SigIn")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CreatedUserDto))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
+        [ProducesResponseType(StatusCodes.Status409Conflict, Type = typeof(NoData))]
         public async Task<IActionResult> NewUser([FromBody] UsuariosM usuarios)
         {
             var user = usuarios.FirsName + " " + usuarios.LastName;
@@ -144,7 +147,7 @@ namespace Notas_Back.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     GET /LogIn
+        ///     GET /api/Session/LogIn
         ///     {
         ///         "NameUser": "Gustavober98",
         ///         "Password": "Ilovereggae.17"
@@ -216,7 +219,7 @@ namespace Notas_Back.Controllers
         /// <remarks>
         /// Sample request:
         /// 
-        ///     PUT /LogIn
+        ///     PUT /api/Session/UpdatePassword/{id}
         ///     {
         ///         "Id": "66dd00816d2edc4b82609d8c",
         ///         "Password": "Gustavo.123",

@@ -69,9 +69,10 @@ namespace Notas_Back.Controllers
         /// <returns>true</returns>
         /// <remarks>
         /// Sample request:
-        ///     GET /api/Notas/Nota/{id}  // id de la nota que busca
+        /// 
+        ///     GET /api/Notas/Nota/{id} 
         ///     {
-        ///         "id" = "672ee22b4731bfe2dc30296c"
+        ///         "id" = "672ee22b4731bfe2dc30296c",
         ///     }
         /// </remarks>
         /// <response code="200">Nota</response> 
@@ -98,7 +99,7 @@ namespace Notas_Back.Controllers
                 }
                 catch (System.Exception ex)
                 {
-                    return NotFound(new NoData {status = 404, mensaje = "Nota no encontrada"});
+                    return NotFound(new NoData { status = 404, mensaje = "Nota no encontrada" });
                     throw new ApplicationException($"Algo Fallo {ex.Message}");
                 }
             }
@@ -108,9 +109,28 @@ namespace Notas_Back.Controllers
         /// Inserta una nueva nota
         /// </summary>
         /// <param name="notas"></param>
-        /// <returns></returns>
+        /// <returns>true</returns>
+        /// <remarks>
+        /// Sample request: 
+        /// 
+        ///     POST /api/Notas/newNote
+        ///     {
+        ///         "idUser": "66dd00816d2edc4b82609d8c",
+        ///         "titulo": "My Note",
+        ///         "contenido": "Hello this is my primary note",
+        ///         "fechaUpdate": "2024-11-11T17:32:45.188Z",
+        ///         "fechaCreada": "2024-11-11T17:32:45.188Z"
+        ///     }
+        /// </remarks>
+        /// <response code="201">created note</response>
+        /// <response code="400">Not send data</response>
+        /// <response code="404">User not fount</response>
+
         [HttpPost]
         [Route("newNote")]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(bool))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> newNotes(Notas notas)
         {
             if (notas.IdUser != null)
@@ -123,18 +143,18 @@ namespace Notas_Back.Controllers
                 }
                 else
                 {
-                    return Ok(new NoData
+                    return NotFound(new NoData
                     {
-                        status = 200,
+                        status = 404,
                         mensaje = "Usuario no existe"
                     });
                 }
             }
             else
             {
-                return Ok(new NoData
+                return BadRequest(new NoData
                 {
-                    status = 200,
+                    status = 400,
                     mensaje = "Debe enviar datos"
                 });
             }
@@ -144,9 +164,25 @@ namespace Notas_Back.Controllers
         /// Actualiza los datos que contiene la nota 
         /// </summary>
         /// <param name="notas"></param>
-        /// <returns></returns>
+        /// <param name="id"></param>
+        /// <returns>true</returns>
+        /// <remarks>
+        /// Sample requests:
+        /// 
+        ///     PUT /api/Notas/ActualizaNota/{id}
+        ///     {
+        ///          "id" = "66dd00816d2edc4b82609d8c",
+        ///          "titulo": "My note update",
+        ///          "contenido": "Yes, update successfully",
+        ///          "fechaUpdate": "2024-11-11T17:48:39.668Z", // add automatically
+        ///     }
+        /// </remarks>
+        /// <response code="200">Update successfully</response>
+        /// <response code="400">Not found note</response>
         [HttpPut]
         [Route("ActualizaNota/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(NoData))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> updateNota(NotasUpdateDto notas, string id)
         {
             if (notas == null || id == null)
@@ -164,7 +200,7 @@ namespace Notas_Back.Controllers
                     IdNota = id,
                     Titulo = notas.Titulo,
                     Contenido = notas.Contenido,
-                    FechaUpdate = notas.FechaUpdate,
+                    FechaUpdate = DateTime.Now,
 
                 });
                 return Ok(new NoData
@@ -179,9 +215,21 @@ namespace Notas_Back.Controllers
         /// Borra una nota con el id de la nota
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>true</returns>
+        /// <remarks>
+        /// Sample request:
+        ///     
+        ///     DELETE /api/Notas/DeleteNota/{id}
+        ///     {
+        ///         "id" = "66dd00816d2edc4b82609d8c" // id of note to delete
+        ///     }
+        /// </remarks>
+        /// <response code="200">Delete successfully</response>
+        /// <response code="404">Not found id note</response>
         [HttpDelete]
         [Route("DeleteNota/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(NoData))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> deleteNote(string id)
         {
             if (id != null)
@@ -195,9 +243,9 @@ namespace Notas_Back.Controllers
             }
             else
             {
-                return Ok(new NoData
+                return BadRequest(new NoData
                 {
-                    status = 200,
+                    status = 404,
                     mensaje = "Inserte el id que se quiere borrar"
                 });
             }

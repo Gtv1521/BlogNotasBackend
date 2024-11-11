@@ -9,7 +9,7 @@ namespace Notas_Back.Dto
     {
         public string? Titulo { get; set; }
         public string? Contenido { get; set; }
-        public DateTime? FechaUpdate { get; set; }
+        public DateTime FechaUpdate { get; set; }
 
     }
 }

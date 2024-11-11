@@ -66,7 +66,7 @@ namespace Notas_Back.Controllers
         /// <remarks>
         /// Sample request:  
         ///     
-        ///     GET /api/USer/{id}
+        ///     GET /api/User/{id}
         ///     {
         ///         "Id" = "66dd00816d2edc4b82609d8c",
         ///     }
@@ -75,7 +75,7 @@ namespace Notas_Back.Controllers
         /// <response code="400">Usuario no encontrado</response>
         /// <response code="401">No Autorizado</response>
         [HttpGet]
-        [Route("{id}")]
+        [Route("{Id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuariosM))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
         [ProducesResponseType(StatusCodes.Status401Unauthorized, Type = typeof(NoData))]
@@ -88,11 +88,10 @@ namespace Notas_Back.Controllers
             }
             catch (System.Exception)
             {
-
                 return BadRequest(new NoData
                 {
                     status = 404,
-                    mensaje = "Error al cargar los datos"
+                    mensaje = "Not Found",
                 });
             }
         }
@@ -104,7 +103,7 @@ namespace Notas_Back.Controllers
         /// <remarks>
         /// Sample request:  
         ///     
-        ///     GET /api/USer/Email
+        ///     GET /api/User/Email
         ///     {
         ///         "Email" = "gustavober98@gmail.com",
         ///     }

@@ -27,28 +27,77 @@
             Muestra los datos de una nota 
             </summary>
             <param name="id"></param>
-            <returns></returns>
+            <returns>true</returns>
+            <remarks>
+            Sample request:
+            
+                GET /api/Notas/Nota/{id} 
+                {
+                    "id" = "672ee22b4731bfe2dc30296c",
+                }
+            </remarks>
+            <response code="200">Nota</response> 
+            <response code="404">Nota no encontrada</response> 
         </member>
         <member name="M:Notas_Back.Controllers.NotasController.newNotes(Notas_Back.Models.Notas)">
             <summary>
             Inserta una nueva nota
             </summary>
             <param name="notas"></param>
-            <returns></returns>
+            <returns>true</returns>
+            <remarks>
+            Sample request: 
+            
+                POST /api/Notas/newNote
+                {
+                    "idUser": "66dd00816d2edc4b82609d8c",
+                    "titulo": "My Note",
+                    "contenido": "Hello this is my primary note",
+                    "fechaUpdate": "2024-11-11T17:32:45.188Z",
+                    "fechaCreada": "2024-11-11T17:32:45.188Z"
+                }
+            </remarks>
+            <response code="201">created note</response>
+            <response code="400">Not send data</response>
+            <response code="404">User not fount</response>
         </member>
         <member name="M:Notas_Back.Controllers.NotasController.updateNota(Notas_Back.Dto.NotasUpdateDto,System.String)">
             <summary>
             Actualiza los datos que contiene la nota 
             </summary>
             <param name="notas"></param>
-            <returns></returns>
+            <param name="id"></param>
+            <returns>true</returns>
+            <remarks>
+            Sample requests:
+            
+                PUT /api/Notas/ActualizaNota/{id}
+                {
+                     "id" = "66dd00816d2edc4b82609d8c",
+                     "titulo": "My note update",
+                     "contenido": "Yes, update successfully",
+                     "fechaUpdate": "2024-11-11T17:48:39.668Z", // add automatically
+                }
+            </remarks>
+            <response code="200">Update successfully</response>
+            <response code="400">Not found note</response>
         </member>
         <member name="M:Notas_Back.Controllers.NotasController.deleteNote(System.String)">
             <summary>
             Borra una nota con el id de la nota
             </summary>
             <param name="id"></param>
-            <returns></returns>
+            <returns>true</returns>
+            <remarks>
+            Sample request:
+                
+                DELETE /api/Notas/DeleteNota/{id}
+                {
+                    "id" = "66dd00816d2edc4b82609d8c" // id of note to delete
+                }
+            </remarks>
+            <response code="200">Delete successfully</response>
+            <response code="404">Not found id note</response>
         </member>
         <member name="M:Notas_Back.Controllers.Session.NewUser(Notas_Back.Models.UsuariosM)">
              <summary>
@@ -58,7 +107,7 @@
              <remarks>
              Sample request:
             
-                 POST /SigIn
+                 POST /api/Session/SigIn
                  {
                      "email": "gustavober98@gmail.com",
                      "firsName": "Gustavo",
@@ -69,6 +118,8 @@
                  }
              </remarks>
              <response code="201">Usuario agregado con éxito</response>
+             <response code="400">Algo fallo</response>
+             <response code="409">Los datos ya existen</response>
         </member>
         <member name="M:Notas_Back.Controllers.Session.Inicio(System.String,System.String)">
             <summary>
@@ -78,7 +129,7 @@
             <remarks>
             Sample request:
             
-                GET /LogIn
+                GET /api/Session/LogIn
                 {
                     "NameUser": "Gustavober98",
                     "Password": "Ilovereggae.17"
@@ -95,7 +146,7 @@
             <remarks>
             Sample request:
             
-                PUT /LogIn
+                PUT /api/Session/UpdatePassword/{id}
                 {
                     "Id": "66dd00816d2edc4b82609d8c",
                     "Password": "Gustavo.123",
@@ -133,7 +184,7 @@
             <remarks>
             Sample request:  
                 
-                GET /api/USer/{id}
+                GET /api/User/{id}
                 {
                     "Id" = "66dd00816d2edc4b82609d8c",
                 }
@@ -150,7 +201,7 @@
             <remarks>
             Sample request:  
                 
-                GET /api/USer/Email
+                GET /api/User/Email
                 {
                     "Email" = "gustavober98@gmail.com",
                 }
