@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+
 using System.Xml.Serialization;
 using Amazon.Runtime.Internal.Auth;
 using Microsoft.AspNetCore.Mvc;
@@ -45,6 +47,7 @@ namespace Notas_Back.Controllers
         [Route("allNotas/{IdUser}")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(NoData))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
+        [Authorize]
         public async Task<IActionResult> allNotes(string IdUser)
         {
             List<Notas> Result = await _service.allNotasByUser(IdUser);
@@ -79,6 +82,7 @@ namespace Notas_Back.Controllers
         /// <response code="404">Nota no encontrada</response> 
         [HttpGet]
         [Route("Nota/{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Notas))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> getNota(string id)
@@ -128,6 +132,7 @@ namespace Notas_Back.Controllers
 
         [HttpPost]
         [Route("newNote")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(bool))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(NoData))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
@@ -181,6 +186,7 @@ namespace Notas_Back.Controllers
         /// <response code="400">Not found note</response>
         [HttpPut]
         [Route("ActualizaNota/{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(NoData))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> updateNota(NotasUpdateDto notas, string id)
@@ -228,6 +234,7 @@ namespace Notas_Back.Controllers
         /// <response code="404">Not found id note</response>
         [HttpDelete]
         [Route("DeleteNota/{id}")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(NoData))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(NoData))]
         public async Task<IActionResult> deleteNote(string id)

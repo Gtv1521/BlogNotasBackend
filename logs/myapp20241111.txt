@@ -2222,3 +2222,73 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate 
 2024-11-11 13:34:10.531 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 2.4095ms
 2024-11-11 13:34:10.598 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
 2024-11-11 13:34:10.676 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.2922ms
+2024-11-11 13:38:42.119 -05:00 [INF] Application is shutting down...
+2024-11-11 13:40:27.408 -05:00 [INF] User profile is available. Using '/home/gustavo/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-11-11 13:40:27.468 -05:00 [WRN] The WebRootPath was not found: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend/wwwroot. Static files may be unavailable.
+2024-11-11 13:40:27.493 -05:00 [INF] Now listening on: http://localhost:5287
+2024-11-11 13:40:27.496 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-11 13:40:27.496 -05:00 [INF] Hosting environment: Development
+2024-11-11 13:40:27.496 -05:00 [INF] Content root path: /home/gustavo/Documentos/Desarrollo/C#/BlogNotasBackend
+2024-11-11 13:40:27.817 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-11 13:40:27.893 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 77.2916ms
+2024-11-11 13:40:27.912 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-11 13:40:27.912 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-11 13:40:27.915 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 2.7859ms
+2024-11-11 13:40:27.915 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 3.4452ms
+2024-11-11 13:40:28.006 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-11 13:40:28.083 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 76.931ms
+2024-11-11 13:40:36.520 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/sadsa - null null
+2024-11-11 13:40:36.525 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-11-11 13:40:36.542 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-11 13:40:36.551 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-11 13:40:36.552 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/allNotas/sadsa - 401 null application/json 31.4037ms
+2024-11-11 13:41:15.913 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-11 13:41:15.915 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.6302ms
+2024-11-11 13:41:15.927 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-11 13:41:15.927 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-11 13:41:15.928 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.5645ms
+2024-11-11 13:41:15.928 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 1.0313ms
+2024-11-11 13:41:15.986 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-11 13:41:15.999 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.6404ms
+2024-11-11 13:41:24.729 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/api/Notas/Nota/672ee22b4731bfe2dc30296c - null null
+2024-11-11 13:41:24.732 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-11 13:41:24.734 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-11 13:41:24.734 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/api/Notas/Nota/672ee22b4731bfe2dc30296c - 401 null application/json 4.5639ms
+2024-11-11 13:41:41.718 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5287/api/Notas/newNote - application/json 213
+2024-11-11 13:41:41.720 -05:00 [INF] No CORS policy found for the specified request.
+2024-11-11 13:41:41.721 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-11 13:41:41.721 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-11 13:41:41.722 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5287/api/Notas/newNote - 401 null application/json 3.1207ms
+2024-11-11 13:42:04.085 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5287/api/Notas/DeleteNota/66dd00816d2edc4b82609d8c - null null
+2024-11-11 13:42:04.086 -05:00 [INF] No CORS policy found for the specified request.
+2024-11-11 13:42:04.086 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-11-11 13:42:04.086 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-11-11 13:42:04.086 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5287/api/Notas/DeleteNota/66dd00816d2edc4b82609d8c - 401 null application/json 0.7497ms
+2024-11-11 13:42:51.367 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-11 13:42:51.368 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 1.0535ms
+2024-11-11 13:42:51.384 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-11 13:42:51.384 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-11 13:42:51.384 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.2418ms
+2024-11-11 13:42:51.384 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.7491ms
+2024-11-11 13:42:51.442 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-11 13:42:51.450 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.3371ms
+2024-11-11 13:43:08.096 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-11 13:43:08.097 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.8197ms
+2024-11-11 13:43:08.112 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-11 13:43:08.112 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-11 13:43:08.112 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.3133ms
+2024-11-11 13:43:08.113 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.6621ms
+2024-11-11 13:43:08.176 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-11 13:43:08.182 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.97ms
+2024-11-11 13:43:11.822 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.html - null null
+2024-11-11 13:43:11.823 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.html - 200 null text/html;charset=utf-8 0.4301ms
+2024-11-11 13:43:11.836 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/index.js - null null
+2024-11-11 13:43:11.836 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-11 13:43:11.837 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/_framework/aspnetcore-browser-refresh.js - 200 13424 application/javascript; charset=utf-8 0.1387ms
+2024-11-11 13:43:11.837 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/index.js - 200 null application/javascript;charset=utf-8 0.5193ms
+2024-11-11 13:43:11.903 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - null null
+2024-11-11 13:43:11.909 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5287/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.2747ms
