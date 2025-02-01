@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BackEndNotes.Interfaces;
+using BackEndNotes.Models;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 
 namespace BackEndNotes.Services
 {
     public class MailService
     {
-        private readonly IViewOne _collection; 
-        public MailService(IViewOne collection)
+        private readonly IViewOne<UserModel> _collection; 
+        public MailService(IViewOne<UserModel> collection)
         {
             _collection = collection;
         }
 
         public async Task<bool> ValidaMail(string email)
         {
-            return await _collection.ViewOne(email);
+            if (await _collection.ViewOne(email) == null) return false;
+            return true;
         }
     }
 }

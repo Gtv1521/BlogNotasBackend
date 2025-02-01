@@ -9,7 +9,7 @@ using MongoDB.Driver;
 
 namespace BackEndNotes.Collections
 {
-    public class MailCollection : IViewOne
+    public class MailCollection : IViewOne<UserModel>
     {
         private readonly IMongoCollection<UserModel> _database;
         public MailCollection(Context context)
@@ -17,12 +17,10 @@ namespace BackEndNotes.Collections
             _database = context.GetCollection<UserModel>("Usuarios");
         }
 
-        public async Task<bool> ViewOne(string Dato)
-        {
+        public async Task<UserModel> ViewOne(string Dato)
+        {   
             var filter = Builders<UserModel>.Filter.Eq(u => u.Email, Dato);
-            var Mail =  await _database.Find(filter).FirstOrDefaultAsync();
-            if (Mail == null) return false;
-            return true;
+            return await _database.Find(filter).FirstOrDefaultAsync();
         }
     }
 }

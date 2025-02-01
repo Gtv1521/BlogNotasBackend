@@ -5,7 +5,16 @@
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/BackEndNotes.runtimeconfig.json
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/BackEndNotes.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/BackEndNotes.pdb
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/BCrypt.Net-Next.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/DnsClient.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/MongoDB.Bson.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/MongoDB.Driver.dll
@@ -14,6 +23,7 @@
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/ZstdSharp.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.csproj.AssemblyReference.cache
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.GeneratedMSBuildEditorConfig.editorconfig
@@ -22,6 +32,7 @@
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.csproj.CoreCompileInputs.cache
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.MvcApplicationPartsAssemblyInfo.cs
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.MvcApplicationPartsAssemblyInfo.cache
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.sourcelink.json
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/staticwebassets.build.json
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/staticwebassets.development.json
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/staticwebassets/msbuild.BackEndNotes.Microsoft.AspNetCore.StaticWebAssets.props
@@ -30,9 +41,12 @@
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BackEndNotes.props
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/staticwebassets.pack.json
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/scopedcss/bundle/BackEndNotes.styles.css
-/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.csproj.CopyComplete
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/refint/BackEndNotes.dll
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.pdb
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndNotes.genruntimeconfig.cache
 /home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/ref/BackEndNotes.dll
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/bin/Debug/net8.0/BackEndNotes.staticwebassets.endpoints.json
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/staticwebassets/msbuild.BackEndNotes.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/Debug/net8.0/BackEndN.B35BCA3C.Up2Date

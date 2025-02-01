@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BackEndNotes</name>
+    </assembly>
+    <members>
+        <member name="M:BackEndNotes.Controllers.NotesController.ObtenerNotas(System.String)">
+            <summary>
+            Trae datos de una nota registrada 
+            </summary>
+            <param name="idNote"></param>
+            <returns>Nota</returns>
+            <remarks> 
+            Sample request: 
+            
+                GET 
+                {
+                    "idNote": "679cf14b5b377829f27c5df1"
+                }
+            </remarks>
+            <response code="200">Nota.</response>
+            <response code="404">No encontrada</response>
+            <response code="500">Server error</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.NotesController.ObtenerNotasUsuario(System.String)">
+            <summary>
+            Trae las notas del usuario
+            </summary>
+            <param name="idUser"></param>
+            <returns>Notas Creadas por el usuario</returns>
+            <remarks>
+            Sample request:
+                
+                GET
+                {
+                    "idUser": "679c21ebc05a56196a429741"
+                }
+            
+            </remarks>
+            <response code="200">Lista notas</response>
+            <response code="404">No hay data</response>
+            <response code="500">Server error</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.NotesController.CrearNota(BackEndNotes.Dto.Notes.NotesDto)">
+            <summary>
+            Crea una nota nueva en la base de datos 
+            </summary>
+            <param name="model"></param>
+            <returns>Usuario creado</returns>
+            <remarks> 
+            Sample request: 
+            
+                GET 
+                {
+                    "Title": "My First Note",
+                    "Contenido": "Esta es la primera nota que agrego a mi blog, es parte de  mis pensamiento de los ultimos dias y hace parte de mi",
+                    "IdUser": "679419a3f650f611c6ce3237",
+                    "FechaCreacion": "2025-01-31T17:20:06.152Z",
+                }
+            </remarks>
+            <response code="201">Created successfully</response>
+            <response code="400">No se pudo crear la nota</response>
+            <response code="500">Error del servidor </response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.NotesController.EliminarNota(System.String)">
+            <summary>
+            Eliminar una nota 
+            </summary>
+            <param name="idNote"></param>
+            <returns>Mensaje verdadero o falso</returns>
+            <remarks>
+            Sample request:
+            
+                GET
+                {
+                    "idNote": "679cf14b5b377829f27c5df1"
+                }
+            </remarks>
+            <response code="200">Successfully</response>
+            <response code="400">Error de entrada de datos</response>
+            <response code="404">No encontrado</response>
+            <response code="500">Server error</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.SessionController.CheckMail(System.String)">
+            <summary>
+            Valida si el email existe en la base de datos
+            </summary>
+            <param name="email"></param>
+            <returns>retorna un bool que verifica si existe o no el email</returns>
+            <remarks> 
+            Sample request:
+            
+                GET 
+                {
+                    "email": "gustavober98@gmail.com"
+                }
+            </remarks>
+            <response code="200">OK</response>
+            <response code="404">No encontrado</response>
+            <response code="500">Error server</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.SessionController.ResetPassword(System.String)">
+            <summary>
+            Reset password in email "olvide la contraseña"
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+            <remarks> 
+            Sample request:
+            
+                GET 
+                {
+                    "email": "gustavober98@gmail.com"
+                }
+            </remarks>
+            <response code="200"></response> 
+            <response code="400"></response> 
+            <response code="500"></response> 
+        </member>
+        <member name="M:BackEndNotes.Controllers.SessionController.Login(BackEndNotes.Dto.LoginDto)">
+            <summary>
+            Inicia session 
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET
+                {
+                    "Email": "user@example.com",
+                    "Password": "stringst"
+                } 
+            </remarks>
+            <param name="login"></param>
+            <returns>Responde con el usuario y el token de acceso</returns>
+            <response code="200">Usuario</response>
+            <response code="404">Usuario no encontrado</response>
+            <response code="500">Server error</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.SessionController.SingIn(BackEndNotes.Dto.UserDto)">
+            <summary>
+            Registra un nuevo usuario en el sistema 
+            </summary>
+            <param name="User"></param>
+            <returns>Usuario creado</returns>
+            <remarks>
+            Sample resquest:
+            
+                POST 
+                {
+                    "Name": "Gustavo Bernal",
+                    "Email": "gustavober98@gmail.com",
+                    "Password": "12345678",
+                    "Role": "usuario"
+                }
+            </remarks>
+            <response code="201">Usuario Creado</response>
+            <response code="400">Algo Fallo</response>
+            <response code="500">Server error</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.SessionController.ChangesPasswords(BackEndNotes.Dto.PasswordDto)">
+            <summary>
+            Cambia contraseña del usuario con la validacion del id de usuario
+            </summary>
+            <param name="pass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackEndNotes.Controllers.UsuarioController.VerDataUsuario(System.String)">
+            <summary>
+            Ver datos de usuario 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <remarks> 
+            Sample request: 
+            
+                GET
+                {
+                    "id": "673d0d7ab2310184458dbfde"
+                }
+            </remarks>
+            <response code="200">usuarios</response>
+            <response code="400">No hay datos</response>
+            <response code="500">Error server.</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.UsuarioController.ActualizarUsuario(System.String,BackEndNotes.Dto.Usuarios.UpdateUserDto)">
+            <summary>
+            Actualiza datos del usuario
+            </summary>
+            <param name="id"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

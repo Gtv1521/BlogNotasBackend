@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using BackEndNotes.Models.Database;
@@ -10,6 +11,7 @@ namespace BackEndNotes.Utils
 {
     public class Context
     {
+        [Required]
         private readonly IMongoDatabase _database;
         public Context(IOptions<DatabaseModel> settings)
         {
@@ -27,7 +29,7 @@ namespace BackEndNotes.Utils
             }
             catch (System.Exception ex)
             {
-                throw new ApplicationException($"Error connecting to {ex.Message}");
+                throw new ApplicationException($"No se pudo conectar a la base de datos -- {ex.Message}");
             }
         }
 
