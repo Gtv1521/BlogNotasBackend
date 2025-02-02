@@ -10,8 +10,5 @@ namespace BackEndNotes.Dto.Notes
     {
         public string? Title { get; set; }
         public string? Contenido { get; set; }
-        [Required(ErrorMessage = "El id de usuario es requerido")]
-        public string? IdUser { get; set; }
-        public DateTime FechaUpdate { get; set; }
     }
 }

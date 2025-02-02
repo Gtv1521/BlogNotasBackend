@@ -62,6 +62,26 @@
             <response code="400">No se pudo crear la nota</response>
             <response code="500">Error del servidor </response>
         </member>
+        <member name="M:BackEndNotes.Controllers.NotesController.UpdateNotes(System.String,BackEndNotes.Dto.Notes.UpdateNoteDto)">
+            <summary>
+            Actualiza el contenido y el titulo de la nota 
+            </summary>
+            <param name="idNote"></param>
+            <param name="model"></param>
+            <returns>Mensaje successfully</returns>
+            <remarks> 
+            Sample request: 
+            
+                GET /update_note/679cf72528458369a5f99176
+                {
+                    "Title": "My first update",
+                    "Contenido": "Hola!!, esta es la primera actualizacion que hago a un de mis notas creadas",
+                }
+            </remarks>
+            <response code="200">Actualizado con exito</response>
+            <response code="400">No se pudo actualizar la nota</response>
+            <response code="500">Server error</response>
+        </member>
         <member name="M:BackEndNotes.Controllers.NotesController.EliminarNota(System.String)">
             <summary>
             Eliminar una nota 

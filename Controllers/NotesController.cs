@@ -142,6 +142,49 @@ namespace BackEndNotes.Controllers
         }
 
         /// <summary>
+        /// Actualiza el contenido y el titulo de la nota 
+        /// </summary>
+        /// <param name="idNote"></param>
+        /// <param name="model"></param>
+        /// <returns>Mensaje successfully</returns>
+        /// <remarks> 
+        /// Sample request: 
+        /// 
+        ///     GET /update_note/679cf72528458369a5f99176
+        ///     {
+        ///         "Title": "My first update",
+        ///         "Contenido": "Hola!!, esta es la primera actualizacion que hago a un de mis notas creadas",
+        ///     }
+        /// </remarks>
+        /// <response code="200">Actualizado con exito</response>
+        /// <response code="400">No se pudo actualizar la nota</response>
+        /// <response code="500">Server error</response>
+        [HttpPatch]
+        [Route("update_note/{idNote}")]
+        [Consumes("multipart/form-data", "application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ResponseDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ResponseDto))]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ProblemDetails))]
+        public async Task<IActionResult> UpdateNotes(string idNote, [FromForm] UpdateNoteDto model)
+        {
+            try
+            {
+                var response = await _service.ActualizarNota(idNote, model);
+                
+                if (!response) return BadRequest(new ResponseDto {
+                    Message = "No se pudo actualizar la nota"
+                });
+
+                return Ok(new ResponseDto {
+                    Message = "Nota actualizada correctamente"
+                });
+            }   
+            catch (System.Exception ex)
+            {
+                return Problem(ex.Message, $"api/Notes/update_note/{idNote}",500, "Server error");
+            }
+        }
+        /// <summary>
         /// Eliminar una nota 
         /// </summary>
         /// <param name="idNote"></param>

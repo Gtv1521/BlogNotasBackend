@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
 using BackEndNotes.Dto.Notes;
@@ -34,6 +35,11 @@ namespace BackEndNotes.Services
                 IdUser = model.IdUser,
                 FechaCreacion = DateTime.Now
             });
+        }
+
+        public async Task<bool> ActualizarNota(string id, UpdateNoteDto model)
+        {
+            return await _note.UpdateData(id, model);
         }
 
         public async Task<bool> RemoveNote(string id)

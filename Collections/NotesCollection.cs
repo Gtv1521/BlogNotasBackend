@@ -40,9 +40,15 @@ namespace BackEndNotes.Collections
              return false;
         }
 
-        public Task<bool> Update(UpdateNoteDto model)
+        public async Task<bool> UpdateData(string id, UpdateNoteDto model)
         {
-            throw new NotImplementedException();
+            var filter = Builders<NotesModel>.Filter.Eq(u => u.IdNote, id);
+            var update = Builders<NotesModel>.Update
+            .Set(u => u.Title, model.Title)
+            .Set(u => u.Contenido, model.Contenido)
+            .Set(u => u.FechaUpdate, DateTime.Now);
+            var response = await _database.UpdateOneAsync(filter, update);
+            return response.IsAcknowledged && response.ModifiedCount > 0;
         }
 
         public Task<List<NotesModel>> ViewAllDataIdUser(string userId)
