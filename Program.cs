@@ -62,7 +62,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Plantas API",
+        Title = "Notes API",
         Version = "v1",
         Description = "Esta API REST permite la creación, lectura, actualización y eliminación de notas para una aplicación de gestión de notas. Está diseñada para proporcionar una manera sencilla y eficiente de que los usuarios gestionen sus notas personales, con soporte para la organización de las mismas por categorías o etiquetas, y para la sincronización entre diferentes dispositivos.",
         TermsOfService = new Uri("https://example.com/license"),

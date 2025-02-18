@@ -217,21 +217,24 @@ namespace BackEndNotes.Controllers
         /// <summary>
         /// Cambia contraseña del usuario con la validacion del id de usuario
         /// </summary>
+        /// <param name="idUser"></param>
         /// <param name="pass"></param>
         /// <returns></returns>
-        [HttpPut]
-        [Route("change_password")]
+        [HttpPatch]
+        [Authorize]
+        [Route("change_password/{idUser}")]
         [Consumes("multipart/form-data", "application/json")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ResponseDto))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ResponseDto))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ProblemDetails))]
-        public async Task<IActionResult> ChangesPasswords([FromForm] PasswordDto pass)
+        public async Task<IActionResult> ChangesPasswords(string idUser, [FromForm] PasswordDto pass)
         {
             try
             {
+                if (string.IsNullOrEmpty(idUser)) return BadRequest(new ResponseDto { Message = "Ingrese un id de usuario" });
                 if (!ModelState.IsValid) return BadRequest(ModelState);
 
-                if (await _service.ChangePassword(pass)) return Ok(new ResponseDto
+                if (await _service.ChangePassword(idUser, pass)) return Ok(new ResponseDto
                 {
                     Message = "Contraseña cambiada correctamente"
                 });

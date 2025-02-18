@@ -7,6 +7,6 @@ namespace BackEndNotes.Interfaces
 {
     public interface IPasswords<T>
     {
-        Task<bool> ChoosePassword(T model);
+        Task<bool> ChoosePassword(string idUser, T model);
     }
 }

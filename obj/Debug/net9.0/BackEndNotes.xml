@@ -177,10 +177,11 @@
             <response code="400">Algo Fallo</response>
             <response code="500">Server error</response>
         </member>
-        <member name="M:BackEndNotes.Controllers.SessionController.ChangesPasswords(BackEndNotes.Dto.PasswordDto)">
+        <member name="M:BackEndNotes.Controllers.SessionController.ChangesPasswords(System.String,BackEndNotes.Dto.PasswordDto)">
             <summary>
             Cambia contraseña del usuario con la validacion del id de usuario
             </summary>
+            <param name="idUser"></param>
             <param name="pass"></param>
             <returns></returns>
         </member>

@@ -28,9 +28,9 @@ namespace BackEndNotes.Collections
             _sendMail = sendNail;
         }
 
-        public async Task<bool> ChoosePassword(PasswordDto model)
+        public async Task<bool> ChoosePassword(string IdUser, PasswordDto model)
         {
-            var filter = Builders<UserModel>.Filter.Eq(u => u.Id, model.IdUser);
+            var filter = Builders<UserModel>.Filter.Eq(u => u.Id, IdUser);
             var update = Builders<UserModel>.Update.Set(u => u.Password, _password.HashearContraseña(model.Password));
             var result = await _collection.UpdateOneAsync(filter, update);
             return result.ModifiedCount > 0;
