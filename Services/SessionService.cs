@@ -18,11 +18,13 @@ namespace BackEndNotes.Services
         private readonly ISessionUser<UserModel, PasswordDto, MailModel> _service;
         private readonly ManejoPasswords _password;
         private readonly MailCollection _mail;
+        private readonly Token _token;
 
-        public SessionService(ISessionUser<UserModel, PasswordDto, MailModel> service, MailCollection mail, ManejoPasswords password)
+        public SessionService(ISessionUser<UserModel, PasswordDto, MailModel> service, Token token, MailCollection mail, ManejoPasswords password)
         {
             _service = service;
             _password = password;
+            _token = token;
             _mail = mail;
         }
         // Ingresa un usuario a la base 
@@ -45,9 +47,9 @@ namespace BackEndNotes.Services
         }
 
         // cambia contraseña con el id de usuario 
-        public async Task<bool> ChangePassword(PasswordDto model)
+        public async Task<bool> ChangePassword(string IdUser, PasswordDto model)
         {
-            return await _service.ChoosePassword(model);
+            return await _service.ChoosePassword(IdUser, model);
         }
 
         public async Task<bool> RestartPassword(string mail)
@@ -57,11 +59,12 @@ namespace BackEndNotes.Services
                 var email = await _mail.ViewOne(mail);
                 if (email == null) return false;
 
+                var token = _token.GenerateToken(email.Id);
                 _service.Notificar(new MailModel
                 {
                     Mail = mail,
                     Motivo = "Recuperación de contraseña",
-                    Message = $"Hola {email.Name}, para recuperar su contraseña, haga click en el siguiente enlace: http://localhost:5000/api/usuarios/resetPassword/{email.Id}"
+                    Message = $"<h1>Hola {email.Name},</h1> <article>Para hacer cambio de su contraseña, haga click en el siguiente enlace:</article> http://localhost:5000/api/usuarios/resetPassword?id={email.Id}?token={token}"
                 });
                 return true;
             }
