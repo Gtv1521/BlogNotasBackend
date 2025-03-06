@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BackEndNotes.Dto.Books;
 using BackEndNotes.Interfaces.Principals;
 using BackEndNotes.Models.Librerias;
 using BackEndNotes.Utils;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace BackEndNotes.Collections
@@ -38,17 +40,30 @@ namespace BackEndNotes.Collections
             if (response.IsAcknowledged && response.DeletedCount > 0) return response.IsAcknowledged;
             return false;
         }
-    
-    //  update data one book
+
+        //  update data one book
         public Task<bool> UpdateData(string id, LibreriasModel model)
         {
             throw new NotImplementedException();
         }
 
         // list all books of user
-        public Task<List<LibreriasModel>> ViewAllDataIdUser(string userId)
+        public async Task<List<LibreriasModel>> ViewAllDataIdUser(string userId)
         {
-            throw new NotImplementedException();
+            var cantidad = 20;
+            var salta = (cantidad - 1) * 10;
+            try
+            {
+                var filter = Builders<LibreriasModel>.Filter.Eq(book => book.IdUser, userId);
+                return await _collection.Find(filter)
+                                        .Skip(salta)  // cantidad de datos que salta 
+                                        .Limit(cantidad)  // cantidad de datos que va a traer 
+                                        .ToListAsync(); // hace una lista de datos y responde 
+            }
+            catch (System.Exception)
+            {
+                return null;
+            }
         }
     }
 }
