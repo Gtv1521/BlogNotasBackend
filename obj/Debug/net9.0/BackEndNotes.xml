@@ -4,6 +4,20 @@
         <name>BackEndNotes</name>
     </assembly>
     <members>
+        <member name="M:BackEndNotes.Controllers.LibretaController.CreatedBook(System.String)">
+            <summary>
+            Crea una libreta
+            </summary>
+            <param name="libro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackEndNotes.Controllers.LibretaController.DeleteBook(System.String)">
+            <summary>
+            Delete one book
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:BackEndNotes.Controllers.NotesController.ObtenerNotas(System.String)">
             <summary>
             Trae datos de una nota registrada 
