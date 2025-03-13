@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Amazon.Util;
 using BackEndNotes.Dto.Books;
 using BackEndNotes.Interfaces.Principals;
 using BackEndNotes.Models.Librerias;
@@ -18,7 +19,8 @@ namespace BackEndNotes.Collections
         {
             _collection = context.GetCollection<LibreriasModel>("Libretas");
         }
-
+        
+        // create one new note
         public async Task<string> Create(LibreriasModel Object)
         {
             try
@@ -42,21 +44,27 @@ namespace BackEndNotes.Collections
         }
 
         //  update data one book
-        public Task<bool> UpdateData(string id, LibreriasModel model)
+        public async Task<bool> UpdateData(string id, LibreriasModel name)
         {
-            throw new NotImplementedException();
+            var filtro = Builders<LibreriasModel>.Filter.Where(u => u.IdLibreta == id);
+
+            var actualizacion = Builders<LibreriasModel>.Update
+                .Set(u => u.Nombre, name.Nombre);
+
+            var response = await _collection.UpdateOneAsync(filtro, actualizacion);
+
+            return response.IsAcknowledged;
         }
 
         // list all books of user
-        public async Task<List<LibreriasModel>> ViewAllDataIdUser(string userId)
+        public async Task<List<LibreriasModel>> ViewAllDataIdUser(string userId, int pagina)
         {
-            var cantidad = 20;
-            var salta = (cantidad - 1) * 10;
+            var cantidad = 10;
             try
             {
                 var filter = Builders<LibreriasModel>.Filter.Eq(book => book.IdUser, userId);
                 return await _collection.Find(filter)
-                                        .Skip(salta)  // cantidad de datos que salta 
+                                        .Skip((pagina - 1) * cantidad)  // cantidad de datos que salta 
                                         .Limit(cantidad)  // cantidad de datos que va a traer 
                                         .ToListAsync(); // hace una lista de datos y responde 
             }

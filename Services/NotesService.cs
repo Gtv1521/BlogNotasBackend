@@ -4,6 +4,7 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
 using BackEndNotes.Dto.Notes;
+using BackEndNotes.Dto.Usuarios;
 using BackEndNotes.Interfaces;
 using BackEndNotes.Models;
 using BackEndNotes.Models.Notes;
@@ -22,17 +23,19 @@ namespace BackEndNotes.Services
         {
             return await _note.ViewOne(idUser);
         }
-        public async Task<List<NotesModel>> ObtenerNotasUsuario(string idUser)
+        public async Task<List<NotesModel>> ObtenerNotasUsuario(string IdLibreta, int pagina)
         {
-            return await _note.ViewAllDataIdUser(idUser);
+            return await _note.ViewAllDataIdUser(IdLibreta, pagina);
         }
 
         public async Task<string> CrearNota(NotesDto model)
         {
-            return await _note.Create(new NotesModel {
+            return await _note.Create(new NotesModel
+            {
                 Title = model.Title,
                 Contenido = model.Contenido,
                 IdUser = model.IdUser,
+                IdLibreta = model.IdLibreta,
                 FechaCreacion = DateTime.Now
             });
         }

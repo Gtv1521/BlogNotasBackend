@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/BackEndNotes.csproj": {}
+    "/src/BackEndNotes.csproj": {}
   },
   "projects": {
-    "/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/BackEndNotes.csproj": {
+    "/src/BackEndNotes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/BackEndNotes.csproj",
+        "projectUniqueName": "/src/BackEndNotes.csproj",
         "projectName": "BackEndNotes",
-        "projectPath": "/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/BackEndNotes.csproj",
-        "packagesPath": "/home/gustavo/.nuget/packages/",
-        "outputPath": "/home/gustavo/Documentos/Desarrollo/C#/BackEndNotes/obj/",
+        "projectPath": "/src/BackEndNotes.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gustavo/.nuget/NuGet/NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -76,16 +75,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.13, 8.0.13]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[8.0.13, 8.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -94,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

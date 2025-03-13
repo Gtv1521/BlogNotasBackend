@@ -17,6 +17,7 @@ namespace BackEndNotes.Models.Notes
         public string? Contenido { get; set; }
         [Required]
         public string? IdUser { get; set; }
+        public string? IdLibreta { get; set; }
         public DateTime? FechaCreacion { get; set; }
         public DateTime? FechaUpdate { get; set; }
 

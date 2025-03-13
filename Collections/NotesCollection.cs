@@ -34,10 +34,10 @@ namespace BackEndNotes.Collections
 
         public async Task<bool> Remove(string id)
         {
-             var filter = Builders<NotesModel>.Filter.Eq(note => note.IdNote, id);
-             var result = await _database.DeleteOneAsync(filter);
-             if (result.IsAcknowledged && result.DeletedCount > 0) return result.IsAcknowledged;
-             return false;
+            var filter = Builders<NotesModel>.Filter.Eq(note => note.IdNote, id);
+            var result = await _database.DeleteOneAsync(filter);
+            if (result.IsAcknowledged && result.DeletedCount > 0) return result.IsAcknowledged;
+            return false;
         }
 
         public async Task<bool> UpdateData(string id, UpdateNoteDto model)
@@ -51,12 +51,16 @@ namespace BackEndNotes.Collections
             return response.IsAcknowledged && response.ModifiedCount > 0;
         }
 
-        public Task<List<NotesModel>> ViewAllDataIdUser(string userId)
+        public async Task<List<NotesModel>> ViewAllDataIdUser(string IdLibreta, int pagina)
         {
+            var cantidad = 20;
             try
             {
-                var filter = Builders<NotesModel>.Filter.Eq(note => note.IdUser, userId);
-                return _database.FindAsync(filter).Result.ToListAsync();
+                var filter = Builders<NotesModel>.Filter.Eq(note => note.IdLibreta, IdLibreta);
+                return await _database.Find(filter)
+                .Skip((pagina - 1) * cantidad)
+                .Limit(cantidad)
+                .ToListAsync();
             }
             catch (System.Exception)
             {

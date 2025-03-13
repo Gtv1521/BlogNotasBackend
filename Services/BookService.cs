@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security;
 using System.Threading.Tasks;
 using BackEndNotes.Dto.Books;
 using BackEndNotes.Interfaces.Principals;
@@ -16,7 +17,7 @@ namespace BackEndNotes.Services
         {
             _collection = collection;
         }
-
+        // Crea una nueva libreta 
         public async Task<string> Create(BooksDto libro)
         {
             var book = new LibreriasModel
@@ -27,11 +28,13 @@ namespace BackEndNotes.Services
             return await _collection.Create(book);
         }
 
+        //  elimina una libreta 
         public async Task<bool> Remove(string id)
         {
             return await _collection.Remove(id);
         }
 
+        // muestra todos los datos de una libreta 
         public LibreriasModel ViewAllData()
         {
             var response = new LibreriasModel
@@ -41,6 +44,19 @@ namespace BackEndNotes.Services
                 IdUser = "asdasdasd"
             };
             return response;
+        }
+
+        // view all books of user
+        public async Task<List<LibreriasModel>> ViewAllBooks(string IdUser, int pagina)
+        {
+            return await _collection.ViewAllDataIdUser(IdUser, pagina);
+        }
+
+        // update name book
+        public async Task<bool> UpdateBook(string id, string name)
+        {
+            var dato = new LibreriasModel { Nombre = name};
+            return await _collection.UpdateData(id, dato);
         }
     }
 }

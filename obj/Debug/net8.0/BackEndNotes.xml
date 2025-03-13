@@ -4,11 +4,27 @@
         <name>BackEndNotes</name>
     </assembly>
     <members>
+        <member name="M:BackEndNotes.Controllers.LibretaController.GetLibretasUser(System.String,System.Int32)">
+            <summary>
+             muestra todas las libretas que estas ligadas al usuario 
+            </summary>
+            <param name="iduser"></param>
+            <param name="pagina"></param>
+            <returns></returns>
+        </member>
         <member name="M:BackEndNotes.Controllers.LibretaController.CreatedBook(BackEndNotes.Dto.Books.BooksDto)">
             <summary>
             Crea una libreta
             </summary>
             <param name="libro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BackEndNotes.Controllers.LibretaController.UpdateName(System.String,System.String)">
+            <summary>
+            Actualiza el nombre de una libreta
+            </summary>
+            <param name="idLibreta"></param>
+            <param name="name"></param>
             <returns></returns>
         </member>
         <member name="M:BackEndNotes.Controllers.LibretaController.DeleteBook(System.String)">
@@ -36,11 +52,12 @@
             <response code="404">No encontrada</response>
             <response code="500">Server error</response>
         </member>
-        <member name="M:BackEndNotes.Controllers.NotesController.ObtenerNotasUsuario(System.String)">
+        <member name="M:BackEndNotes.Controllers.NotesController.ObtenerNotasLibreta(System.String,System.Int32)">
             <summary>
             Trae las notas del usuario
             </summary>
-            <param name="idUser"></param>
+            <param name="IdLibreta"></param>
+            <param name="pagina"></param>
             <returns>Notas Creadas por el usuario</returns>
             <remarks>
             Sample request:
@@ -48,6 +65,7 @@
                 GET
                 {
                     "idUser": "679c21ebc05a56196a429741"
+                    "pagina": 1
                 }
             
             </remarks>

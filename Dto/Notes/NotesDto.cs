@@ -16,5 +16,6 @@ namespace BackEndNotes.Dto.Notes
         public string? Contenido { get; set; }
         [Required(ErrorMessage ="El id de usuario es requerido")]
         public string? IdUser { get; set; }
+        public string? IdLibreta { get; set; }
     }
 }
