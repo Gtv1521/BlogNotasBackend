@@ -8,6 +8,6 @@ namespace BackEndNotes.Interfaces
 {
     public interface IViewXId<T>
     {
-        Task<List<T>> ViewAllDataIdUser(string userId);  
+        Task<List<T>> ViewAllDataIdUser(string userId, int pagina);
     }
 }

@@ -62,7 +62,8 @@ namespace BackEndNotes.Controllers
         /// <summary>
         /// Trae las notas del usuario
         /// </summary>
-        /// <param name="idUser"></param>
+        /// <param name="IdLibreta"></param>
+        /// <param name="pagina"></param>
         /// <returns>Notas Creadas por el usuario</returns>
         /// <remarks>
         /// Sample request:
@@ -70,6 +71,7 @@ namespace BackEndNotes.Controllers
         ///     GET
         ///     {
         ///         "idUser": "679c21ebc05a56196a429741"
+        ///         "pagina": 1
         ///     }
         /// 
         /// </remarks>
@@ -77,22 +79,22 @@ namespace BackEndNotes.Controllers
         /// <response code="404">No hay data</response>
         /// <response code="500">Server error</response>
         [HttpGet]
-        [Route("all_notes/{idUser}")]
+        [Route("all_notes/{IdLibreta}")]
         [Consumes("application/json", "multipart/form-data")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<NotesModel>))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ResponseDto))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ProblemDetails))]
-        public async Task<IActionResult> ObtenerNotasUsuario(string idUser)
+        public async Task<IActionResult> ObtenerNotasLibreta(string IdLibreta, int pagina)
         {
             try
             {
-                var notes = await _service.ObtenerNotasUsuario(idUser);
+                var notes = await _service.ObtenerNotasUsuario(IdLibreta, pagina);
                 if (notes.Count() == 0) return NotFound(new ResponseDto { Message = "No hay notas" });
                 return Ok(notes);
             }
             catch (System.Exception)
             {
-                return Problem("Hubo un error inesperado", $"api/notes/all_notes/{idUser}", 500, "Server error");
+                return Problem("Hubo un error inesperado", $"api/notes/all_notes/{IdLibreta}", 500, "Server error");
             }
         }
 

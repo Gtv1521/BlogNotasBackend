@@ -18,6 +18,7 @@ using BackEndNotes.Controllers;
 using BackEndNotes.Models.Notes;
 using BackEndNotes.Dto.Notes;
 using BackEndNotes.Interfaces.Principals;
+using BackEndNotes.Models.Librerias;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +36,11 @@ builder.Services.AddScoped<NotificationMail>();
 // Enlaces para sesion de usuario 
 builder.Services.AddScoped<ISessionUser<UserModel, PasswordDto, MailModel>, SessionCollection>();
 builder.Services.AddScoped<SessionCollection>();
+
+// Enlaces a libretas
+builder.Services.AddScoped<ILibreta<LibreriasModel>, LibretaCollection>();
+builder.Services.AddScoped<BookService>();
+
 // Enlaces para rutas de usuario 
 builder.Services.AddScoped<IUsuario<UpdateUserDto, UsuarioDataDto>, UsuarioCollection>();
 

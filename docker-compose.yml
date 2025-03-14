@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ApiNotes
+    ports:
+      - "5217:5217"
+    volumes:
+      - ./:/src
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    command: dotnet watch run --urls=http://0.0.0.0:5217
