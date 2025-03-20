@@ -79,7 +79,7 @@ namespace BackEndNotes.Controllers
         /// <response code="404">No hay data</response>
         /// <response code="500">Server error</response>
         [HttpGet]
-        [Route("all_notes/{IdLibreta}")]
+        [Route("all_notes/{IdLibreta}/{pagina}")]
         [Consumes("application/json", "multipart/form-data")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<NotesModel>))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(ResponseDto))]
