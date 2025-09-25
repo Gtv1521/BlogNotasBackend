@@ -32,6 +32,13 @@ namespace BackEndNotes.Collections
             }
         }
 
+        // cuenta las notas que hay en una nota
+        public async Task<long> CountNotes(string id)
+        {
+            var filter = Builders<NotesModel>.Filter.Eq(n => n.IdLibreta, id);
+            return await _database.CountDocumentsAsync(filter);
+        }
+
         public async Task<bool> Remove(string id)
         {
             var filter = Builders<NotesModel>.Filter.Eq(note => note.IdNote, id);
@@ -58,6 +65,7 @@ namespace BackEndNotes.Collections
             {
                 var filter = Builders<NotesModel>.Filter.Eq(note => note.IdLibreta, IdLibreta);
                 return await _database.Find(filter)
+                .SortByDescending(n => n.IdNote)
                 .Skip((pagina - 1) * cantidad)
                 .Limit(cantidad)
                 .ToListAsync();

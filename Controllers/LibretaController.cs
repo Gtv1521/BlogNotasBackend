@@ -17,9 +17,11 @@ namespace BackEndNotes.Controllers
     public class LibretaController : ControllerBase
     {
         private readonly BookService _service;
-        public LibretaController(BookService service)
+        private readonly NotesService _notes;
+        public LibretaController(BookService service, NotesService notes)
         {
             _service = service;
+            _notes = notes;
         }
 
         /// <summary>
@@ -35,13 +37,40 @@ namespace BackEndNotes.Controllers
             try
             {
                 if (string.IsNullOrEmpty(iduser)) return BadRequest(new ResponseDto { Message = "Los campos son requeridos" });
-                return Ok(await _service.ViewAllBooks(iduser, pagina));
+                var response = await _service.ViewAllBooks(iduser, pagina);
+
+                var data = await Task.WhenAll(response.Select(async item => new
+                {
+                    idLibreta = item.IdLibreta,
+                    nombre = item.Nombre,
+                    idUser = item.IdUser,
+                    NotesCount = await _notes.CountNotes(item.IdLibreta)
+                }));
+
+                return Ok(data);
             }
             catch (System.Exception ex)
             {
                 return Problem("Algo fallo", $"/view_books/{iduser}/{pagina}", 500, ex.Message, "Server error");
             }
         }
+
+
+        [HttpGet]
+        [Route("notes_count/{idLibreta}")]
+        public async Task<IActionResult> CountNote(string idlibreta)
+        {
+            try
+            {
+                var response = await _notes.CountNotes(idlibreta);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return Problem("Algo fallo", $"/create-book", 500, ex.Message, "Server error");
+            }
+        }
+
 
         /// <summary>
         /// Crea una libreta
@@ -50,7 +79,7 @@ namespace BackEndNotes.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("create_book")]
-        public async Task<IActionResult> CreatedBook(BooksDto libro)
+        public async Task<IActionResult> CreatedBook([FromBody] BooksDto libro)
         {
             try
             {

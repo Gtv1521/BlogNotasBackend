@@ -19,19 +19,12 @@ namespace BackEndNotes.Collections
         {
             _collection = context.GetCollection<LibreriasModel>("Libretas");
         }
-        
+
         // create one new note
         public async Task<string> Create(LibreriasModel Object)
         {
-            try
-            {
-                await _collection.InsertOneAsync(Object);
-                return Object.IdLibreta;
-            }
-            catch (System.Exception)
-            {
-                return null;
-            }
+            await _collection.InsertOneAsync(Object);
+            return Object.IdLibreta;
         }
 
         //  delete one book
@@ -60,18 +53,11 @@ namespace BackEndNotes.Collections
         public async Task<List<LibreriasModel>> ViewAllDataIdUser(string userId, int pagina)
         {
             var cantidad = 10;
-            try
-            {
-                var filter = Builders<LibreriasModel>.Filter.Eq(book => book.IdUser, userId);
-                return await _collection.Find(filter)
-                                        .Skip((pagina - 1) * cantidad)  // cantidad de datos que salta 
-                                        .Limit(cantidad)  // cantidad de datos que va a traer 
-                                        .ToListAsync(); // hace una lista de datos y responde 
-            }
-            catch (System.Exception)
-            {
-                return null;
-            }
+            var filter = Builders<LibreriasModel>.Filter.Eq(book => book.IdUser, userId);
+            return await _collection.Find(filter)
+            .Skip((pagina - 1) * cantidad)  // cantidad de datos que salta 
+            .Limit(cantidad)  // cantidad de datos que va a traer 
+            .ToListAsync(); // hace una lista de datos y responde 
         }
     }
 }
