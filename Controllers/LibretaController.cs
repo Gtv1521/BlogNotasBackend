@@ -57,7 +57,7 @@ namespace BackEndNotes.Controllers
 
 
         [HttpGet]
-        [Route("notes_count/{idLibreta}")]
+        [Route("notes_count/{idlibreta}")]
         public async Task<IActionResult> CountNote(string idlibreta)
         {
             try
