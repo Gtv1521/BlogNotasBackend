@@ -27,6 +27,13 @@ namespace BackEndNotes.Collections
             return Object.IdLibreta;
         }
 
+        // Coynt the number of books of a user
+        public async Task<long> CountLibretas(string idUser)
+        {
+            var filter = Builders<LibreriasModel>.Filter.Eq(book => book.IdUser, idUser);
+            return await _collection.CountDocumentsAsync(filter);
+        }
+
         //  delete one book
         public async Task<bool> Remove(string id)
         {

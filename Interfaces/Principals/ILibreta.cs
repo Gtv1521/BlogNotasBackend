@@ -9,6 +9,6 @@ namespace BackEndNotes.Interfaces.Principals
 {
     public interface ILibreta<T> : ICreated<T>, IRemove, IUpdate<T>, IViewXId<T>
     {
-        
+        Task<long> CountLibretas(string idUser);
     }
 }

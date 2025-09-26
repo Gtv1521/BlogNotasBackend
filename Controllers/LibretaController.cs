@@ -57,12 +57,12 @@ namespace BackEndNotes.Controllers
 
 
         [HttpGet]
-        [Route("notes_count/{idlibreta}")]
-        public async Task<IActionResult> CountNote(string idlibreta)
+        [Route("books_count/{idUser}")]
+        public async Task<IActionResult> Countlibreta(string idUser)
         {
             try
             {
-                var response = await _notes.CountNotes(idlibreta);
+                var response = await _service.Countlibreta(idUser);
                 return Ok(response);
             }
             catch (Exception ex)

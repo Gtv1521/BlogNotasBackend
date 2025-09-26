@@ -28,6 +28,11 @@ namespace BackEndNotes.Services
             return await _collection.Create(book);
         }
 
+        public async Task<long> Countlibreta(string idUser)
+        {
+            return await _collection.CountLibretas(idUser);
+        }
+        
         //  elimina una libreta 
         public async Task<bool> Remove(string id)
         {

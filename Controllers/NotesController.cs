@@ -60,6 +60,27 @@ namespace BackEndNotes.Controllers
         }
 
         /// <summary>
+        /// Cuenta la cantidad de notas que hay en una libreta
+        /// </summary>
+        /// <param name="IdLibreta"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("count_notes/{IdLibreta}")]
+        public async Task<IActionResult> CountNotes(string IdLibreta)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(IdLibreta)) return BadRequest(new ResponseDto { Message = "El id de la libreta es requerido" });
+                var response = await _service.CountNotes(IdLibreta);
+                return Ok(response);
+            }
+            catch (System.Exception ex)
+            {
+                return Problem("Algo fallo", $"api/notes/count_notes/{IdLibreta}", 500, ex.Message, "Server error");
+            }
+        }
+
+        /// <summary>
         /// Trae las notas del usuario
         /// </summary>
         /// <param name="IdLibreta"></param>
@@ -172,18 +193,20 @@ namespace BackEndNotes.Controllers
             try
             {
                 var response = await _service.ActualizarNota(idNote, model);
-                
-                if (!response) return BadRequest(new ResponseDto {
+
+                if (!response) return BadRequest(new ResponseDto
+                {
                     Message = "No se pudo actualizar la nota"
                 });
 
-                return Ok(new ResponseDto {
+                return Ok(new ResponseDto
+                {
                     Message = "Nota actualizada correctamente"
                 });
-            }   
+            }
             catch (System.Exception ex)
             {
-                return Problem(ex.Message, $"api/Notes/update_note/{idNote}",500, "Server error");
+                return Problem(ex.Message, $"api/Notes/update_note/{idNote}", 500, "Server error");
             }
         }
         /// <summary>
