@@ -175,7 +175,8 @@ builder.Services.AddControllers();
 var allowedOrigins = new[] {
     "http://localhost:4200",
     "http://172.19.0.2:4200",
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "https://blog-notas-front.vercel.app" // produccion en vercel
 };
 
 builder.Services.AddCors(options =>
