@@ -174,9 +174,9 @@ builder.Services.AddControllers();
 // Agrega policía cors 
 var allowedOrigins = new[] {
     "http://localhost:4200",
+    "https://blog-notas-front.vercel.app" // produccion en vercel
     "http://172.19.0.2:4200",
     "http://localhost:3000",
-    "https://blog-notas-front.vercel.app" // produccion en vercel
 };
 
 builder.Services.AddCors(options =>
@@ -184,9 +184,9 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFronts", policy =>
     {
         policy.WithOrigins(allowedOrigins)
+              .AllowCredentials() // importante para enviar cookies
               .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials(); // importante para enviar cookies
+              .AllowAnyMethod();
     });
 });
 
