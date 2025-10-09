@@ -16,7 +16,7 @@ namespace BackEndNotes.Utils
         {
             _configuration = configuration;
         }
-        public string GenerateToken(string userId)
+        public string GenerateToken(string userId, int time)
         {
              var claims = new[] {
                         new Claim(JwtRegisteredClaimNames.Sub, userId),
@@ -30,7 +30,7 @@ namespace BackEndNotes.Utils
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Issuer"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
+                expires: DateTime.UtcNow.AddHours(time),
                 signingCredentials: creds);
             var Pass = new JwtSecurityTokenHandler().WriteToken(token);
             return Pass.ToString();

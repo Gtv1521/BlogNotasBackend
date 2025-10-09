@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Amazon.Util;
+// using Amazon.Util;
 using BackEndNotes.Dto.Books;
 using BackEndNotes.Interfaces.Principals;
 using BackEndNotes.Models.Librerias;
@@ -38,7 +38,7 @@ namespace BackEndNotes.Collections
         public async Task<bool> Remove(string id)
         {
             var filter = Builders<LibreriasModel>.Filter.Eq(book => book.IdLibreta, id);
-            var response = await _collection.DeleteOneAsync(filter);
+            var response = await _collection.DeleteManyAsync(filter);
             if (response.IsAcknowledged && response.DeletedCount > 0) return response.IsAcknowledged;
             return false;
         }
@@ -65,6 +65,12 @@ namespace BackEndNotes.Collections
             .Skip((pagina - 1) * cantidad)  // cantidad de datos que salta 
             .Limit(cantidad)  // cantidad de datos que va a traer 
             .ToListAsync(); // hace una lista de datos y responde 
+        }
+
+        public async Task<LibreriasModel> ViewOne(string id)
+        {
+            var filter = Builders<LibreriasModel>.Filter.Eq("_id", new ObjectId(id));
+            return await _collection.Find(filter).FirstOrDefaultAsync();
         }
     }
 }

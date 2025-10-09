@@ -1,14 +1,46 @@
+# version: '3.9'
+
+# services:
+#   backend:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.dev
+#     container_name: ApiNotesDev # nombre del contendor
+#     ports:
+#       - "8080:5217"       # 8080 fuera, 5217 dentro del contenedor
+#     volumes:
+#       - .:/app            # monta el código local
+#       - /app/bin          # evita conflictos con bin y obj
+#       - /app/obj
+#     environment:
+#       - ASPNETCORE_ENVIRONMENT=Development
+
+#############
+# PRUEBA
 version: '3.9'
 services:
+  # Contenedir de desarrollo
   myapp:
     build:
       context: .
-      dockerfile: Dockerfile
-    container_name: ApiNotes
+      dockerfile: Dockerfile.dev
+    container_name: ApiNotesDev
     ports:
       - "5217:5217"
     volumes:
-      - ./:/src
+      - .:/src
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     command: dotnet watch run --urls=http://0.0.0.0:5217
+  
+  
+  # 🚀 Contenedor de producción
+  myapp-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ApiNotesProd
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production

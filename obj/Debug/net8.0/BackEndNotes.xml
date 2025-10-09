@@ -52,6 +52,13 @@
             <response code="404">No encontrada</response>
             <response code="500">Server error</response>
         </member>
+        <member name="M:BackEndNotes.Controllers.NotesController.CountNotes(System.String)">
+            <summary>
+            Cuenta la cantidad de notas que hay en una libreta
+            </summary>
+            <param name="IdLibreta"></param>
+            <returns></returns>
+        </member>
         <member name="M:BackEndNotes.Controllers.NotesController.ObtenerNotasLibreta(System.String,System.Int32)">
             <summary>
             Trae las notas del usuario
@@ -187,6 +194,14 @@
             <response code="200">Usuario</response>
             <response code="404">Usuario no encontrado</response>
             <response code="500">Server error</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.SessionController.Refresh">
+            <summary>
+            refresca token de acceso de usuarios 
+            </summary>
+            <returns></returns>
+            
+            
         </member>
         <member name="M:BackEndNotes.Controllers.SessionController.SingIn(BackEndNotes.Dto.UserDto)">
             <summary>

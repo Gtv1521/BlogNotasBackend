@@ -19,6 +19,9 @@ using BackEndNotes.Models.Notes;
 using BackEndNotes.Dto.Notes;
 using BackEndNotes.Interfaces.Principals;
 using BackEndNotes.Models.Librerias;
+using BlogNotasBackend.Interfaces.Principals;
+using BlogNotasBackend.Collections;
+using src.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,9 +54,11 @@ builder.Services.AddScoped<NotesService>();
 // Enlaces para Correo
 builder.Services.AddScoped<IViewOne<UserModel>, MailCollection>();
 builder.Services.AddScoped<MailCollection>();
+builder.Services.AddScoped<ITokens, TokensCollection>();
 
 // Files services
 builder.Services.AddScoped<MailService>();
+builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<SessionService>();
 builder.Services.AddScoped<MailService>();
 builder.Services.AddScoped<UsuarioService>();
@@ -147,8 +152,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
             var response = new ResponseDto { Message = "No autorizado. Token invalido o expirado." };
             var jsonResponse = JsonSerializer.Serialize(response);
             return context.Response.WriteAsync(jsonResponse);
+        },
+
+        OnMessageReceived = context =>
+        {
+            if (context.Request.Cookies.ContainsKey("AuthToken"))
+            {
+                context.Token = context.Request.Cookies["AuthToken"];
+            }
+            return Task.CompletedTask;
         }
     };
+
+
 });
 
 builder.Services.AddAuthorization();
@@ -156,14 +172,20 @@ builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 
 // Agrega policía cors 
+var allowedOrigins = new[] {
+    "http://localhost:4200",
+    "http://172.19.0.2:4200",
+    "http://localhost:3000"
+};
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("PermitirTodo", builder =>
+    options.AddPolicy("AllowFronts", policy =>
     {
-        builder
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader();
+        policy.WithOrigins(allowedOrigins)
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials(); // importante para enviar cookies
     });
 });
 
@@ -175,15 +197,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-else
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
 app.UseHttpsRedirection();
 
-app.UseCors("PermitirTodo");
+app.UseCors("AllowFronts");
 
 app.UseAuthentication();
 

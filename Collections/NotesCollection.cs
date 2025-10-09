@@ -42,7 +42,7 @@ namespace BackEndNotes.Collections
         public async Task<bool> Remove(string id)
         {
             var filter = Builders<NotesModel>.Filter.Eq(note => note.IdNote, id);
-            var result = await _database.DeleteOneAsync(filter);
+            var result = await _database.DeleteManyAsync(filter);
             if (result.IsAcknowledged && result.DeletedCount > 0) return result.IsAcknowledged;
             return false;
         }
@@ -90,6 +90,12 @@ namespace BackEndNotes.Collections
             }
         }
 
-
+        public async Task<bool> DeleteByIdUser(string id)
+        {
+            var delete = Builders<NotesModel>.Filter.Eq(x => x.IdUser, id);
+            var response = await _database.DeleteManyAsync(delete);
+            if (response.IsAcknowledged && response.DeletedCount > 0) return response.IsAcknowledged;
+            return false;
+        }
     }
 }

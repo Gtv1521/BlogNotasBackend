@@ -11,5 +11,6 @@ namespace BackEndNotes.Interfaces
     public interface INotes<T, S> : ICreated<T>, IViewOne<T>, IViewXId<T>, IRemove, IUpdate<UpdateNoteDto>
     {
         Task<long> CountNotes(string id);
+        Task<bool> DeleteByIdUser(string id);
     }
 }

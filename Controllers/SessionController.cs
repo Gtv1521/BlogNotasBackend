@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using BackEndNotes.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using src.Services;
 
 namespace BackEndNotes.Controllers
 {
@@ -19,13 +21,15 @@ namespace BackEndNotes.Controllers
     public class SessionController : ControllerBase
     {
         private readonly Token _token;
+        private readonly TokenService _serviceToken;
         private readonly SessionService _service;
         private readonly MailService _mailService;
         private readonly INotification<MailModel> _notificationMail;
 
-        public SessionController(SessionService service, MailService mailService, INotification<MailModel> notificationMail, Token token)
+        public SessionController(SessionService service, MailService mailService, INotification<MailModel> notificationMail, Token token, TokenService serviceToken)
         {
             _service = service;
+            _serviceToken = serviceToken;
             _mailService = mailService;
             _notificationMail = notificationMail;
             _token = token;
@@ -131,23 +135,87 @@ namespace BackEndNotes.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                { }
                 var user = await _service.Login(login.Email, login.Password);
+
                 if (user == null) return NotFound(new ResponseDto { Message = "Usuario o contraseña incorrecta" });
+
+                //  datos para token y tiempo 
+                string Token = _token.GenerateToken(user.Id, 1);
+
+                //  crea y guarda el refreshToken en BD
+                var refreshToken = await _serviceToken.CreateToken(user.Id);
+
+
                 var result = new UserResDto
                 {
                     IdUser = user.Id,
                     Name = user.Name,
                     Email = user.Email,
                     Message = "Bienvenido",
-                    Token = _token.GenerateToken(user.Id)
                 };
+
+                Response.Cookies.Append("AuthToken", Token, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddHours(1)
+                });
+
+                Response.Cookies.Append("RefreshToken", refreshToken, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddMonths(2)
+                });
+
+#if !DEBUG
                 return Ok(result);
+#else
+                return Ok(new { result, Token, refreshToken });
+#endif
+
             }
             catch (System.Exception ex)
             {
                 return Problem(ex.Message, "/api/session/login", 500, "Server error");
             }
         }
+
+
+        /// <summary>
+        /// refresca token de acceso de usuarios 
+        /// </summary>
+        /// <returns></returns>
+        /// 
+        /// 
+        [HttpGet]
+        [Route("refresh")]
+        public async Task<IActionResult> Refresh()
+        {
+            var refreshToken = Request.Cookies["RefreshToken"];
+            if (string.IsNullOrEmpty(refreshToken))
+                return Unauthorized();
+
+            var data = await _serviceToken.RefreshToken(refreshToken);
+            if (data == null)
+                return Unauthorized();
+
+            var newAccessToken = _token.GenerateToken(data, 1);
+            Response.Cookies.Append("AuthToken", newAccessToken, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(1)
+            });
+
+            return Ok(new { message = "Token renovado correctamente" });
+        }
+
 
         /// <summary>
         /// Registra un nuevo usuario en el sistema 
@@ -195,6 +263,28 @@ namespace BackEndNotes.Controllers
                     Message = "<h1><strong>Bienvenido a Notas</strong></h1><br> <div>Esta es una red donde puedes agregar tus notas y plasmar lo que piensas, lo que sientes, las cosas que te rodean y los buenos momentos que quieras narrar..</div>",
                 });
 
+                // crea token se session
+                var Token = _token.GenerateToken(resultado, 1);
+
+                //  crea y guarda el refreshToken en BD
+                var refreshToken = await _serviceToken.CreateToken(resultado);
+
+                Response.Cookies.Append("AuthToken", Token, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddHours(1)
+                });
+
+                Response.Cookies.Append("RefreshToken", refreshToken, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddMonths(2)
+                });
+
                 return CreatedAtAction(
                     nameof(Login),
                     new { Mail = "user@example.com", Password = "***********" },
@@ -204,7 +294,6 @@ namespace BackEndNotes.Controllers
                         Name = User.Name,
                         Message = "Usuario Creado",
                         IdUser = resultado,
-                        Token = _token.GenerateToken(resultado)
                     }
                  );
             }
@@ -250,5 +339,50 @@ namespace BackEndNotes.Controllers
             }
         }
 
+
+        [HttpGet]
+        [Route("log_out")]
+        public async Task<IActionResult> Logout()
+        {
+            var refreshToken = Request.Cookies["RefreshToken"];
+            if (string.IsNullOrEmpty(refreshToken))
+                return Unauthorized();
+
+
+            // elimina datos de session 
+            var response = await _serviceToken.DeleteTokenRefresh(refreshToken);
+            if (!response) return BadRequest(new { Message = "fallo al cerrar sesion" });
+
+            // se limpian las cookies con la session 
+            Response.Cookies.Append("AuthToken", "", new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddDays(-1) // vencida
+            });
+
+            Response.Cookies.Append("RefreshToken", "", new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddDays(-1)
+            });
+
+            return Ok(new { Message = "Sesion cerrada" });
+        }
+
+        [HttpGet]
+        [Authorize]
+        [Route("close_sesion/{token}")]
+        public async Task<IActionResult> DeleteSessions(string token)
+        {
+            if (token == null) return BadRequest(new { Message = "no existe token" });
+            var response = await _serviceToken.DeleteTokenRefresh(token);
+
+            if (!response) return BadRequest(new { Message = "fallo al cerrar sesion" });
+            return Ok(new { Message = "Sesion cerrada" });
+        }
     }
 }

@@ -57,6 +57,15 @@ namespace BackEndNotes.Controllers
 
 
         [HttpGet]
+        [Route("view_book/{idLibreta}")]
+        public async Task<IActionResult> GetLibreta(string idLibreta)
+        {
+            var responde = await _service.ViewOneBook(idLibreta);
+            if (responde == null) return NotFound("Not found data");
+            return Ok(responde);
+        }
+
+        [HttpGet]
         [Route("books_count/{idUser}")]
         public async Task<IActionResult> Countlibreta(string idUser)
         {
@@ -104,11 +113,11 @@ namespace BackEndNotes.Controllers
         /// <returns></returns>
         [HttpPatch]
         [Route("update_name/{idLibreta}")]
-        public async Task<IActionResult> UpdateName(string idLibreta, string name)
+        public async Task<IActionResult> UpdateName( string idLibreta, [FromQuery] string name)
         {
             try
             {
-                if (string.IsNullOrEmpty(idLibreta) && string.IsNullOrEmpty(name)) return BadRequest(new ResponseNoteDto { Message = "Debe enviar todos los datos " });
+                if (string.IsNullOrEmpty(idLibreta) || string.IsNullOrEmpty(name)) return BadRequest(new ResponseNoteDto { Message = "Debe enviar todos los datos " });
                 return Ok(await _service.UpdateBook(idLibreta, name));
             }
             catch (System.Exception ex)

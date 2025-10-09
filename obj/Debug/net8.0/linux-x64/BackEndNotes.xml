@@ -4,6 +4,14 @@
         <name>BackEndNotes</name>
     </assembly>
     <members>
+        <member name="M:BackEndNotes.Controllers.LibretaController.GetLibretasUser(System.String,System.Int32)">
+            <summary>
+             muestra todas las libretas que estas ligadas al usuario 
+            </summary>
+            <param name="iduser"></param>
+            <param name="pagina"></param>
+            <returns></returns>
+        </member>
         <member name="M:BackEndNotes.Controllers.LibretaController.CreatedBook(BackEndNotes.Dto.Books.BooksDto)">
             <summary>
             Crea una libreta
@@ -43,6 +51,13 @@
             <response code="200">Nota.</response>
             <response code="404">No encontrada</response>
             <response code="500">Server error</response>
+        </member>
+        <member name="M:BackEndNotes.Controllers.NotesController.CountNotes(System.String)">
+            <summary>
+            Cuenta la cantidad de notas que hay en una libreta
+            </summary>
+            <param name="IdLibreta"></param>
+            <returns></returns>
         </member>
         <member name="M:BackEndNotes.Controllers.NotesController.ObtenerNotasLibreta(System.String,System.Int32)">
             <summary>

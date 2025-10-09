@@ -1,0 +1,20 @@
+# ETAPA DE DESARROLLO
+# Imagen base: SDK (tiene runtime + herramientas de desarrollo)
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS dev
+
+# Directorio de trabajo dentro del contenedor
+WORKDIR /src
+
+# Copiamos los archivos del proyecto
+COPY . .
+
+# Restauramos dependencias
+RUN dotnet restore
+
+# Exponemos el puerto interno
+EXPOSE 5217
+
+# Ejecutamos en modo watch con recarga en caliente
+CMD ["dotnet", "watch", "run", "--urls=http://0.0.0.0:5217"]
+
+
