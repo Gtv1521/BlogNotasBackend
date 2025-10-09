@@ -174,7 +174,7 @@ builder.Services.AddControllers();
 // Agrega policía cors 
 var allowedOrigins = new[] {
     "http://localhost:4200",
-    "https://blog-notas-front.vercel.app" // produccion en vercel
+    "https://blog-notas-front.vercel.app", // produccion en vercel
     "http://172.19.0.2:4200",
     "http://localhost:3000",
 };

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/gustavo/Desarrollo/C#/BlogNotasBackend/BackEndNotes.csproj": {}
+    "/src/BackEndNotes.csproj": {}
   },
   "projects": {
-    "/home/gustavo/Desarrollo/C#/BlogNotasBackend/BackEndNotes.csproj": {
+    "/src/BackEndNotes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gustavo/Desarrollo/C#/BlogNotasBackend/BackEndNotes.csproj",
+        "projectUniqueName": "/src/BackEndNotes.csproj",
         "projectName": "BackEndNotes",
-        "projectPath": "/home/gustavo/Desarrollo/C#/BlogNotasBackend/BackEndNotes.csproj",
-        "packagesPath": "/home/gustavo/.nuget/packages/",
-        "outputPath": "/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/",
+        "projectPath": "/src/BackEndNotes.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/gustavo/.nuget/NuGet/NuGet.Config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -70,12 +75,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -84,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
