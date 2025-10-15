@@ -113,7 +113,7 @@ namespace BackEndNotes.Controllers
         /// <returns></returns>
         [HttpPatch]
         [Route("update_name/{idLibreta}")]
-        public async Task<IActionResult> UpdateName( string idLibreta, [FromQuery] string name)
+        public async Task<IActionResult> UpdateName(string idLibreta, [FromQuery] string name)
         {
             try
             {

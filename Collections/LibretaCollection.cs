@@ -49,7 +49,8 @@ namespace BackEndNotes.Collections
             var filtro = Builders<LibreriasModel>.Filter.Where(u => u.IdLibreta == id);
 
             var actualizacion = Builders<LibreriasModel>.Update
-                .Set(u => u.Nombre, name.Nombre);
+                .Set(u => u.Nombre, name.Nombre)
+                .Set(u => u.UpdateBook, DateTime.Now);
 
             var response = await _collection.UpdateOneAsync(filtro, actualizacion);
 
@@ -62,6 +63,7 @@ namespace BackEndNotes.Collections
             var cantidad = 10;
             var filter = Builders<LibreriasModel>.Filter.Eq(book => book.IdUser, userId);
             return await _collection.Find(filter)
+            .SortByDescending(n => n.UpdateBook)
             .Skip((pagina - 1) * cantidad)  // cantidad de datos que salta 
             .Limit(cantidad)  // cantidad de datos que va a traer 
             .ToListAsync(); // hace una lista de datos y responde 

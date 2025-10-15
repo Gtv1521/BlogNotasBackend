@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/gustavo/Desarrollo/C#/BlogNotasBackend/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/home/gustavo/Desarrollo/C#/BlogNotasBackend/wwwroot/styles/styles.css",
+      "PackagePath": "staticwebassets/styles/styles.css"
+    },
+    {
+      "Id": "obj/Debug/net8.0/linux-x64/staticwebassets/msbuild.BackEndNotes.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/linux-x64/staticwebassets/msbuild.build.BackEndNotes.props",
+      "PackagePath": "build\\BackEndNotes.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/linux-x64/staticwebassets/msbuild.buildMultiTargeting.BackEndNotes.props",
+      "PackagePath": "buildMultiTargeting\\BackEndNotes.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/linux-x64/staticwebassets/msbuild.buildTransitive.BackEndNotes.props",
+      "PackagePath": "buildTransitive\\BackEndNotes.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

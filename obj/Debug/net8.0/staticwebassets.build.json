@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "Td/5G7Li6UIFhLQgdIiHHF0iQ0KsosWDHH9qWukKRnA=",
+  "Hash": "OqMMG+A2N/L95q/uTnSv4EPLK0aBR0VrsUnMVyrklYE=",
   "Source": "BackEndNotes",
   "BasePath": "_content/BackEndNotes",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "BackEndNotes/wwwroot",
+      "Source": "BackEndNotes",
+      "ContentRoot": "/src/wwwroot/",
+      "BasePath": "_content/BackEndNotes",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/src/wwwroot/index.html",
+      "SourceId": "BackEndNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "/src/wwwroot/",
+      "BasePath": "_content/BackEndNotes",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/src/wwwroot/styles/styles.css",
+      "SourceId": "BackEndNotes",
+      "SourceType": "Discovered",
+      "ContentRoot": "/src/wwwroot/",
+      "BasePath": "_content/BackEndNotes",
+      "RelativePath": "styles/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/styles/styles.css"
+    }
+  ]
 }

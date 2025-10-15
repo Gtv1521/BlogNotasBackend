@@ -28,7 +28,9 @@ namespace BackEndNotes.Services
             var book = new LibreriasModel
             {
                 Nombre = libro.NameBook,
-                IdUser = libro.IdAuthor
+                IdUser = libro.IdAuthor,
+                CreateBook = DateTime.Now,
+                UpdateBook = DateTime.Now,
             };
             return await _collection.Create(book);
         }

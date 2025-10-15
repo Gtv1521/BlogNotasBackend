@@ -172,11 +172,7 @@ namespace BackEndNotes.Controllers
                     Expires = DateTime.UtcNow.AddMonths(2)
                 });
 
-#if !DEBUG
                 return Ok(result);
-#else
-                return Ok(new { result, Token, refreshToken });
-#endif
 
             }
             catch (System.Exception ex)

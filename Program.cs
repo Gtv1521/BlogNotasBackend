@@ -174,6 +174,7 @@ builder.Services.AddControllers();
 // Agrega policía cors 
 var allowedOrigins = new[] {
     "http://localhost:4200",
+    "https://4nm7h46w-4200.use2.devtunnels.ms",
     "https://blog-notas-front.vercel.app", // produccion en vercel
     "http://172.19.0.2:4200",
     "http://localhost:3000",
@@ -193,11 +194,14 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
+// {
+app.UseSwagger();
+app.UseSwaggerUI();
+// }
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 

@@ -166,3 +166,4 @@
 /app/obj/Debug/net8.0/BackEndNotes.pdb
 /app/obj/Debug/net8.0/BackEndNotes.genruntimeconfig.cache
 /app/obj/Debug/net8.0/ref/BackEndNotes.dll
+/src/bin/Debug/net8.0/BackEndNotes.staticwebassets.runtime.json

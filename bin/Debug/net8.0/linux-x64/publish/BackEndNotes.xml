@@ -195,6 +195,14 @@
             <response code="404">Usuario no encontrado</response>
             <response code="500">Server error</response>
         </member>
+        <member name="M:BackEndNotes.Controllers.SessionController.Refresh">
+            <summary>
+            refresca token de acceso de usuarios 
+            </summary>
+            <returns></returns>
+            
+            
+        </member>
         <member name="M:BackEndNotes.Controllers.SessionController.SingIn(BackEndNotes.Dto.UserDto)">
             <summary>
             Registra un nuevo usuario en el sistema 

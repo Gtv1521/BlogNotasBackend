@@ -1,0 +1,60 @@
+:root {
+    --color-fondo: rgb(7, 7, 39);
+    --colores-titles: rgb(255, 250, 250);
+    --colores-btn: rgba(203, 122, 23, 0.861);
+    --colores-btn_hover: rgba(44, 137, 170, 0.861);
+    --colores-cajas: rgba(34, 28, 109, 0.757);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-fondo);
+}
+
+.container-fluid {
+    width: 50%;
+    margin: 10% auto 0 auto;
+    text-align: center;
+    background-color: var(--colores-cajas);
+    border-radius: 20px;
+    padding: 20px;
+    color: var(--colores-titles)
+}
+
+.panel_description {
+    padding: 10px;
+    font-weight: 600;
+}
+
+.resumen {
+    margin: auto;
+    width: 90%;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.visitar {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_swagger{
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--colores-titles);
+    background-color: var(--colores-btn);
+}
+
+.btn_swagger:hover{
+    background-color: var(--colores-btn_hover);
+}
