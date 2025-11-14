@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using BackEndNotes.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using src.Interfaces.Regulars;
 using src.Services;
 
 namespace BackEndNotes.Controllers
@@ -20,19 +22,23 @@ namespace BackEndNotes.Controllers
     [Route("api/[controller]")]
     public class SessionController : ControllerBase
     {
+        private readonly ILogger<SessionController> _logger;
         private readonly Token _token;
         private readonly TokenService _serviceToken;
         private readonly SessionService _service;
         private readonly MailService _mailService;
+        private readonly ITokenBlacklist _blackList;
         private readonly INotification<MailModel> _notificationMail;
 
-        public SessionController(SessionService service, MailService mailService, INotification<MailModel> notificationMail, Token token, TokenService serviceToken)
+        public SessionController(ILogger<SessionController> logger, ITokenBlacklist blackList, SessionService service, MailService mailService, INotification<MailModel> notificationMail, Token token, TokenService serviceToken)
         {
             _service = service;
             _serviceToken = serviceToken;
             _mailService = mailService;
             _notificationMail = notificationMail;
             _token = token;
+            _blackList = blackList;
+            _logger = logger;
         }
 
         /// <summary>
@@ -350,23 +356,29 @@ namespace BackEndNotes.Controllers
             if (!response) return BadRequest(new { Message = "fallo al cerrar sesion" });
 
             // se limpian las cookies con la session 
-            Response.Cookies.Append("AuthToken", "", new CookieOptions
+            var jti = User.FindFirst(JwtRegisteredClaimNames.Jti)?.Value;
+            var exp = User.FindFirst("exp")?.Value;
+
+            if (jti != null && exp != null)
             {
+                var expiration = DateTimeOffset.FromUnixTimeSeconds(long.Parse(exp)).UtcDateTime;
+                _blackList.Revoke(jti, expiration);
+            }
+
+            // 🧹 Borrar ambas cookies
+            var cookieOptions = new CookieOptions
+            {
+                Expires = DateTime.UtcNow.AddDays(-2),
                 HttpOnly = true,
                 Secure = true,
-                SameSite = SameSiteMode.None,
-                Expires = DateTime.UtcNow.AddDays(-1) // vencida
-            });
+                SameSite = SameSiteMode.Strict
+            };
 
-            Response.Cookies.Append("RefreshToken", "", new CookieOptions
-            {
-                HttpOnly = true,
-                Secure = true,
-                SameSite = SameSiteMode.None,
-                Expires = DateTime.UtcNow.AddDays(-1)
-            });
+            Response.Cookies.Append("AuthToken", "", cookieOptions);
+            Response.Cookies.Append("RefreshToken", "", cookieOptions);
 
-            return Ok(new { Message = "Sesion cerrada" });
+            _logger.LogInformation("usuario cerro session");
+            return Ok(new { message = "Sesión cerrada correctamente" });
         }
 
         [HttpGet]

@@ -22,6 +22,18 @@ using BackEndNotes.Models.Librerias;
 using BlogNotasBackend.Interfaces.Principals;
 using BlogNotasBackend.Collections;
 using src.Services;
+using src.Interfaces.Principals;
+using BlogNotasBackend.Models;
+using src.Collections;
+using src.Models.projeccions;
+using DnsClient.Protocol;
+using BlogNotasBackend.requests;
+using BlogNotasBackend.Dto.Notifications;
+using src.Models;
+using src.Hubs;
+using src.Interfaces.Regulars;
+using src.Utils;
+using System.IdentityModel.Tokens.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +44,11 @@ builder.Services.Configure<DatabaseModel>(builder.Configuration.GetSection("Conn
 builder.Services.AddScoped<Context>();
 builder.Services.AddScoped<ManejoPasswords>();
 builder.Services.AddSingleton<Token>();
+builder.Services.AddSingleton<ITokenBlacklist, MemoryToken>();
+
+// enlace a signalR
+builder.Services.AddScoped<INotificationService<NotificationRequest, NotificationModel>, NotificationsCollection>();
+builder.Services.AddScoped<NotificationService>();
 
 // Enlaces para notificacion 
 builder.Services.AddScoped<INotification<MailModel>, NotificationMail>();
@@ -39,6 +56,9 @@ builder.Services.AddScoped<NotificationMail>();
 // Enlaces para sesion de usuario 
 builder.Services.AddScoped<ISessionUser<UserModel, PasswordDto, MailModel>, SessionCollection>();
 builder.Services.AddScoped<SessionCollection>();
+
+builder.Services.AddScoped<IShare<ShareNoteModel, ShareNoteProjection>, ShareNoteCollection>();
+builder.Services.AddScoped<ShareNoteService>();
 
 // Enlaces a libretas
 builder.Services.AddScoped<ILibreta<LibreriasModel>, LibretaCollection>();
@@ -143,6 +163,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     // varify if token valid
     options.Events = new JwtBearerEvents
     {
+        OnTokenValidated = context =>
+        {
+            var blacklist = context.HttpContext.RequestServices.GetRequiredService<ITokenBlacklist>();
+            var jti = context.Principal.FindFirst(JwtRegisteredClaimNames.Jti)?.Value;
+
+            if (jti != null && blacklist.IsRevoked(jti))
+            {
+                context.Fail("Token revocado");
+            }
+
+            return Task.CompletedTask;
+        },
+
         OnChallenge = context =>
         {
             context.HandleResponse(); // Evitar el manejo predeterminado
@@ -163,11 +196,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
             return Task.CompletedTask;
         }
     };
-
-
 });
 
+
 builder.Services.AddAuthorization();
+
+// config signalR
+builder.Services.AddSignalR(options =>
+{
+    options.EnableDetailedErrors = true;
+});
 
 builder.Services.AddControllers();
 
@@ -210,6 +248,8 @@ app.UseCors("AllowFronts");
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.MapHub<NotificationHub>("/notificationHub");
 
 app.MapControllers();
 

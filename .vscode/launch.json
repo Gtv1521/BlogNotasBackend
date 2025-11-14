@@ -5,7 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Docker .NET Container SDK Launch",
+            "type": "dockerfile",
+            "request": "launch",
+            "name": "Docker: Build",
+            "dockerfile": "Dockerfile",
+            "contextPath": "${workspaceFolder}"
+        },
+        {
+            "name": "Containers: .NET Container SDK Launch",
             "type": "docker",
             "request": "launch",
             "netCore": {

@@ -40,6 +40,12 @@ namespace BackEndNotes.Services
             return await _collection.CountLibretas(idUser);
         }
 
+        //  filtra las libretas 
+        public async Task<IEnumerable<LibreriasModel>> Filter(string filter, string id)
+        {
+            return await _collection.Filter(filter, id);
+        }
+        
         //  elimina una libreta 
         public async Task<bool> Remove(string id)
         {

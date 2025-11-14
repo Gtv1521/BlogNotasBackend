@@ -18,7 +18,8 @@ namespace BackEndNotes.Utils
         }
         public string GenerateToken(string userId, int time)
         {
-             var claims = new[] {
+            var claims = new[] {
+                        new Claim(ClaimTypes.NameIdentifier, userId),
                         new Claim(JwtRegisteredClaimNames.Sub, userId),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                     };

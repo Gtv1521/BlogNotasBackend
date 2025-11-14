@@ -80,6 +80,14 @@ namespace BackEndNotes.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("filter/{id}")]
+        public async Task<IActionResult> Filter(string id, [FromQuery] string filter)
+        {
+            if (string.IsNullOrEmpty(filter) && string.IsNullOrEmpty(id)) return BadRequest(new ResponseDto { Message = "Se requieren todos los datos" });
+            return Ok(await _service.Filter(filter, id));
+        }
+
 
         /// <summary>
         /// Crea una libreta

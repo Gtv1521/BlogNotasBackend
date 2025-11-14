@@ -74,5 +74,16 @@ namespace BackEndNotes.Collections
             var filter = Builders<LibreriasModel>.Filter.Eq("_id", new ObjectId(id));
             return await _collection.Find(filter).FirstOrDefaultAsync();
         }
+
+        public async Task<IEnumerable<LibreriasModel>> Filter(string filter, string id)
+        {
+            var text = new BsonRegularExpression(filter, "i");
+            var filtro = Builders<LibreriasModel>.Filter.And(
+                Builders<LibreriasModel>.Filter.Eq(x => x.IdUser, id),
+                Builders<LibreriasModel>.Filter.Regex(x => x.Nombre, text)
+            );
+
+            return await _collection.Find(filtro).ToListAsync();
+        }
     }
 }

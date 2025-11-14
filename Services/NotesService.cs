@@ -8,6 +8,7 @@ using BackEndNotes.Dto.Usuarios;
 using BackEndNotes.Interfaces;
 using BackEndNotes.Models;
 using BackEndNotes.Models.Notes;
+using MongoDB.Bson;
 
 namespace BackEndNotes.Services
 {
@@ -43,11 +44,19 @@ namespace BackEndNotes.Services
             {
                 Title = model.Title,
                 Contenido = model.Contenido,
-                IdUser = model.IdUser,
-                IdLibreta = model.IdLibreta,
-                FechaCreacion = DateTime.Now
+                IdUser = ObjectId.Parse(model.IdUser),
+                IdLibreta = ObjectId.Parse(model.IdLibreta),
+                FechaCreacion = DateTime.Now,
+                FechaUpdate = DateTime.Now,
             });
         }
+
+        // filtro
+        public async Task<IEnumerable<NotesModel>> Filter(string filter, string id)
+        {
+            return await _note.Filter(filter, id);
+        }
+
 
         // actualiza datos de una nota 
         public async Task<bool> ActualizarNota(string id, UpdateNoteDto model)
@@ -61,5 +70,10 @@ namespace BackEndNotes.Services
             return await _note.Remove(id);
         }
 
+        //  makes a change of book in the note
+        public async Task<bool> ChangeBook(string idNote, string idLibreta)
+        {
+            return await _note.ChangeBook(idNote, idLibreta);
+        }
     }
 }

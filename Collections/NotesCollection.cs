@@ -29,7 +29,7 @@ namespace BackEndNotes.Collections
             try
             {
                 await _database.InsertOneAsync(Object);
-                var response = await UpdateDate(Object.IdLibreta);
+                var response = await UpdateDate(Object.IdLibreta.ToString());
                 return Object.IdNote;
             }
             catch (System.Exception)
@@ -41,7 +41,8 @@ namespace BackEndNotes.Collections
         // cuenta las notas que hay en una nota
         public async Task<long> CountNotes(string id)
         {
-            var filter = Builders<NotesModel>.Filter.Eq(n => n.IdLibreta, id);
+            var ids = ObjectId.Parse(id);
+            var filter = Builders<NotesModel>.Filter.Eq(n => n.IdLibreta, ids);
             return await _database.CountDocumentsAsync(filter);
         }
 
@@ -63,7 +64,7 @@ namespace BackEndNotes.Collections
             var response = await _database.UpdateOneAsync(filter, update);
 
             var fil = await ViewOne(id);
-            var res = await UpdateDate(fil.IdLibreta);
+            var res = await UpdateDate(fil.IdLibreta.ToString());
             // UpdateDate(fil.IdLibreta
             return response.IsAcknowledged && response.ModifiedCount > 0;
         }
@@ -73,7 +74,9 @@ namespace BackEndNotes.Collections
             var cantidad = 20;
             try
             {
-                var filter = Builders<NotesModel>.Filter.Eq(note => note.IdLibreta, IdLibreta);
+                var Libreta = ObjectId.Parse(IdLibreta);
+                var filter = Builders<NotesModel>.Filter.Eq(n => n.IdLibreta, Libreta);
+
                 return await _database.Find(filter)
                 .SortByDescending(n => n.FechaUpdate)
                 .Skip((pagina - 1) * cantidad)
@@ -102,7 +105,8 @@ namespace BackEndNotes.Collections
 
         public async Task<bool> DeleteByIdUser(string id)
         {
-            var delete = Builders<NotesModel>.Filter.Eq(x => x.IdLibreta, id);
+            var Ids = ObjectId.Parse(id);
+            var delete = Builders<NotesModel>.Filter.Eq(x => x.IdLibreta, Ids);
             var response = await _database.DeleteManyAsync(delete);
             if (response.IsAcknowledged && response.DeletedCount > 0) return response.IsAcknowledged;
             return false;
@@ -114,6 +118,31 @@ namespace BackEndNotes.Collections
             var update = Builders<LibreriasModel>.Update.Set(u => u.UpdateBook, DateTime.Now);
             var response = await _collection.UpdateOneAsync(filter, update);
             return response.IsAcknowledged;
+        }
+
+        public async Task<bool> ChangeBook(string IdNote, string IdLibreta)
+        {
+            var Libreta = ObjectId.Parse(IdLibreta);
+            var filter = Builders<NotesModel>.Filter.Eq(x => x.IdNote, IdNote);
+            var update = Builders<NotesModel>.Update.Set(x => x.IdLibreta, Libreta);
+
+            var response = await _database.UpdateOneAsync(filter, update);
+            if (response.IsAcknowledged) return response.IsAcknowledged;
+            return false;
+        }
+
+        public async Task<IEnumerable<NotesModel>> Filter(string filter, string idUser)
+        {
+            var text = new BsonRegularExpression(filter, "i");
+
+            var userId = ObjectId.Parse(idUser);
+            var filterId = Builders<NotesModel>.Filter.Eq(x => x.IdUser, userId);
+            var filtro = Builders<NotesModel>.Filter.Or(
+                Builders<NotesModel>.Filter.Regex(x => x.Contenido, text),
+                Builders<NotesModel>.Filter.Regex(x => x.Title, text));
+            var filterEnd = Builders<NotesModel>.Filter.And(filterId, filtro);
+
+            return await _database.Find(filterEnd).ToListAsync();
         }
     }
 }

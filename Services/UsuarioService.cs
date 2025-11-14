@@ -23,6 +23,11 @@ namespace BackEndNotes.Services
             return await _colection.ViewOne(id);
         }
 
+        public async Task<IEnumerable<UsuarioDataDto>> VerUsuarioEmail(string email)
+        {
+            return await _colection.ViewUserEmail(email);
+        }
+
         public async Task<bool> ActualizarUsuario(string id, UpdateUserDto model)
         {
             return await _colection.UpdateData(id, model);

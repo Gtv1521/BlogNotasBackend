@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using BackEndNotes.Dto;
@@ -7,6 +8,7 @@ using BackEndNotes.Dto.Usuarios;
 using BackEndNotes.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using ZstdSharp.Unsafe;
 
 namespace BackEndNotes.Controllers
 {
@@ -62,6 +64,21 @@ namespace BackEndNotes.Controllers
                 return Problem($"Hubo un error inesperado: {ex.Message}", $"/api/usuario/user/{id}", 500, "Server error");
 
             }
+        }
+
+        /// <summary>
+        /// muestre el usuario por el email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("{email}")]
+        public async Task<IActionResult> VerUserEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email)) return BadRequest(new ResponseDto { Message = "Debe enviar un email" });
+            var response = await _service.VerUsuarioEmail(email);
+            if (response == null) return NotFound(new ResponseDto { Message = "usuario de este email no existe" });
+            return Ok(response);
         }
 
         /// <summary>

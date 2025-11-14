@@ -17,7 +17,7 @@
 
 #############
 # PRUEBA
-version: '3.9'
+# version: '3.9'
 services:
   # Contenedir de desarrollo
   myapp:

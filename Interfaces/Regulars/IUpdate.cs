@@ -7,6 +7,6 @@ namespace BackEndNotes.Interfaces.Regulars
 {
     public interface IUpdate<T>
     {
-        Task<bool> UpdateData(string id,T model);
+        Task<bool> UpdateData(string id, T model);
     }
 }

@@ -119,6 +119,16 @@ namespace BackEndNotes.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("filter/{id}")]
+        public async Task<IActionResult> Filter([FromQuery] string filter, string id)
+        {
+            if (string.IsNullOrEmpty(filter) && string.IsNullOrEmpty(id)) return BadRequest(new ResponseNoteDto { Message = "Debe enviar todos los datos " });
+
+            var response = await _service.Filter(filter, id);
+            return Ok(response);
+        }
+
         /// <summary>
         /// Crea una nota nueva en la base de datos 
         /// </summary>
@@ -209,6 +219,27 @@ namespace BackEndNotes.Controllers
                 return Problem(ex.Message, $"api/Notes/update_note/{idNote}", 500, "Server error");
             }
         }
+
+
+        [HttpPatch]
+        [Route("change_book/{idNote}")]
+        public async Task<IActionResult> ChangeBook(string idNote, [FromQuery] string idLibreta)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(idLibreta) || string.IsNullOrEmpty(idNote)) return BadRequest(new ResponseNoteDto { Message = "Debe enviar todos los datos " });
+                var response = await _service.ChangeBook(idNote, idLibreta);
+                if (!response) BadRequest(new { Message = "no se pudo cambiar " });
+                return Ok(new { Message = "se cambio con exito" });
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+
+        }
+
         /// <summary>
         /// Eliminar una nota 
         /// </summary>

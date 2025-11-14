@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using BackEndNotes.Dto.Usuarios;
@@ -50,6 +51,20 @@ namespace BackEndNotes.Collections
                 Email = result?.Email,
                 Role = result?.Role
             };
+        }
+
+        public async Task<IEnumerable<UsuarioDataDto>> ViewUserEmail(string email)
+        {
+            var filtro = Builders<UserModel>.Filter.Regex(x => x.Email, email);
+            return await _database.Find(filtro)
+                .Project(x => new UsuarioDataDto
+                {
+                    IdUser = x.Id,
+                    Name = x.Name,
+                    Email = x.Email,
+                    Role = x.Role
+                })
+                .ToListAsync();
         }
     }
 }

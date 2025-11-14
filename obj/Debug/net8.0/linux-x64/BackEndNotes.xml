@@ -250,6 +250,13 @@
             <response code="400">No hay datos</response>
             <response code="500">Error server.</response>
         </member>
+        <member name="M:BackEndNotes.Controllers.UsuarioController.VerUserEmail(System.String)">
+            <summary>
+            muestre el usuario por el email
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
         <member name="M:BackEndNotes.Controllers.UsuarioController.ActualizarUsuario(System.String,BackEndNotes.Dto.Usuarios.UpdateUserDto)">
             <summary>
             Actualiza datos del usuario

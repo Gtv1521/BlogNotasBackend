@@ -12,14 +12,16 @@ namespace BackEndNotes.Models.Notes
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? IdNote { get; set; }
+        public string IdNote { get; set; }
         public string? Title { get; set; }
         public string? Contenido { get; set; }
         [Required]
-        public string? IdUser { get; set; }
-        public string? IdLibreta { get; set; }
-        public DateTime? FechaCreacion { get; set; }
-        public DateTime? FechaUpdate { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public ObjectId IdUser { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public ObjectId IdLibreta { get; set; }
+        public DateTime FechaCreacion { get; set; }
+        public DateTime FechaUpdate { get; set; }
 
     }
 }
