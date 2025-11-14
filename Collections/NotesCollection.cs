@@ -93,7 +93,8 @@ namespace BackEndNotes.Collections
         {
             try
             {
-                var note = await _database.Find(new BsonDocument { { "_id", new ObjectId(Dato) } }).FirstOrDefaultAsync();
+                var filtro = Builders<NotesModel>.Filter.Eq(x => x.IdNote, Dato);
+                var note = await _database.Find(filtro).FirstOrDefaultAsync();
                 if (note == null) return null;
                 return note;
             }
