@@ -18,7 +18,7 @@ namespace BlogNotasBackend.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string NoteId { get; set; } // id nota 
         [BsonRepresentation(BsonType.ObjectId)]
-        public string IdLibreta { get; set; } // id libreta
+        public string? IdLibreta { get; set; } // id libreta
         [BsonRepresentation(BsonType.ObjectId)]
         public string IdUserReference { get; set; } // usuario de referencia 
         public bool WritePermits { get; set; } // Permiso de escribir 

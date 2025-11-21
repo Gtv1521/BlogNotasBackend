@@ -11,9 +11,10 @@ namespace BackEndNotes.Models.Librerias
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? IdLibreta { get; set; }
+        public string IdLibreta { get; set; }
         public string? Nombre { get; set; }
-        public string? IdUser { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string IdUser { get; set; }
         public DateTime UpdateBook { get; set; }
         public DateTime CreateBook { get; set; }
     }

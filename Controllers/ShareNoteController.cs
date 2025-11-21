@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using BlogNotasBackend.requests;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
+using MongoDB.Bson;
 using src.Dto;
 using src.Models;
 using src.Services;
@@ -60,6 +62,15 @@ namespace src.Controllers
             return Ok(response);
         }
 
+        [HttpGet]
+        [Route("GetShares/{idUser}")]
+        public async Task<IActionResult> NotesShare(string idUser)
+        {
+            var response = await _service.ShareNotes(idUser);
+            if(response == null) return BadRequest(new ResponseDto { Message = "No hay notas compartidas"});
+            return Ok(response);
+        }
+
         [HttpPost]
         // [Route("")]
         public async Task<IActionResult> New([FromBody] ShareNoteDto data)
@@ -105,5 +116,7 @@ namespace src.Controllers
             if (!response) return NotFound(new ResponseDto { Message = "No se encuentra la nota" });
             return Ok(new ResponseDto { Message = "Enlace terminado" });
         }
+
+
     }
 }

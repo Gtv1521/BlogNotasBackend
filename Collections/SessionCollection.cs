@@ -30,7 +30,7 @@ namespace BackEndNotes.Collections
 
         public async Task<bool> ChoosePassword(string IdUser, PasswordDto model)
         {
-            var filter = Builders<UserModel>.Filter.Eq(u => u.Id, IdUser);
+            var filter = Builders<UserModel>.Filter.Eq(u => u.Id, new ObjectId(IdUser));
             var update = Builders<UserModel>.Update.Set(u => u.Password, _password.HashearContraseña(model.Password));
             var result = await _collection.UpdateOneAsync(filter, update);
             return result.ModifiedCount > 0;
@@ -41,7 +41,7 @@ namespace BackEndNotes.Collections
             try
             {
                 await _collection.InsertOneAsync(Object);
-                return Object.Id;
+                return Object.Id.ToString();
             }
             catch (System.Exception)
             {

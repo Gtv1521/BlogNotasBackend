@@ -148,15 +148,15 @@ namespace BackEndNotes.Controllers
                 if (user == null) return NotFound(new ResponseDto { Message = "Usuario o contraseña incorrecta" });
 
                 //  datos para token y tiempo 
-                string Token = _token.GenerateToken(user.Id, 1);
+                string Token = _token.GenerateToken(user.Id.ToString(), 1);
 
                 //  crea y guarda el refreshToken en BD
-                var refreshToken = await _serviceToken.CreateToken(user.Id);
+                var refreshToken = await _serviceToken.CreateToken(user.Id.ToString());
 
 
                 var result = new UserResDto
                 {
-                    IdUser = user.Id,
+                    IdUser = user.Id.ToString(),
                     Name = user.Name,
                     Email = user.Email,
                     Message = "Bienvenido",

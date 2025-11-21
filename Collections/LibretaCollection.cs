@@ -24,7 +24,7 @@ namespace BackEndNotes.Collections
         public async Task<string> Create(LibreriasModel Object)
         {
             await _collection.InsertOneAsync(Object);
-            return Object.IdLibreta;
+            return Object.IdLibreta.ToString();
         }
 
         // Coynt the number of books of a user
@@ -84,6 +84,21 @@ namespace BackEndNotes.Collections
             );
 
             return await _collection.Find(filtro).ToListAsync();
+        }
+
+        public async Task<LibreriasModel> SearchCollection(string idUser, string name)
+        {
+            var filter = Builders<LibreriasModel>.Filter.And(
+                Builders<LibreriasModel>.Filter.Eq(x => x.IdUser, idUser),
+                Builders<LibreriasModel>.Filter.Eq(x => x.Nombre, name)
+            );
+
+            return await _collection.Find(filter).FirstOrDefaultAsync();
+        }
+
+        private ObjectId Change(string id)
+        {
+            return new ObjectId(id);
         }
     }
 }

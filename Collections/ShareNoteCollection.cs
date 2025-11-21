@@ -4,7 +4,10 @@ using System.IO.Pipelines;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using BackEndNotes.Dto.Usuarios;
+using BackEndNotes.Interfaces.Principals;
 using BackEndNotes.Models;
+using BackEndNotes.Models.Librerias;
 using BackEndNotes.Models.Notes;
 using BackEndNotes.Utils;
 using BlogNotasBackend.Models;
@@ -39,7 +42,7 @@ namespace src.Collections
         public async Task<string> Create(ShareNoteModel Object)
         {
             await _collection.InsertOneAsync(Object);
-            return Object.Id;
+            return Object.Id.ToString();
         }
 
         public async Task<IEnumerable<ShareNoteProjection>> Filter(string filter, string id)
@@ -113,9 +116,8 @@ namespace src.Collections
         }
 
         public async Task<List<ShareNoteProjection>> ViewAllDataIdUser(string Id, int pagina)
-        {  
+        {
             // id de usuario
-            // var response = Builders<ShareNoteModel>.Filter.Eq(x => x.NoteId, Id);
             return await _collection.Aggregate()
             .Match(x => x.NoteId == Id)
             .Lookup(
@@ -156,8 +158,29 @@ namespace src.Collections
 
         public async Task<ShareNoteModel> ViewOne(string Dato)
         {
-            var response = Builders<ShareNoteModel>.Filter.Eq(x => x.Id, Dato);
+            var response = Builders<ShareNoteModel>.Filter.Eq(x => x.Id,Dato);
             return await _collection.Find(response).FirstOrDefaultAsync();
+        }
+
+        // Entra el id de usuario referido y muestra las notas compartidas
+        public async Task<IEnumerable<ShareNoteProjection>> GetShares(string Id)
+        {
+            System.Console.WriteLine(Id);
+            return await _collection.Aggregate()
+            .Match(x => x.IdUserReference == Id)
+            .Lookup(
+                foreignCollection: _notes,
+                foreignField: x => x.IdNote,
+                localField: x => x.NoteId,
+                @as: (ShareNoteProjection x) => x.NoteDetails
+            )
+            .ToListAsync();
+        }
+
+        //  cambia el id  de string a objectid
+        private ObjectId Change(string id)
+        {
+            return new ObjectId(id);
         }
     }
 }

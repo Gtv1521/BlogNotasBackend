@@ -11,6 +11,9 @@ namespace src.Interfaces.Principals
     public interface IShare<T, P> : ICreated<T>, IViewOne<T>, IViewXId<P>, IUpdate<T>, IRemove
     {
         Task<long> Count(string id);
-        Task<IEnumerable<P>> Filter(string filter, string id);       
+        Task<IEnumerable<P>> Filter(string filter, string id);
+        
+        // muestra todas las notas que hay compartidas en la libreta compartido
+        Task<IEnumerable<P>> GetShares(string IdLibreta);       
     }
 }

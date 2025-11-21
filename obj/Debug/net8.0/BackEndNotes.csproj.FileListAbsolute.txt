@@ -56,3 +56,11 @@
 /src/obj/Debug/net8.0/BackEndNotes.pdb
 /src/obj/Debug/net8.0/BackEndNotes.genruntimeconfig.cache
 /src/obj/Debug/net8.0/ref/BackEndNotes.dll
+/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/Debug/net8.0/BackEndNotes.csproj.AssemblyReference.cache
+/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/Debug/net8.0/BackEndNotes.GeneratedMSBuildEditorConfig.editorconfig
+/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/Debug/net8.0/BackEndNotes.AssemblyInfoInputs.cache
+/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/Debug/net8.0/BackEndNotes.AssemblyInfo.cs
+/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/Debug/net8.0/BackEndNotes.dll
+/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/Debug/net8.0/refint/BackEndNotes.dll
+/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/Debug/net8.0/BackEndNotes.xml
+/home/gustavo/Desarrollo/C#/BlogNotasBackend/obj/Debug/net8.0/BackEndNotes.pdb

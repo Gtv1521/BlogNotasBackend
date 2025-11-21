@@ -8,6 +8,8 @@ using MongoDB.Driver;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualBasic;
+using MongoDB.Bson;
+using System.Runtime.InteropServices.ObjectiveC;
 
 namespace BlogNotasBackend.Collections
 {
@@ -28,7 +30,7 @@ namespace BlogNotasBackend.Collections
             var filter = Builders<SessionModel>.Filter.Eq(x => x.TokenRefresh, TokenRefresh);
             var response = await _session.Find(filter).FirstOrDefaultAsync();
             if (response == null) return null;
-            return response.IdUser;
+            return response.IdUser.ToString();
         }
 
 
@@ -38,7 +40,7 @@ namespace BlogNotasBackend.Collections
             var token = Guid.NewGuid().ToString(); // crea nuevo token 
             var insert = new SessionModel
             {
-                IdUser = IdUser,
+                IdUser = Change(IdUser),
                 TokenRefresh = token
             };
 
@@ -55,6 +57,11 @@ namespace BlogNotasBackend.Collections
 
             if (response.IsAcknowledged && response.DeletedCount > 0) return response.IsAcknowledged;
             return false;
+        }
+
+        private ObjectId Change(string id)
+        {
+            return new ObjectId(id);
         }
     }
 }

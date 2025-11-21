@@ -59,7 +59,7 @@ namespace BackEndNotes.Services
                 var email = await _mail.ViewOne(mail);
                 if (email == null) return false;
 
-                var token = _token.GenerateToken(email.Id, 1);
+                var token = _token.GenerateToken(email.Id.ToString(), 1);
                 _service.Notificar(new MailModel
                 {
                     Mail = mail,

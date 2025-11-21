@@ -24,7 +24,7 @@ namespace BackEndNotes.Collections
 
         public async Task<bool> Remove(string id)
         {
-            var filter = Builders<UserModel>.Filter.Eq(user => user.Id, id);
+            var filter = Builders<UserModel>.Filter.Eq(user => user.Id, Change(id));
             var result = await _database.DeleteOneAsync(filter);
             if (result.IsAcknowledged && result.DeletedCount > 0) return result.IsAcknowledged;
             return false;
@@ -32,7 +32,7 @@ namespace BackEndNotes.Collections
 
         public async Task<bool> UpdateData(string id, UpdateUserDto model)
         {
-            var filter = Builders<UserModel>.Filter.Eq(u => u.Id, id);
+            var filter = Builders<UserModel>.Filter.Eq(u => u.Id, Change(id));
             var update = Builders<UserModel>.Update
             .Set(u => u.Name, model.Name)
             .Set(u => u.Role, model.Role);
@@ -59,12 +59,17 @@ namespace BackEndNotes.Collections
             return await _database.Find(filtro)
                 .Project(x => new UsuarioDataDto
                 {
-                    IdUser = x.Id,
+                    IdUser = x.Id.ToString(),
                     Name = x.Name,
                     Email = x.Email,
                     Role = x.Role
                 })
                 .ToListAsync();
+        }
+
+        private ObjectId Change(string id)
+        {
+            return new ObjectId(id);
         }
     }
 }

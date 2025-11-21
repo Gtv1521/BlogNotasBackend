@@ -13,7 +13,8 @@ namespace BlogNotasBackend.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string IdSession { get; set; }
-        public string IdUser { get; set; }
+        [BsonRepresentation(BsonType.ObjectId)]
+        public ObjectId IdUser { get; set; }
         public string TokenRefresh { get; set; }
     }
 }

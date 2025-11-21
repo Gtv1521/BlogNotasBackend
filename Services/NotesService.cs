@@ -44,8 +44,8 @@ namespace BackEndNotes.Services
             {
                 Title = model.Title,
                 Contenido = model.Contenido,
-                IdUser = ObjectId.Parse(model.IdUser),
-                IdLibreta = ObjectId.Parse(model.IdLibreta),
+                IdUser = model.IdUser,
+                IdLibreta = model.IdLibreta,
                 FechaCreacion = DateTime.Now,
                 FechaUpdate = DateTime.Now,
             });

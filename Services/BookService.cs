@@ -10,6 +10,7 @@ using BackEndNotes.Interfaces;
 using BackEndNotes.Interfaces.Principals;
 using BackEndNotes.Models.Librerias;
 using BackEndNotes.Models.Notes;
+using MongoDB.Bson;
 
 namespace BackEndNotes.Services
 {
@@ -45,7 +46,7 @@ namespace BackEndNotes.Services
         {
             return await _collection.Filter(filter, id);
         }
-        
+
         //  elimina una libreta 
         public async Task<bool> Remove(string id)
         {
@@ -59,9 +60,9 @@ namespace BackEndNotes.Services
         {
             var response = new LibreriasModel
             {
-                IdLibreta = "adsaijdsaiojfa",
-                Nombre = "Todas las Libretas",
-                IdUser = "asdasdasd"
+                // IdLibreta = "adsaijdsaiojfa",
+                // Nombre = "Todas las Libretas",
+                // IdUser = "asdasdasd"
             };
             return response;
         }
@@ -83,6 +84,11 @@ namespace BackEndNotes.Services
         {
             var dato = new LibreriasModel { Nombre = name };
             return await _collection.UpdateData(id, dato);
+        }
+
+        private ObjectId Change(string id)
+        {
+            return new ObjectId(id);
         }
     }
 }

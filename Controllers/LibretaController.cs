@@ -44,7 +44,7 @@ namespace BackEndNotes.Controllers
                     idLibreta = item.IdLibreta,
                     nombre = item.Nombre,
                     idUser = item.IdUser,
-                    NotesCount = await _notes.CountNotes(item.IdLibreta)
+                    NotesCount = await _notes.CountNotes(item.IdLibreta.ToString())
                 }));
 
                 return Ok(data);
